@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductApi
+ * PriceListApi
  * PHP version 5
  *
  * @category Class
@@ -23,7 +23,7 @@
  * Do not edit the class manually.
  */
 
-namespace Swagger\Client\Api;
+namespace Swagger\Client\LeapOneProductAPIs;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
@@ -37,14 +37,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * ProductApi Class Doc Comment
+ * PriceListApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProductApi
+class PriceListApi
 {
     /**
      * @var ClientInterface
@@ -85,9 +85,9 @@ class ProductApi
     }
 
     /**
-     * Operation deleteProductItem
+     * Operation deletePriceListItem
      *
-     * Removes the Product resource.
+     * Removes the PriceList resource.
      *
      * @param  string $id id (required)
      *
@@ -95,15 +95,15 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function deleteProductItem($id)
+    public function deletePriceListItem($id)
     {
-        $this->deleteProductItemWithHttpInfo($id);
+        $this->deletePriceListItemWithHttpInfo($id);
     }
 
     /**
-     * Operation deleteProductItemWithHttpInfo
+     * Operation deletePriceListItemWithHttpInfo
      *
-     * Removes the Product resource.
+     * Removes the PriceList resource.
      *
      * @param  string $id (required)
      *
@@ -111,10 +111,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteProductItemWithHttpInfo($id)
+    public function deletePriceListItemWithHttpInfo($id)
     {
         $returnType = '';
-        $request = $this->deleteProductItemRequest($id);
+        $request = $this->deletePriceListItemRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -154,18 +154,18 @@ class ProductApi
     }
 
     /**
-     * Operation deleteProductItemAsync
+     * Operation deletePriceListItemAsync
      *
-     * Removes the Product resource.
+     * Removes the PriceList resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteProductItemAsync($id)
+    public function deletePriceListItemAsync($id)
     {
-        return $this->deleteProductItemAsyncWithHttpInfo($id)
+        return $this->deletePriceListItemAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -174,19 +174,19 @@ class ProductApi
     }
 
     /**
-     * Operation deleteProductItemAsyncWithHttpInfo
+     * Operation deletePriceListItemAsyncWithHttpInfo
      *
-     * Removes the Product resource.
+     * Removes the PriceList resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteProductItemAsyncWithHttpInfo($id)
+    public function deletePriceListItemAsyncWithHttpInfo($id)
     {
         $returnType = '';
-        $request = $this->deleteProductItemRequest($id);
+        $request = $this->deletePriceListItemRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -212,23 +212,23 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'deleteProductItem'
+     * Create request for operation 'deletePriceListItem'
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteProductItemRequest($id)
+    protected function deletePriceListItemRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling deleteProductItem'
+                'Missing the required parameter $id when calling deletePriceListItem'
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/api/price_lists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -310,37 +310,37 @@ class ProductApi
     }
 
     /**
-     * Operation getProductCollection
+     * Operation getPriceListCollection
      *
-     * Retrieves the collection of Product resources.
+     * Retrieves the collection of PriceList resources.
      *
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\InlineResponse2002
+     * @return \Swagger\Client\Model\InlineResponse2001
      */
-    public function getProductCollection($page = '1')
+    public function getPriceListCollection($page = '1')
     {
-        list($response) = $this->getProductCollectionWithHttpInfo($page);
+        list($response) = $this->getPriceListCollectionWithHttpInfo($page);
         return $response;
     }
 
     /**
-     * Operation getProductCollectionWithHttpInfo
+     * Operation getPriceListCollectionWithHttpInfo
      *
-     * Retrieves the collection of Product resources.
+     * Retrieves the collection of PriceList resources.
      *
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCollectionWithHttpInfo($page = '1')
+    public function getPriceListCollectionWithHttpInfo($page = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
-        $request = $this->getProductCollectionRequest($page);
+        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $request = $this->getPriceListCollectionRequest($page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -391,7 +391,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\InlineResponse2002',
+                        '\Swagger\Client\Model\InlineResponse2001',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -402,18 +402,18 @@ class ProductApi
     }
 
     /**
-     * Operation getProductCollectionAsync
+     * Operation getPriceListCollectionAsync
      *
-     * Retrieves the collection of Product resources.
+     * Retrieves the collection of PriceList resources.
      *
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsync($page = '1')
+    public function getPriceListCollectionAsync($page = '1')
     {
-        return $this->getProductCollectionAsyncWithHttpInfo($page)
+        return $this->getPriceListCollectionAsyncWithHttpInfo($page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -422,19 +422,19 @@ class ProductApi
     }
 
     /**
-     * Operation getProductCollectionAsyncWithHttpInfo
+     * Operation getPriceListCollectionAsyncWithHttpInfo
      *
-     * Retrieves the collection of Product resources.
+     * Retrieves the collection of PriceList resources.
      *
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsyncWithHttpInfo($page = '1')
+    public function getPriceListCollectionAsyncWithHttpInfo($page = '1')
     {
-        $returnType = '\Swagger\Client\Model\InlineResponse2002';
-        $request = $this->getProductCollectionRequest($page);
+        $returnType = '\Swagger\Client\Model\InlineResponse2001';
+        $request = $this->getPriceListCollectionRequest($page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -474,17 +474,17 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'getProductCollection'
+     * Create request for operation 'getPriceListCollection'
      *
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCollectionRequest($page = '1')
+    protected function getPriceListCollectionRequest($page = '1')
     {
 
-        $resourcePath = '/api/products';
+        $resourcePath = '/api/price_lists';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -502,11 +502,11 @@ class ProductApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json', 'application/json', 'text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json', 'application/json', 'text/html'],
                 []
             );
         }
@@ -562,37 +562,37 @@ class ProductApi
     }
 
     /**
-     * Operation getProductItem
+     * Operation getPriceListItem
      *
-     * Retrieves a Product resource.
+     * Retrieves a PriceList resource.
      *
      * @param  string $id id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ProductJsonld
+     * @return \Swagger\Client\Model\PriceListJsonld
      */
-    public function getProductItem($id)
+    public function getPriceListItem($id)
     {
-        list($response) = $this->getProductItemWithHttpInfo($id);
+        list($response) = $this->getPriceListItemWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation getProductItemWithHttpInfo
+     * Operation getPriceListItemWithHttpInfo
      *
-     * Retrieves a Product resource.
+     * Retrieves a PriceList resource.
      *
      * @param  string $id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductItemWithHttpInfo($id)
+    public function getPriceListItemWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ProductJsonld';
-        $request = $this->getProductItemRequest($id);
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->getPriceListItemRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -643,7 +643,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ProductJsonld',
+                        '\Swagger\Client\Model\PriceListJsonld',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -654,18 +654,18 @@ class ProductApi
     }
 
     /**
-     * Operation getProductItemAsync
+     * Operation getPriceListItemAsync
      *
-     * Retrieves a Product resource.
+     * Retrieves a PriceList resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductItemAsync($id)
+    public function getPriceListItemAsync($id)
     {
-        return $this->getProductItemAsyncWithHttpInfo($id)
+        return $this->getPriceListItemAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -674,19 +674,19 @@ class ProductApi
     }
 
     /**
-     * Operation getProductItemAsyncWithHttpInfo
+     * Operation getPriceListItemAsyncWithHttpInfo
      *
-     * Retrieves a Product resource.
+     * Retrieves a PriceList resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductItemAsyncWithHttpInfo($id)
+    public function getPriceListItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\Model\ProductJsonld';
-        $request = $this->getProductItemRequest($id);
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->getPriceListItemRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -726,23 +726,23 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'getProductItem'
+     * Create request for operation 'getPriceListItem'
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductItemRequest($id)
+    protected function getPriceListItemRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling getProductItem'
+                'Missing the required parameter $id when calling getPriceListItem'
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/api/price_lists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -764,11 +764,11 @@ class ProductApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json', 'application/json', 'text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json', 'application/json', 'text/html'],
                 []
             );
         }
@@ -824,39 +824,39 @@ class ProductApi
     }
 
     /**
-     * Operation patchProductItem
+     * Operation patchPriceListItem
      *
-     * Updates the Product resource.
+     * Updates the PriceList resource.
      *
      * @param  string $id id (required)
-     * @param  \Swagger\Client\Model\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ProductJsonld
+     * @return \Swagger\Client\Model\PriceListJsonld
      */
-    public function patchProductItem($id, $body = null)
+    public function patchPriceListItem($id, $body = null)
     {
-        list($response) = $this->patchProductItemWithHttpInfo($id, $body);
+        list($response) = $this->patchPriceListItemWithHttpInfo($id, $body);
         return $response;
     }
 
     /**
-     * Operation patchProductItemWithHttpInfo
+     * Operation patchPriceListItemWithHttpInfo
      *
-     * Updates the Product resource.
+     * Updates the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\Model\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchProductItemWithHttpInfo($id, $body = null)
+    public function patchPriceListItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ProductJsonld';
-        $request = $this->patchProductItemRequest($id, $body);
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->patchPriceListItemRequest($id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -907,7 +907,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ProductJsonld',
+                        '\Swagger\Client\Model\PriceListJsonld',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -918,19 +918,19 @@ class ProductApi
     }
 
     /**
-     * Operation patchProductItemAsync
+     * Operation patchPriceListItemAsync
      *
-     * Updates the Product resource.
+     * Updates the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\Model\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchProductItemAsync($id, $body = null)
+    public function patchPriceListItemAsync($id, $body = null)
     {
-        return $this->patchProductItemAsyncWithHttpInfo($id, $body)
+        return $this->patchPriceListItemAsyncWithHttpInfo($id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -939,20 +939,20 @@ class ProductApi
     }
 
     /**
-     * Operation patchProductItemAsyncWithHttpInfo
+     * Operation patchPriceListItemAsyncWithHttpInfo
      *
-     * Updates the Product resource.
+     * Updates the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\Model\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchProductItemAsyncWithHttpInfo($id, $body = null)
+    public function patchPriceListItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ProductJsonld';
-        $request = $this->patchProductItemRequest($id, $body);
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->patchPriceListItemRequest($id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -992,24 +992,24 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'patchProductItem'
+     * Create request for operation 'patchPriceListItem'
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\Model\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function patchProductItemRequest($id, $body = null)
+    protected function patchPriceListItemRequest($id, $body = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling patchProductItem'
+                'Missing the required parameter $id when calling patchPriceListItem'
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/api/price_lists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1034,11 +1034,11 @@ class ProductApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json', 'application/json', 'text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json', 'application/json', 'text/html'],
                 ['application/merge-patch+json']
             );
         }
@@ -1094,37 +1094,37 @@ class ProductApi
     }
 
     /**
-     * Operation postProductCollection
+     * Operation postPriceListCollection
      *
-     * Creates a Product resource.
+     * Creates a PriceList resource.
      *
-     * @param  \Swagger\Client\Model\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The new PriceList resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ProductJsonld
+     * @return \Swagger\Client\Model\PriceListJsonld
      */
-    public function postProductCollection($body = null)
+    public function postPriceListCollection($body = null)
     {
-        list($response) = $this->postProductCollectionWithHttpInfo($body);
+        list($response) = $this->postPriceListCollectionWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation postProductCollectionWithHttpInfo
+     * Operation postPriceListCollectionWithHttpInfo
      *
-     * Creates a Product resource.
+     * Creates a PriceList resource.
      *
-     * @param  \Swagger\Client\Model\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The new PriceList resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postProductCollectionWithHttpInfo($body = null)
+    public function postPriceListCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ProductJsonld';
-        $request = $this->postProductCollectionRequest($body);
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->postPriceListCollectionRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1175,7 +1175,7 @@ class ProductApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ProductJsonld',
+                        '\Swagger\Client\Model\PriceListJsonld',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1186,18 +1186,18 @@ class ProductApi
     }
 
     /**
-     * Operation postProductCollectionAsync
+     * Operation postPriceListCollectionAsync
      *
-     * Creates a Product resource.
+     * Creates a PriceList resource.
      *
-     * @param  \Swagger\Client\Model\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The new PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postProductCollectionAsync($body = null)
+    public function postPriceListCollectionAsync($body = null)
     {
-        return $this->postProductCollectionAsyncWithHttpInfo($body)
+        return $this->postPriceListCollectionAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1206,19 +1206,19 @@ class ProductApi
     }
 
     /**
-     * Operation postProductCollectionAsyncWithHttpInfo
+     * Operation postPriceListCollectionAsyncWithHttpInfo
      *
-     * Creates a Product resource.
+     * Creates a PriceList resource.
      *
-     * @param  \Swagger\Client\Model\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The new PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postProductCollectionAsyncWithHttpInfo($body = null)
+    public function postPriceListCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ProductJsonld';
-        $request = $this->postProductCollectionRequest($body);
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->postPriceListCollectionRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1258,17 +1258,17 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'postProductCollection'
+     * Create request for operation 'postPriceListCollection'
      *
-     * @param  \Swagger\Client\Model\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The new PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function postProductCollectionRequest($body = null)
+    protected function postPriceListCollectionRequest($body = null)
     {
 
-        $resourcePath = '/api/products';
+        $resourcePath = '/api/price_lists';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1285,12 +1285,12 @@ class ProductApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json', 'application/json', 'text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
-                ['application/ld+json']
+                ['application/ld+json', 'application/json', 'text/html'],
+                ['application/ld+json', 'application/json', 'text/html']
             );
         }
 
@@ -1345,39 +1345,290 @@ class ProductApi
     }
 
     /**
-     * Operation putProductItem
+     * Operation postPriceListCollection
      *
-     * Replaces the Product resource.
+     * Creates a PriceList resource.
      *
-     * @param  string $id id (required)
-     * @param  \Swagger\Client\Model\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceList $body The new PriceList resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\Model\ProductJsonld
+     * @return \Swagger\Client\Model\PriceListJsonld
      */
-    public function putProductItem($id, $body = null)
+    public function postPriceListCollection($body = null)
     {
-        list($response) = $this->putProductItemWithHttpInfo($id, $body);
+        list($response) = $this->postPriceListCollectionWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation putProductItemWithHttpInfo
+     * Operation postPriceListCollectionWithHttpInfo
      *
-     * Replaces the Product resource.
+     * Creates a PriceList resource.
      *
-     * @param  string $id (required)
-     * @param  \Swagger\Client\Model\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceList $body The new PriceList resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\Model\ProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putProductItemWithHttpInfo($id, $body = null)
+    public function postPriceListCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\Model\ProductJsonld';
-        $request = $this->putProductItemRequest($id, $body);
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->postPriceListCollectionRequest($body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 201:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\PriceListJsonld',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation postPriceListCollectionAsync
+     *
+     * Creates a PriceList resource.
+     *
+     * @param  \Swagger\Client\Model\PriceList $body The new PriceList resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postPriceListCollectionAsync($body = null)
+    {
+        return $this->postPriceListCollectionAsyncWithHttpInfo($body)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation postPriceListCollectionAsyncWithHttpInfo
+     *
+     * Creates a PriceList resource.
+     *
+     * @param  \Swagger\Client\Model\PriceList $body The new PriceList resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function postPriceListCollectionAsyncWithHttpInfo($body = null)
+    {
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->postPriceListCollectionRequest($body);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'postPriceListCollection'
+     *
+     * @param  \Swagger\Client\Model\PriceList $body The new PriceList resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function postPriceListCollectionRequest($body = null)
+    {
+
+        $resourcePath = '/api/price_lists';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/ld+json', 'application/json', 'text/html']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/ld+json', 'application/json', 'text/html'],
+                ['application/ld+json', 'application/json', 'text/html']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'POST',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation putPriceListItem
+     *
+     * Replaces the PriceList resource.
+     *
+     * @param  string $id id (required)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The updated PriceList resource (optional)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\PriceListJsonld
+     */
+    public function putPriceListItem($id, $body = null)
+    {
+        list($response) = $this->putPriceListItemWithHttpInfo($id, $body);
+        return $response;
+    }
+
+    /**
+     * Operation putPriceListItemWithHttpInfo
+     *
+     * Replaces the PriceList resource.
+     *
+     * @param  string $id (required)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The updated PriceList resource (optional)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function putPriceListItemWithHttpInfo($id, $body = null)
+    {
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->putPriceListItemRequest($id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1428,7 +1679,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\Model\ProductJsonld',
+                        '\Swagger\Client\Model\PriceListJsonld',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1439,19 +1690,19 @@ class ProductApi
     }
 
     /**
-     * Operation putProductItemAsync
+     * Operation putPriceListItemAsync
      *
-     * Replaces the Product resource.
+     * Replaces the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\Model\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putProductItemAsync($id, $body = null)
+    public function putPriceListItemAsync($id, $body = null)
     {
-        return $this->putProductItemAsyncWithHttpInfo($id, $body)
+        return $this->putPriceListItemAsyncWithHttpInfo($id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1460,20 +1711,20 @@ class ProductApi
     }
 
     /**
-     * Operation putProductItemAsyncWithHttpInfo
+     * Operation putPriceListItemAsyncWithHttpInfo
      *
-     * Replaces the Product resource.
+     * Replaces the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\Model\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putProductItemAsyncWithHttpInfo($id, $body = null)
+    public function putPriceListItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\Model\ProductJsonld';
-        $request = $this->putProductItemRequest($id, $body);
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->putPriceListItemRequest($id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1513,24 +1764,24 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'putProductItem'
+     * Create request for operation 'putPriceListItem'
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\Model\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\Model\PriceListJsonld $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function putProductItemRequest($id, $body = null)
+    protected function putPriceListItemRequest($id, $body = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling putProductItem'
+                'Missing the required parameter $id when calling putPriceListItem'
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/api/price_lists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1555,12 +1806,282 @@ class ProductApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json', 'application/json', 'text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
-                ['application/ld+json']
+                ['application/ld+json', 'application/json', 'text/html'],
+                ['application/ld+json', 'application/json', 'text/html']
+            );
+        }
+
+        // for model (json/xml)
+        if (isset($_tempBody)) {
+            // $_tempBody is the method argument, if present
+            $httpBody = $_tempBody;
+            // \stdClass has no __toString(), so we should encode it manually
+            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($httpBody);
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $multipartContents[] = [
+                        'name' => $formParamName,
+                        'contents' => $formParamValue
+                    ];
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif ($headers['Content-Type'] === 'application/json') {
+                $httpBody = \GuzzleHttp\json_encode($formParams);
+
+            } else {
+                // for HTTP post (form)
+                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
+            }
+        }
+
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $query = \GuzzleHttp\Psr7\build_query($queryParams);
+        return new Request(
+            'PUT',
+            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation putPriceListItem
+     *
+     * Replaces the PriceList resource.
+     *
+     * @param  string $id id (required)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return \Swagger\Client\Model\PriceListJsonld
+     */
+    public function putPriceListItem($id, $body = null)
+    {
+        list($response) = $this->putPriceListItemWithHttpInfo($id, $body);
+        return $response;
+    }
+
+    /**
+     * Operation putPriceListItemWithHttpInfo
+     *
+     * Replaces the PriceList resource.
+     *
+     * @param  string $id (required)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
+     *
+     * @throws \Swagger\Client\ApiException on non-2xx response
+     * @throws \InvalidArgumentException
+     * @return array of \Swagger\Client\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function putPriceListItemWithHttpInfo($id, $body = null)
+    {
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->putPriceListItemRequest($id, $body);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    $response->getBody()
+                );
+            }
+
+            $responseBody = $response->getBody();
+            if ($returnType === '\SplFileObject') {
+                $content = $responseBody; //stream goes to serializer
+            } else {
+                $content = $responseBody->getContents();
+                if (!in_array($returnType, ['string','integer','bool'])) {
+                    $content = json_decode($content);
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\Swagger\Client\Model\PriceListJsonld',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation putPriceListItemAsync
+     *
+     * Replaces the PriceList resource.
+     *
+     * @param  string $id (required)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function putPriceListItemAsync($id, $body = null)
+    {
+        return $this->putPriceListItemAsyncWithHttpInfo($id, $body)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation putPriceListItemAsyncWithHttpInfo
+     *
+     * Replaces the PriceList resource.
+     *
+     * @param  string $id (required)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function putPriceListItemAsyncWithHttpInfo($id, $body = null)
+    {
+        $returnType = '\Swagger\Client\Model\PriceListJsonld';
+        $request = $this->putPriceListItemRequest($id, $body);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    $responseBody = $response->getBody();
+                    if ($returnType === '\SplFileObject') {
+                        $content = $responseBody; //stream goes to serializer
+                    } else {
+                        $content = $responseBody->getContents();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'putPriceListItem'
+     *
+     * @param  string $id (required)
+     * @param  \Swagger\Client\Model\PriceList $body The updated PriceList resource (optional)
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    protected function putPriceListItemRequest($id, $body = null)
+    {
+        // verify the required parameter 'id' is set
+        if ($id === null || (is_array($id) && count($id) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $id when calling putPriceListItem'
+            );
+        }
+
+        $resourcePath = '/api/price_lists/{id}';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+        // path params
+        if ($id !== null) {
+            $resourcePath = str_replace(
+                '{' . 'id' . '}',
+                ObjectSerializer::toPathValue($id),
+                $resourcePath
+            );
+        }
+
+        // body params
+        $_tempBody = null;
+        if (isset($body)) {
+            $_tempBody = $body;
+        }
+
+        if ($multipart) {
+            $headers = $this->headerSelector->selectHeadersForMultipart(
+                ['application/ld+json', 'application/json', 'text/html']
+            );
+        } else {
+            $headers = $this->headerSelector->selectHeaders(
+                ['application/ld+json', 'application/json', 'text/html'],
+                ['application/ld+json', 'application/json', 'text/html']
             );
         }
 

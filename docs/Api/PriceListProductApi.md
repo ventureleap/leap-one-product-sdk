@@ -21,7 +21,7 @@ Removes the PriceListProduct resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\PriceListProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -67,7 +67,7 @@ Retrieves the collection of PriceListProduct resources.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\PriceListProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -100,7 +100,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/ld+json
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -114,7 +114,7 @@ Retrieves a PriceListProduct resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\PriceListProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -147,7 +147,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/ld+json
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -161,7 +161,7 @@ Updates the PriceListProduct resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\PriceListProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -196,7 +196,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/merge-patch+json
- - **Accept**: application/ld+json
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -210,7 +210,7 @@ Creates a PriceListProduct resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\PriceListProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -242,8 +242,55 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+json
- - **Accept**: application/ld+json
+ - **Content-Type**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json, application/json, text/html
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postPriceListProductCollection**
+> \Swagger\Client\Model\PriceListProductJsonld postPriceListProductCollection($body)
+
+Creates a PriceListProduct resource.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$body = new \Swagger\Client\Model\PriceListProduct(); // \Swagger\Client\Model\PriceListProduct | The new PriceListProduct resource
+
+try {
+    $result = $apiInstance->postPriceListProductCollection($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PriceListProductApi->postPriceListProductCollection: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\Model\PriceListProduct**](../Model/PriceListProduct.md)| The new PriceListProduct resource | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PriceListProductJsonld**](../Model/PriceListProductJsonld.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -257,7 +304,7 @@ Replaces the PriceListProduct resource.
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\Api\PriceListProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -291,8 +338,57 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+json
- - **Accept**: application/ld+json
+ - **Content-Type**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json, application/json, text/html
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **putPriceListProductItem**
+> \Swagger\Client\Model\PriceListProductJsonld putPriceListProductItem($id, $body)
+
+Replaces the PriceListProduct resource.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client()
+);
+$id = "id_example"; // string | 
+$body = new \Swagger\Client\Model\PriceListProduct(); // \Swagger\Client\Model\PriceListProduct | The updated PriceListProduct resource
+
+try {
+    $result = $apiInstance->putPriceListProductItem($id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling PriceListProductApi->putPriceListProductItem: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+ **body** | [**\Swagger\Client\Model\PriceListProduct**](../Model/PriceListProduct.md)| The updated PriceListProduct resource | [optional]
+
+### Return type
+
+[**\Swagger\Client\Model\PriceListProductJsonld**](../Model/PriceListProductJsonld.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+ - **Content-Type**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
