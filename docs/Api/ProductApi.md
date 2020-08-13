@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCollection**
-> \Swagger\Client\Model\InlineResponse2002 getProductCollection($name, $application_id, $page)
+> \Swagger\Client\Model\InlineResponse2002 getProductCollection($name, $application_id, $order_id, $order_name, $page)
 
 Retrieves the collection of Product resources.
 
@@ -74,10 +74,12 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
 );
 $name = "name_example"; // string | 
 $application_id = "application_id_example"; // string | 
+$order_id = "order_id_example"; // string | 
+$order_name = "order_name_example"; // string | 
 $page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->getProductCollection($name, $application_id, $page);
+    $result = $apiInstance->getProductCollection($name, $application_id, $order_id, $order_name, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductApi->getProductCollection: ', $e->getMessage(), PHP_EOL;
@@ -91,6 +93,8 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**|  | [optional]
  **application_id** | **string**|  | [optional]
+ **order_id** | **string**|  | [optional]
+ **order_name** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
 
 ### Return type
