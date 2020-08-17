@@ -96,7 +96,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/ld+jsonapplication/jsontext/html
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -143,7 +143,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/ld+jsonapplication/jsontext/html
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -192,7 +192,7 @@ No authorization required
 ### HTTP request headers
 
  - **Content-Type**: application/merge-patch+json
- - **Accept**: application/ld+jsonapplication/jsontext/html
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -238,8 +238,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+jsonapplication/jsontext/html
- - **Accept**: application/ld+jsonapplication/jsontext/html
+ - **Content-Type**: application/ld+json
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -287,8 +287,8 @@ No authorization required
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+jsonapplication/jsontext/html
- - **Accept**: application/ld+jsonapplication/jsontext/html
+ - **Content-Type**: application/ld+json
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
