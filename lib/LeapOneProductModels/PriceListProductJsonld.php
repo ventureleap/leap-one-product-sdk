@@ -59,14 +59,9 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'type' => 'string',
 'gross_price_per_unit' => 'BigDecimal',
 'tax_percentage' => 'string',
-'price_list' => 'string',
-'product' => 'string',
-'vat_per_unit' => 'BigDecimal',
-'net_price_per_unit' => 'BigDecimal',
-'internal_id' => 'string',
+'price_list' => '',
+'product' => '',
 'active' => 'bool',
-'created_at' => '\DateTime',
-'updated_at' => '\DateTime',
 'application_id' => 'string',
 'custom_data' => 'string[]'    ];
 
@@ -81,14 +76,9 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'type' => null,
 'gross_price_per_unit' => null,
 'tax_percentage' => null,
-'price_list' => 'iri-reference',
-'product' => 'iri-reference',
-'vat_per_unit' => null,
-'net_price_per_unit' => null,
-'internal_id' => null,
+'price_list' => null,
+'product' => null,
 'active' => null,
-'created_at' => 'date-time',
-'updated_at' => 'date-time',
 'application_id' => null,
 'custom_data' => null    ];
 
@@ -126,12 +116,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'tax_percentage' => 'taxPercentage',
 'price_list' => 'priceList',
 'product' => 'product',
-'vat_per_unit' => 'vatPerUnit',
-'net_price_per_unit' => 'netPricePerUnit',
-'internal_id' => 'internalId',
 'active' => 'active',
-'created_at' => 'createdAt',
-'updated_at' => 'updatedAt',
 'application_id' => 'applicationId',
 'custom_data' => 'customData'    ];
 
@@ -148,12 +133,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'tax_percentage' => 'setTaxPercentage',
 'price_list' => 'setPriceList',
 'product' => 'setProduct',
-'vat_per_unit' => 'setVatPerUnit',
-'net_price_per_unit' => 'setNetPricePerUnit',
-'internal_id' => 'setInternalId',
 'active' => 'setActive',
-'created_at' => 'setCreatedAt',
-'updated_at' => 'setUpdatedAt',
 'application_id' => 'setApplicationId',
 'custom_data' => 'setCustomData'    ];
 
@@ -170,12 +150,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'tax_percentage' => 'getTaxPercentage',
 'price_list' => 'getPriceList',
 'product' => 'getProduct',
-'vat_per_unit' => 'getVatPerUnit',
-'net_price_per_unit' => 'getNetPricePerUnit',
-'internal_id' => 'getInternalId',
 'active' => 'getActive',
-'created_at' => 'getCreatedAt',
-'updated_at' => 'getUpdatedAt',
 'application_id' => 'getApplicationId',
 'custom_data' => 'getCustomData'    ];
 
@@ -244,12 +219,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
         $this->container['tax_percentage'] = isset($data['tax_percentage']) ? $data['tax_percentage'] : null;
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
-        $this->container['vat_per_unit'] = isset($data['vat_per_unit']) ? $data['vat_per_unit'] : null;
-        $this->container['net_price_per_unit'] = isset($data['net_price_per_unit']) ? $data['net_price_per_unit'] : null;
-        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
     }
@@ -402,7 +372,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
     /**
      * Gets price_list
      *
-     * @return string
+     * @return 
      */
     public function getPriceList()
     {
@@ -412,7 +382,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
     /**
      * Sets price_list
      *
-     * @param string $price_list price_list
+     * @param  $price_list price_list
      *
      * @return $this
      */
@@ -426,7 +396,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
     /**
      * Gets product
      *
-     * @return string
+     * @return 
      */
     public function getProduct()
     {
@@ -436,85 +406,13 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
     /**
      * Sets product
      *
-     * @param string $product product
+     * @param  $product product
      *
      * @return $this
      */
     public function setProduct($product)
     {
         $this->container['product'] = $product;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat_per_unit
-     *
-     * @return BigDecimal
-     */
-    public function getVatPerUnit()
-    {
-        return $this->container['vat_per_unit'];
-    }
-
-    /**
-     * Sets vat_per_unit
-     *
-     * @param BigDecimal $vat_per_unit vat_per_unit
-     *
-     * @return $this
-     */
-    public function setVatPerUnit($vat_per_unit)
-    {
-        $this->container['vat_per_unit'] = $vat_per_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets net_price_per_unit
-     *
-     * @return BigDecimal
-     */
-    public function getNetPricePerUnit()
-    {
-        return $this->container['net_price_per_unit'];
-    }
-
-    /**
-     * Sets net_price_per_unit
-     *
-     * @param BigDecimal $net_price_per_unit net_price_per_unit
-     *
-     * @return $this
-     */
-    public function setNetPricePerUnit($net_price_per_unit)
-    {
-        $this->container['net_price_per_unit'] = $net_price_per_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets internal_id
-     *
-     * @return string
-     */
-    public function getInternalId()
-    {
-        return $this->container['internal_id'];
-    }
-
-    /**
-     * Sets internal_id
-     *
-     * @param string $internal_id internal_id
-     *
-     * @return $this
-     */
-    public function setInternalId($internal_id)
-    {
-        $this->container['internal_id'] = $internal_id;
 
         return $this;
     }
@@ -539,54 +437,6 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
     public function setActive($active)
     {
         $this->container['active'] = $active;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param \DateTime $created_at created_at
-     *
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     *
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     *
-     * @param \DateTime $updated_at updated_at
-     *
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

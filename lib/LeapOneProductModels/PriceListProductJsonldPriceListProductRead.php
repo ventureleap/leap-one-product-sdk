@@ -1,6 +1,6 @@
 <?php
 /**
- * InlineResponse200
+ * PriceListProductJsonldPriceListProductRead
  *
  * PHP version 5
  *
@@ -30,14 +30,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * InlineResponse200 Class Doc Comment
+ * PriceListProductJsonldPriceListProductRead Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class InlineResponse200 implements ModelInterface, ArrayAccess
+class PriceListProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -46,7 +46,7 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'inline_response_200';
+    protected static $swaggerModelName = 'PriceListProduct:jsonld-price_list_product:read';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -54,10 +54,12 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'hydramember' => '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead[]',
-'hydratotal_items' => 'int',
-'hydraview' => '\Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview',
-'hydrasearch' => '\Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch'    ];
+        'context' => 'string',
+'id' => 'string',
+'type' => 'string',
+'tax_percentage' => 'string',
+'price_list' => '',
+'product' => ''    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -65,10 +67,12 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'hydramember' => null,
-'hydratotal_items' => 'int32',
-'hydraview' => null,
-'hydrasearch' => null    ];
+        'context' => null,
+'id' => null,
+'type' => null,
+'tax_percentage' => null,
+'price_list' => null,
+'product' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -97,10 +101,12 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'hydramember' => 'hydra:member',
-'hydratotal_items' => 'hydra:totalItems',
-'hydraview' => 'hydra:view',
-'hydrasearch' => 'hydra:search'    ];
+        'context' => '@context',
+'id' => '@id',
+'type' => '@type',
+'tax_percentage' => 'taxPercentage',
+'price_list' => 'priceList',
+'product' => 'product'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -108,10 +114,12 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'hydramember' => 'setHydramember',
-'hydratotal_items' => 'setHydratotalItems',
-'hydraview' => 'setHydraview',
-'hydrasearch' => 'setHydrasearch'    ];
+        'context' => 'setContext',
+'id' => 'setId',
+'type' => 'setType',
+'tax_percentage' => 'setTaxPercentage',
+'price_list' => 'setPriceList',
+'product' => 'setProduct'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -119,10 +127,12 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'hydramember' => 'getHydramember',
-'hydratotal_items' => 'getHydratotalItems',
-'hydraview' => 'getHydraview',
-'hydrasearch' => 'getHydrasearch'    ];
+        'context' => 'getContext',
+'id' => 'getId',
+'type' => 'getType',
+'tax_percentage' => 'getTaxPercentage',
+'price_list' => 'getPriceList',
+'product' => 'getProduct'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -182,10 +192,12 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['hydramember'] = isset($data['hydramember']) ? $data['hydramember'] : null;
-        $this->container['hydratotal_items'] = isset($data['hydratotal_items']) ? $data['hydratotal_items'] : null;
-        $this->container['hydraview'] = isset($data['hydraview']) ? $data['hydraview'] : null;
-        $this->container['hydrasearch'] = isset($data['hydrasearch']) ? $data['hydrasearch'] : null;
+        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['tax_percentage'] = isset($data['tax_percentage']) ? $data['tax_percentage'] : null;
+        $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
+        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
     }
 
     /**
@@ -196,10 +208,6 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
     public function listInvalidProperties()
     {
         $invalidProperties = [];
-
-        if (!is_null($this->container['hydratotal_items']) && ($this->container['hydratotal_items'] < 0)) {
-            $invalidProperties[] = "invalid value for 'hydratotal_items', must be bigger than or equal to 0.";
-        }
 
         return $invalidProperties;
     }
@@ -218,102 +226,145 @@ class InlineResponse200 implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets hydramember
+     * Gets context
      *
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead[]
+     * @return string
      */
-    public function getHydramember()
+    public function getContext()
     {
-        return $this->container['hydramember'];
+        return $this->container['context'];
     }
 
     /**
-     * Sets hydramember
+     * Sets context
      *
-     * @param \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead[] $hydramember hydramember
+     * @param string $context context
      *
      * @return $this
      */
-    public function setHydramember($hydramember)
+    public function setContext($context)
     {
-        $this->container['hydramember'] = $hydramember;
+        $this->container['context'] = $context;
 
         return $this;
     }
 
     /**
-     * Gets hydratotal_items
+     * Gets id
      *
-     * @return int
+     * @return string
      */
-    public function getHydratotalItems()
+    public function getId()
     {
-        return $this->container['hydratotal_items'];
+        return $this->container['id'];
     }
 
     /**
-     * Sets hydratotal_items
+     * Sets id
      *
-     * @param int $hydratotal_items hydratotal_items
+     * @param string $id id
      *
      * @return $this
      */
-    public function setHydratotalItems($hydratotal_items)
+    public function setId($id)
     {
-
-        if (!is_null($hydratotal_items) && ($hydratotal_items < 0)) {
-            throw new \InvalidArgumentException('invalid value for $hydratotal_items when calling InlineResponse200., must be bigger than or equal to 0.');
-        }
-
-        $this->container['hydratotal_items'] = $hydratotal_items;
+        $this->container['id'] = $id;
 
         return $this;
     }
 
     /**
-     * Gets hydraview
+     * Gets type
      *
-     * @return \Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview
+     * @return string
      */
-    public function getHydraview()
+    public function getType()
     {
-        return $this->container['hydraview'];
+        return $this->container['type'];
     }
 
     /**
-     * Sets hydraview
+     * Sets type
      *
-     * @param \Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview $hydraview hydraview
+     * @param string $type type
      *
      * @return $this
      */
-    public function setHydraview($hydraview)
+    public function setType($type)
     {
-        $this->container['hydraview'] = $hydraview;
+        $this->container['type'] = $type;
 
         return $this;
     }
 
     /**
-     * Gets hydrasearch
+     * Gets tax_percentage
      *
-     * @return \Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch
+     * @return string
      */
-    public function getHydrasearch()
+    public function getTaxPercentage()
     {
-        return $this->container['hydrasearch'];
+        return $this->container['tax_percentage'];
     }
 
     /**
-     * Sets hydrasearch
+     * Sets tax_percentage
      *
-     * @param \Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch $hydrasearch hydrasearch
+     * @param string $tax_percentage tax_percentage
      *
      * @return $this
      */
-    public function setHydrasearch($hydrasearch)
+    public function setTaxPercentage($tax_percentage)
     {
-        $this->container['hydrasearch'] = $hydrasearch;
+        $this->container['tax_percentage'] = $tax_percentage;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_list
+     *
+     * @return 
+     */
+    public function getPriceList()
+    {
+        return $this->container['price_list'];
+    }
+
+    /**
+     * Sets price_list
+     *
+     * @param  $price_list price_list
+     *
+     * @return $this
+     */
+    public function setPriceList($price_list)
+    {
+        $this->container['price_list'] = $price_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets product
+     *
+     * @return 
+     */
+    public function getProduct()
+    {
+        return $this->container['product'];
+    }
+
+    /**
+     * Sets product
+     *
+     * @param  $product product
+     *
+     * @return $this
+     */
+    public function setProduct($product)
+    {
+        $this->container['product'] = $product;
 
         return $this;
     }

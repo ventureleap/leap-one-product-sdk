@@ -496,11 +496,11 @@ $resourcePath = '/api/price_lists';
         $_tempBody = null;
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json''application/json''text/html'],
                 []
             );
         }
@@ -759,11 +759,11 @@ if ($id !== null) {
         $_tempBody = null;
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json''application/json''text/html'],
                 []
             );
         }
@@ -1030,11 +1030,11 @@ if (isset($body)) {
         }
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json''application/json''text/html'],
                 ['application/merge-patch+json']
             );
         }
@@ -1282,12 +1282,12 @@ if (isset($body)) {
         }
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html'],
+                ['application/ld+json''application/json''text/html']
             );
         }
 
@@ -1553,12 +1553,12 @@ if (isset($body)) {
         }
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html'],
+                ['application/ld+json''application/json''text/html']
             );
         }
 

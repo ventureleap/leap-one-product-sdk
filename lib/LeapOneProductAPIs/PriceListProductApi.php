@@ -314,15 +314,16 @@ $defaultHeaders = [];
 *
      * Retrieves the collection of PriceListProduct resources.
 *
+* @param  string $product product (optional)
 * @param  int $page The collection page number (optional)
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\LeapOneProductModels\InlineResponse200
      */
-    public function getPriceListProductCollection($page = null)
+    public function getPriceListProductCollection($product = null, $page = null)
     {
-        list($response) = $this->getPriceListProductCollectionWithHttpInfo($page);
+        list($response) = $this->getPriceListProductCollectionWithHttpInfo($product, $page);
         return $response;
     }
 
@@ -331,16 +332,17 @@ $defaultHeaders = [];
 *
      * Retrieves the collection of PriceListProduct resources.
 *
+* @param  string $product (optional)
 * @param  int $page The collection page number (optional)
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPriceListProductCollectionWithHttpInfo($page = null)
+    public function getPriceListProductCollectionWithHttpInfo($product = null, $page = null)
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse200';
-        $request = $this->getPriceListProductCollectionRequest($page);
+        $request = $this->getPriceListProductCollectionRequest($product, $page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -413,14 +415,15 @@ case 200:$data = ObjectSerializer::deserialize(
      *
      * Retrieves the collection of PriceListProduct resources.
      *
+* @param  string $product (optional)
 * @param  int $page The collection page number (optional)
 *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPriceListProductCollectionAsync($page = null)
+    public function getPriceListProductCollectionAsync($product = null, $page = null)
     {
-        return $this->getPriceListProductCollectionAsyncWithHttpInfo($page)
+        return $this->getPriceListProductCollectionAsyncWithHttpInfo($product, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -433,15 +436,16 @@ case 200:$data = ObjectSerializer::deserialize(
      *
      * Retrieves the collection of PriceListProduct resources.
      *
+* @param  string $product (optional)
 * @param  int $page The collection page number (optional)
 *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPriceListProductCollectionAsyncWithHttpInfo($page = null)
+    public function getPriceListProductCollectionAsyncWithHttpInfo($product = null, $page = null)
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse200';
-        $request = $this->getPriceListProductCollectionRequest($page);
+        $request = $this->getPriceListProductCollectionRequest($product, $page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -483,12 +487,13 @@ $responseBody = $response->getBody();
     /**
      * Create request for operation 'getPriceListProductCollection'
      *
+* @param  string $product (optional)
 * @param  int $page The collection page number (optional)
 *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPriceListProductCollectionRequest($page = null)
+    protected function getPriceListProductCollectionRequest($product = null, $page = null)
     {
 $resourcePath = '/api/price_list_products';
         $formParams = [];
@@ -498,6 +503,10 @@ $resourcePath = '/api/price_list_products';
         $multipart = false;
 
 // query params
+if ($product !== null) {
+            $queryParams['product'] = ObjectSerializer::toQueryValue($product);
+        }
+// query params
 if ($page !== null) {
             $queryParams['page'] = ObjectSerializer::toQueryValue($page);
         }
@@ -505,11 +514,11 @@ if ($page !== null) {
         $_tempBody = null;
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json''application/json''text/html'],
                 []
             );
         }
@@ -571,7 +580,7 @@ $defaultHeaders = [];
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead
      */
     public function getPriceListProductItem($id)
     {
@@ -588,11 +597,11 @@ $defaultHeaders = [];
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceListProductItemWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->getPriceListProductItemRequest($id);
 
         try {
@@ -651,7 +660,7 @@ $responseBody = $response->getBody();
             switch ($e->getCode()) {
 case 200:$data = ObjectSerializer::deserialize(
                         $content,
-                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -693,7 +702,7 @@ case 200:$data = ObjectSerializer::deserialize(
      */
     public function getPriceListProductItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->getPriceListProductItemRequest($id);
 
         return $this->client
@@ -768,11 +777,11 @@ if ($id !== null) {
         $_tempBody = null;
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json''application/json''text/html'],
                 []
             );
         }
@@ -835,7 +844,7 @@ $defaultHeaders = [];
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead
      */
     public function patchPriceListProductItem($id, $body = null)
     {
@@ -853,11 +862,11 @@ $defaultHeaders = [];
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchPriceListProductItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->patchPriceListProductItemRequest($id, $body);
 
         try {
@@ -916,7 +925,7 @@ $responseBody = $response->getBody();
             switch ($e->getCode()) {
 case 200:$data = ObjectSerializer::deserialize(
                         $content,
-                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -960,7 +969,7 @@ case 200:$data = ObjectSerializer::deserialize(
      */
     public function patchPriceListProductItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->patchPriceListProductItemRequest($id, $body);
 
         return $this->client
@@ -1039,11 +1048,11 @@ if (isset($body)) {
         }
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
+                ['application/ld+json''application/json''text/html'],
                 ['application/merge-patch+json']
             );
         }
@@ -1105,7 +1114,7 @@ $defaultHeaders = [];
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead
      */
     public function postPriceListProductCollection($body = null)
     {
@@ -1122,11 +1131,11 @@ $defaultHeaders = [];
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPriceListProductCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->postPriceListProductCollectionRequest($body);
 
         try {
@@ -1185,7 +1194,7 @@ $responseBody = $response->getBody();
             switch ($e->getCode()) {
 case 201:$data = ObjectSerializer::deserialize(
                         $content,
-                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1227,7 +1236,7 @@ case 201:$data = ObjectSerializer::deserialize(
      */
     public function postPriceListProductCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->postPriceListProductCollectionRequest($body);
 
         return $this->client
@@ -1291,12 +1300,12 @@ if (isset($body)) {
         }
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html'],
+                ['application/ld+json''application/json''text/html']
             );
         }
 
@@ -1358,7 +1367,7 @@ $defaultHeaders = [];
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead
      */
     public function putPriceListProductItem($id, $body = null)
     {
@@ -1376,11 +1385,11 @@ $defaultHeaders = [];
 *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function putPriceListProductItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->putPriceListProductItemRequest($id, $body);
 
         try {
@@ -1439,7 +1448,7 @@ $responseBody = $response->getBody();
             switch ($e->getCode()) {
 case 200:$data = ObjectSerializer::deserialize(
                         $content,
-                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1483,7 +1492,7 @@ case 200:$data = ObjectSerializer::deserialize(
      */
     public function putPriceListProductItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->putPriceListProductItemRequest($id, $body);
 
         return $this->client
@@ -1562,12 +1571,12 @@ if (isset($body)) {
         }
 if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json'],
-                ['application/ld+json']
+                ['application/ld+json''application/json''text/html'],
+                ['application/ld+json''application/json''text/html']
             );
         }
 
