@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteProductItem**](ProductApi.md#deleteproductitem) | **DELETE** /api/products/{id} | Removes the Product resource.
-[**getProductCollection**](ProductApi.md#getproductcollection) | **GET** /api/products | Retrieves the collection of Product resources.
-[**getProductItem**](ProductApi.md#getproductitem) | **GET** /api/products/{id} | Retrieves a Product resource.
-[**patchProductItem**](ProductApi.md#patchproductitem) | **PATCH** /api/products/{id} | Updates the Product resource.
-[**postProductCollection**](ProductApi.md#postproductcollection) | **POST** /api/products | Creates a Product resource.
-[**putProductItem**](ProductApi.md#putproductitem) | **PUT** /api/products/{id} | Replaces the Product resource.
+[**deleteProductItem**](ProductApi.md#deleteProductItem) | **DELETE** /api/products/{id} | Removes the Product resource.
+[**getProductCollection**](ProductApi.md#getProductCollection) | **GET** /api/products | Retrieves the collection of Product resources.
+[**getProductItem**](ProductApi.md#getProductItem) | **GET** /api/products/{id} | Retrieves a Product resource.
+[**patchProductItem**](ProductApi.md#patchProductItem) | **PATCH** /api/products/{id} | Updates the Product resource.
+[**postProductCollection**](ProductApi.md#postProductCollection) | **POST** /api/products | Creates a Product resource.
+[**putProductItem**](ProductApi.md#putProductItem) | **PUT** /api/products/{id} | Replaces the Product resource.
 
 # **deleteProductItem**
 > deleteProductItem($id)
@@ -58,7 +58,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCollection**
-> \Swagger\Client\Model\InlineResponse2002 getProductCollection($name, $application_id, $page)
+> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCollection($name, $application_id, $order_id, $order_name, $page)
 
 Retrieves the collection of Product resources.
 
@@ -74,10 +74,12 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
 );
 $name = "name_example"; // string | 
 $application_id = "application_id_example"; // string | 
-$page = 1; // int | The collection page number
+$order_id = "order_id_example"; // string | 
+$order_name = "order_name_example"; // string | 
+$page = 56; // int | The collection page number
 
 try {
-    $result = $apiInstance->getProductCollection($name, $application_id, $page);
+    $result = $apiInstance->getProductCollection($name, $application_id, $order_id, $order_name, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductApi->getProductCollection: ', $e->getMessage(), PHP_EOL;
@@ -91,11 +93,13 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**|  | [optional]
  **application_id** | **string**|  | [optional]
- **page** | **int**| The collection page number | [optional] [default to 1]
+ **order_id** | **string**|  | [optional]
+ **order_name** | **string**|  | [optional]
+ **page** | **int**| The collection page number | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\Swagger\Client\LeapOneProductModels\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -109,7 +113,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductItem**
-> \Swagger\Client\Model\ProductJsonld getProductItem($id)
+> \Swagger\Client\LeapOneProductModels\ProductJsonld getProductItem($id)
 
 Retrieves a Product resource.
 
@@ -142,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\Model\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
 
 ### Authorization
 
@@ -156,7 +160,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchProductItem**
-> \Swagger\Client\Model\ProductJsonld patchProductItem($id, $body)
+> \Swagger\Client\LeapOneProductModels\ProductJsonld patchProductItem($id, $body)
 
 Updates the Product resource.
 
@@ -171,7 +175,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     new GuzzleHttp\Client()
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\Model\Product(); // \Swagger\Client\Model\Product | The updated Product resource
+$body = new \Swagger\Client\LeapOneProductModels\Product(); // \Swagger\Client\LeapOneProductModels\Product | The updated Product resource
 
 try {
     $result = $apiInstance->patchProductItem($id, $body);
@@ -187,11 +191,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\Model\Product**](../Model/Product.md)| The updated Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\Product**](../Model/Product.md)| The updated Product resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
 
 ### Authorization
 
@@ -205,7 +209,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postProductCollection**
-> \Swagger\Client\Model\ProductJsonld postProductCollection($body)
+> \Swagger\Client\LeapOneProductModels\ProductJsonld postProductCollection($body)
 
 Creates a Product resource.
 
@@ -219,7 +223,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\ProductJsonld(); // \Swagger\Client\Model\ProductJsonld | The new Product resource
+$body = new \Swagger\Client\LeapOneProductModels\ProductJsonld(); // \Swagger\Client\LeapOneProductModels\ProductJsonld | The new Product resource
 
 try {
     $result = $apiInstance->postProductCollection($body);
@@ -234,11 +238,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\Model\ProductJsonld**](../Model/ProductJsonld.md)| The new Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)| The new Product resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
 
 ### Authorization
 
@@ -252,7 +256,7 @@ No authorization required
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putProductItem**
-> \Swagger\Client\Model\ProductJsonld putProductItem($id, $body)
+> \Swagger\Client\LeapOneProductModels\ProductJsonld putProductItem($id, $body)
 
 Replaces the Product resource.
 
@@ -267,7 +271,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     new GuzzleHttp\Client()
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\Model\ProductJsonld(); // \Swagger\Client\Model\ProductJsonld | The updated Product resource
+$body = new \Swagger\Client\LeapOneProductModels\ProductJsonld(); // \Swagger\Client\LeapOneProductModels\ProductJsonld | The updated Product resource
 
 try {
     $result = $apiInstance->putProductItem($id, $body);
@@ -283,11 +287,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\Model\ProductJsonld**](../Model/ProductJsonld.md)| The updated Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)| The updated Product resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\Model\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
 
 ### Authorization
 

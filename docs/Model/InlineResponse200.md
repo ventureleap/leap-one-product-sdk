@@ -3,10 +3,10 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hydramember** | [**\Swagger\Client\Model\PriceListProductJsonld[]**](PriceListProductJsonld.md) |  | 
+**hydramember** | [**\Swagger\Client\LeapOneProductModels\PriceListProductJsonld[]**](PriceListProductJsonld.md) |  | [optional] 
 **hydratotal_items** | **int** |  | [optional] 
-**hydraview** | [**\Swagger\Client\Model\InlineResponse200Hydraview**](InlineResponse200Hydraview.md) |  | [optional] 
-**hydrasearch** | [**\Swagger\Client\Model\InlineResponse200Hydrasearch**](InlineResponse200Hydrasearch.md) |  | [optional] 
+**hydraview** | [**\Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview**](InlineResponse200Hydraview.md) |  | [optional] 
+**hydrasearch** | [**\Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch**](InlineResponse200Hydrasearch.md) |  | [optional] 
 
-[[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
+[[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
