@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteProductItem**](ProductApi.md#deleteProductItem) | **DELETE** /api/products/{id} | Removes the Product resource.
-[**getProductCollection**](ProductApi.md#getProductCollection) | **GET** /api/products | Retrieves the collection of Product resources.
-[**getProductItem**](ProductApi.md#getProductItem) | **GET** /api/products/{id} | Retrieves a Product resource.
-[**patchProductItem**](ProductApi.md#patchProductItem) | **PATCH** /api/products/{id} | Updates the Product resource.
-[**postProductCollection**](ProductApi.md#postProductCollection) | **POST** /api/products | Creates a Product resource.
-[**putProductItem**](ProductApi.md#putProductItem) | **PUT** /api/products/{id} | Replaces the Product resource.
+[**deleteProductItem**](ProductApi.md#deleteproductitem) | **DELETE** /api/products/{id} | Removes the Product resource.
+[**getProductCollection**](ProductApi.md#getproductcollection) | **GET** /api/products | Retrieves the collection of Product resources.
+[**getProductItem**](ProductApi.md#getproductitem) | **GET** /api/products/{id} | Retrieves a Product resource.
+[**patchProductItem**](ProductApi.md#patchproductitem) | **PATCH** /api/products/{id} | Updates the Product resource.
+[**postProductCollection**](ProductApi.md#postproductcollection) | **POST** /api/products | Creates a Product resource.
+[**putProductItem**](ProductApi.md#putproductitem) | **PUT** /api/products/{id} | Replaces the Product resource.
 
 # **deleteProductItem**
 > deleteProductItem($id)
@@ -76,7 +76,7 @@ $name = "name_example"; // string |
 $application_id = "application_id_example"; // string | 
 $order_id = "order_id_example"; // string | 
 $order_name = "order_name_example"; // string | 
-$page = 56; // int | The collection page number
+$page = 1; // int | The collection page number
 
 try {
     $result = $apiInstance->getProductCollection($name, $application_id, $order_id, $order_name, $page);
@@ -95,7 +95,7 @@ Name | Type | Description  | Notes
  **application_id** | **string**|  | [optional]
  **order_id** | **string**|  | [optional]
  **order_name** | **string**|  | [optional]
- **page** | **int**| The collection page number | [optional]
+ **page** | **int**| The collection page number | [optional] [default to 1]
 
 ### Return type
 
