@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductTest
+ * InlineResponse2003Test
  *
  * PHP version 5
  *
@@ -27,15 +27,15 @@
 namespace Swagger\Client;
 
 /**
- * ProductTest Class Doc Comment
+ * InlineResponse2003Test Class Doc Comment
  *
  * @category    Class
- * @description Product
+ * @description InlineResponse2003
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductTest extends \PHPUnit_Framework_TestCase
+class InlineResponse2003Test extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -67,72 +67,37 @@ class ProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Product"
+     * Test "InlineResponse2003"
      */
-    public function testProduct()
+    public function testInlineResponse2003()
     {
     }
 
     /**
-     * Test attribute "categories"
+     * Test attribute "hydramember"
      */
-    public function testPropertyCategories()
+    public function testPropertyHydramember()
     {
     }
 
     /**
-     * Test attribute "internal_id"
+     * Test attribute "hydratotal_items"
      */
-    public function testPropertyInternalId()
+    public function testPropertyHydratotalItems()
     {
     }
 
     /**
-     * Test attribute "active"
+     * Test attribute "hydraview"
      */
-    public function testPropertyActive()
+    public function testPropertyHydraview()
     {
     }
 
     /**
-     * Test attribute "name"
+     * Test attribute "hydrasearch"
      */
-    public function testPropertyName()
-    {
-    }
-
-    /**
-     * Test attribute "priority"
-     */
-    public function testPropertyPriority()
-    {
-    }
-
-    /**
-     * Test attribute "created_at"
-     */
-    public function testPropertyCreatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "updated_at"
-     */
-    public function testPropertyUpdatedAt()
-    {
-    }
-
-    /**
-     * Test attribute "application_id"
-     */
-    public function testPropertyApplicationId()
-    {
-    }
-
-    /**
-     * Test attribute "custom_data"
-     */
-    public function testPropertyCustomData()
+    public function testPropertyHydrasearch()
     {
     }
 }

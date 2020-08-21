@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductTest
+ * ProductCategoryTest
  *
  * PHP version 5
  *
@@ -27,15 +27,15 @@
 namespace Swagger\Client;
 
 /**
- * ProductTest Class Doc Comment
+ * ProductCategoryTest Class Doc Comment
  *
  * @category    Class
- * @description Product
+ * @description ProductCategory
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductTest extends \PHPUnit_Framework_TestCase
+class ProductCategoryTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -67,16 +67,16 @@ class ProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Product"
+     * Test "ProductCategory"
      */
-    public function testProduct()
+    public function testProductCategory()
     {
     }
 
     /**
-     * Test attribute "categories"
+     * Test attribute "products"
      */
-    public function testPropertyCategories()
+    public function testPropertyProducts()
     {
     }
 

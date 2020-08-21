@@ -1,9 +1,9 @@
-# Product
+# ProductCategory
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**categories** | **string[]** |  | [optional] 
+**products** | **string[]** |  | [optional] 
 **internal_id** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **name** | **string** |  | [optional] 

@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductApi
+ * ProductCategoryApi
  * PHP version 5
  *
  * @category Class
@@ -37,14 +37,14 @@ use Swagger\Client\HeaderSelector;
 use Swagger\Client\ObjectSerializer;
 
 /**
- * ProductApi Class Doc Comment
+ * ProductCategoryApi Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class ProductApi
+class ProductCategoryApi
 {
     /**
      * @var ClientInterface
@@ -85,9 +85,9 @@ class ProductApi
     }
 
     /**
-     * Operation deleteProductItem
+     * Operation deleteProductCategoryItem
      *
-     * Removes the Product resource.
+     * Removes the ProductCategory resource.
      *
      * @param  string $id id (required)
      *
@@ -95,15 +95,15 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return void
      */
-    public function deleteProductItem($id)
+    public function deleteProductCategoryItem($id)
     {
-        $this->deleteProductItemWithHttpInfo($id);
+        $this->deleteProductCategoryItemWithHttpInfo($id);
     }
 
     /**
-     * Operation deleteProductItemWithHttpInfo
+     * Operation deleteProductCategoryItemWithHttpInfo
      *
-     * Removes the Product resource.
+     * Removes the ProductCategory resource.
      *
      * @param  string $id (required)
      *
@@ -111,10 +111,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteProductItemWithHttpInfo($id)
+    public function deleteProductCategoryItemWithHttpInfo($id)
     {
         $returnType = '';
-        $request = $this->deleteProductItemRequest($id);
+        $request = $this->deleteProductCategoryItemRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -154,18 +154,18 @@ class ProductApi
     }
 
     /**
-     * Operation deleteProductItemAsync
+     * Operation deleteProductCategoryItemAsync
      *
-     * Removes the Product resource.
+     * Removes the ProductCategory resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteProductItemAsync($id)
+    public function deleteProductCategoryItemAsync($id)
     {
-        return $this->deleteProductItemAsyncWithHttpInfo($id)
+        return $this->deleteProductCategoryItemAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -174,19 +174,19 @@ class ProductApi
     }
 
     /**
-     * Operation deleteProductItemAsyncWithHttpInfo
+     * Operation deleteProductCategoryItemAsyncWithHttpInfo
      *
-     * Removes the Product resource.
+     * Removes the ProductCategory resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function deleteProductItemAsyncWithHttpInfo($id)
+    public function deleteProductCategoryItemAsyncWithHttpInfo($id)
     {
         $returnType = '';
-        $request = $this->deleteProductItemRequest($id);
+        $request = $this->deleteProductCategoryItemRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -212,23 +212,23 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'deleteProductItem'
+     * Create request for operation 'deleteProductCategoryItem'
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function deleteProductItemRequest($id)
+    protected function deleteProductCategoryItemRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling deleteProductItem'
+                'Missing the required parameter $id when calling deleteProductCategoryItem'
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/api/product_categories/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -310,45 +310,41 @@ class ProductApi
     }
 
     /**
-     * Operation getProductCollection
+     * Operation getProductCategoryCollection
      *
-     * Retrieves the collection of Product resources.
+     * Retrieves the collection of ProductCategory resources.
      *
-     * @param  string $name name (optional)
      * @param  string $application_id application_id (optional)
-     * @param  string $order_id order_id (optional)
-     * @param  string $order_name order_name (optional)
+     * @param  string $name name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\InlineResponse2003
+     * @return \Swagger\Client\LeapOneProductModels\InlineResponse2002
      */
-    public function getProductCollection($name = null, $application_id = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCategoryCollection($application_id = null, $name = null, $page = '1')
     {
-        list($response) = $this->getProductCollectionWithHttpInfo($name, $application_id, $order_id, $order_name, $page);
+        list($response) = $this->getProductCategoryCollectionWithHttpInfo($application_id, $name, $page);
         return $response;
     }
 
     /**
-     * Operation getProductCollectionWithHttpInfo
+     * Operation getProductCategoryCollectionWithHttpInfo
      *
-     * Retrieves the collection of Product resources.
+     * Retrieves the collection of ProductCategory resources.
      *
-     * @param  string $name (optional)
      * @param  string $application_id (optional)
-     * @param  string $order_id (optional)
-     * @param  string $order_name (optional)
+     * @param  string $name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCollectionWithHttpInfo($name = null, $application_id = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCategoryCollectionWithHttpInfo($application_id = null, $name = null, $page = '1')
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2003';
-        $request = $this->getProductCollectionRequest($name, $application_id, $order_id, $order_name, $page);
+        $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2002';
+        $request = $this->getProductCategoryCollectionRequest($application_id, $name, $page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -399,7 +395,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\InlineResponse2003',
+                        '\Swagger\Client\LeapOneProductModels\InlineResponse2002',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -410,22 +406,20 @@ class ProductApi
     }
 
     /**
-     * Operation getProductCollectionAsync
+     * Operation getProductCategoryCollectionAsync
      *
-     * Retrieves the collection of Product resources.
+     * Retrieves the collection of ProductCategory resources.
      *
-     * @param  string $name (optional)
      * @param  string $application_id (optional)
-     * @param  string $order_id (optional)
-     * @param  string $order_name (optional)
+     * @param  string $name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsync($name = null, $application_id = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCategoryCollectionAsync($application_id = null, $name = null, $page = '1')
     {
-        return $this->getProductCollectionAsyncWithHttpInfo($name, $application_id, $order_id, $order_name, $page)
+        return $this->getProductCategoryCollectionAsyncWithHttpInfo($application_id, $name, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -434,23 +428,21 @@ class ProductApi
     }
 
     /**
-     * Operation getProductCollectionAsyncWithHttpInfo
+     * Operation getProductCategoryCollectionAsyncWithHttpInfo
      *
-     * Retrieves the collection of Product resources.
+     * Retrieves the collection of ProductCategory resources.
      *
-     * @param  string $name (optional)
      * @param  string $application_id (optional)
-     * @param  string $order_id (optional)
-     * @param  string $order_name (optional)
+     * @param  string $name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsyncWithHttpInfo($name = null, $application_id = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCategoryCollectionAsyncWithHttpInfo($application_id = null, $name = null, $page = '1')
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2003';
-        $request = $this->getProductCollectionRequest($name, $application_id, $order_id, $order_name, $page);
+        $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2002';
+        $request = $this->getProductCategoryCollectionRequest($application_id, $name, $page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -490,21 +482,19 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'getProductCollection'
+     * Create request for operation 'getProductCategoryCollection'
      *
-     * @param  string $name (optional)
      * @param  string $application_id (optional)
-     * @param  string $order_id (optional)
-     * @param  string $order_name (optional)
+     * @param  string $name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCollectionRequest($name = null, $application_id = null, $order_id = null, $order_name = null, $page = '1')
+    protected function getProductCategoryCollectionRequest($application_id = null, $name = null, $page = '1')
     {
 
-        $resourcePath = '/api/products';
+        $resourcePath = '/api/product_categories';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -512,20 +502,12 @@ class ProductApi
         $multipart = false;
 
         // query params
-        if ($name !== null) {
-            $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);
-        }
-        // query params
         if ($application_id !== null) {
             $queryParams['applicationId'] = ObjectSerializer::toQueryValue($application_id, null);
         }
         // query params
-        if ($order_id !== null) {
-            $queryParams['order[id]'] = ObjectSerializer::toQueryValue($order_id, null);
-        }
-        // query params
-        if ($order_name !== null) {
-            $queryParams['order[name]'] = ObjectSerializer::toQueryValue($order_name, null);
+        if ($name !== null) {
+            $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);
         }
         // query params
         if ($page !== null) {
@@ -598,37 +580,37 @@ class ProductApi
     }
 
     /**
-     * Operation getProductItem
+     * Operation getProductCategoryItem
      *
-     * Retrieves a Product resource.
+     * Retrieves a ProductCategory resource.
      *
      * @param  string $id id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
      */
-    public function getProductItem($id)
+    public function getProductCategoryItem($id)
     {
-        list($response) = $this->getProductItemWithHttpInfo($id);
+        list($response) = $this->getProductCategoryItemWithHttpInfo($id);
         return $response;
     }
 
     /**
-     * Operation getProductItemWithHttpInfo
+     * Operation getProductCategoryItemWithHttpInfo
      *
-     * Retrieves a Product resource.
+     * Retrieves a ProductCategory resource.
      *
      * @param  string $id (required)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductItemWithHttpInfo($id)
+    public function getProductCategoryItemWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductJsonld';
-        $request = $this->getProductItemRequest($id);
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $request = $this->getProductCategoryItemRequest($id);
 
         try {
             $options = $this->createHttpClientOption();
@@ -679,7 +661,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -690,18 +672,18 @@ class ProductApi
     }
 
     /**
-     * Operation getProductItemAsync
+     * Operation getProductCategoryItemAsync
      *
-     * Retrieves a Product resource.
+     * Retrieves a ProductCategory resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductItemAsync($id)
+    public function getProductCategoryItemAsync($id)
     {
-        return $this->getProductItemAsyncWithHttpInfo($id)
+        return $this->getProductCategoryItemAsyncWithHttpInfo($id)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -710,19 +692,19 @@ class ProductApi
     }
 
     /**
-     * Operation getProductItemAsyncWithHttpInfo
+     * Operation getProductCategoryItemAsyncWithHttpInfo
      *
-     * Retrieves a Product resource.
+     * Retrieves a ProductCategory resource.
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductItemAsyncWithHttpInfo($id)
+    public function getProductCategoryItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductJsonld';
-        $request = $this->getProductItemRequest($id);
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $request = $this->getProductCategoryItemRequest($id);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -762,23 +744,23 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'getProductItem'
+     * Create request for operation 'getProductCategoryItem'
      *
      * @param  string $id (required)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductItemRequest($id)
+    protected function getProductCategoryItemRequest($id)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling getProductItem'
+                'Missing the required parameter $id when calling getProductCategoryItem'
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/api/product_categories/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -860,39 +842,39 @@ class ProductApi
     }
 
     /**
-     * Operation patchProductItem
+     * Operation patchProductCategoryItem
      *
-     * Updates the Product resource.
+     * Updates the ProductCategory resource.
      *
      * @param  string $id id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategory $body The updated ProductCategory resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
      */
-    public function patchProductItem($id, $body = null)
+    public function patchProductCategoryItem($id, $body = null)
     {
-        list($response) = $this->patchProductItemWithHttpInfo($id, $body);
+        list($response) = $this->patchProductCategoryItemWithHttpInfo($id, $body);
         return $response;
     }
 
     /**
-     * Operation patchProductItemWithHttpInfo
+     * Operation patchProductCategoryItemWithHttpInfo
      *
-     * Updates the Product resource.
+     * Updates the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategory $body The updated ProductCategory resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchProductItemWithHttpInfo($id, $body = null)
+    public function patchProductCategoryItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductJsonld';
-        $request = $this->patchProductItemRequest($id, $body);
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $request = $this->patchProductCategoryItemRequest($id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -943,7 +925,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -954,19 +936,19 @@ class ProductApi
     }
 
     /**
-     * Operation patchProductItemAsync
+     * Operation patchProductCategoryItemAsync
      *
-     * Updates the Product resource.
+     * Updates the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategory $body The updated ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchProductItemAsync($id, $body = null)
+    public function patchProductCategoryItemAsync($id, $body = null)
     {
-        return $this->patchProductItemAsyncWithHttpInfo($id, $body)
+        return $this->patchProductCategoryItemAsyncWithHttpInfo($id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -975,20 +957,20 @@ class ProductApi
     }
 
     /**
-     * Operation patchProductItemAsyncWithHttpInfo
+     * Operation patchProductCategoryItemAsyncWithHttpInfo
      *
-     * Updates the Product resource.
+     * Updates the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategory $body The updated ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function patchProductItemAsyncWithHttpInfo($id, $body = null)
+    public function patchProductCategoryItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductJsonld';
-        $request = $this->patchProductItemRequest($id, $body);
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $request = $this->patchProductCategoryItemRequest($id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1028,24 +1010,24 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'patchProductItem'
+     * Create request for operation 'patchProductCategoryItem'
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategory $body The updated ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function patchProductItemRequest($id, $body = null)
+    protected function patchProductCategoryItemRequest($id, $body = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling patchProductItem'
+                'Missing the required parameter $id when calling patchProductCategoryItem'
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/api/product_categories/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1130,37 +1112,37 @@ class ProductApi
     }
 
     /**
-     * Operation postProductCollection
+     * Operation postProductCategoryCollection
      *
-     * Creates a Product resource.
+     * Creates a ProductCategory resource.
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
      */
-    public function postProductCollection($body = null)
+    public function postProductCategoryCollection($body = null)
     {
-        list($response) = $this->postProductCollectionWithHttpInfo($body);
+        list($response) = $this->postProductCategoryCollectionWithHttpInfo($body);
         return $response;
     }
 
     /**
-     * Operation postProductCollectionWithHttpInfo
+     * Operation postProductCategoryCollectionWithHttpInfo
      *
-     * Creates a Product resource.
+     * Creates a ProductCategory resource.
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postProductCollectionWithHttpInfo($body = null)
+    public function postProductCategoryCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductJsonld';
-        $request = $this->postProductCollectionRequest($body);
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $request = $this->postProductCategoryCollectionRequest($body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1211,7 +1193,7 @@ class ProductApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1222,18 +1204,18 @@ class ProductApi
     }
 
     /**
-     * Operation postProductCollectionAsync
+     * Operation postProductCategoryCollectionAsync
      *
-     * Creates a Product resource.
+     * Creates a ProductCategory resource.
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postProductCollectionAsync($body = null)
+    public function postProductCategoryCollectionAsync($body = null)
     {
-        return $this->postProductCollectionAsyncWithHttpInfo($body)
+        return $this->postProductCategoryCollectionAsyncWithHttpInfo($body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1242,19 +1224,19 @@ class ProductApi
     }
 
     /**
-     * Operation postProductCollectionAsyncWithHttpInfo
+     * Operation postProductCategoryCollectionAsyncWithHttpInfo
      *
-     * Creates a Product resource.
+     * Creates a ProductCategory resource.
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function postProductCollectionAsyncWithHttpInfo($body = null)
+    public function postProductCategoryCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductJsonld';
-        $request = $this->postProductCollectionRequest($body);
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $request = $this->postProductCategoryCollectionRequest($body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1294,17 +1276,17 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'postProductCollection'
+     * Create request for operation 'postProductCategoryCollection'
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function postProductCollectionRequest($body = null)
+    protected function postProductCategoryCollectionRequest($body = null)
     {
 
-        $resourcePath = '/api/products';
+        $resourcePath = '/api/product_categories';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1381,39 +1363,39 @@ class ProductApi
     }
 
     /**
-     * Operation putProductItem
+     * Operation putProductCategoryItem
      *
-     * Replaces the Product resource.
+     * Replaces the ProductCategory resource.
      *
      * @param  string $id id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
      */
-    public function putProductItem($id, $body = null)
+    public function putProductCategoryItem($id, $body = null)
     {
-        list($response) = $this->putProductItemWithHttpInfo($id, $body);
+        list($response) = $this->putProductCategoryItemWithHttpInfo($id, $body);
         return $response;
     }
 
     /**
-     * Operation putProductItemWithHttpInfo
+     * Operation putProductCategoryItemWithHttpInfo
      *
-     * Replaces the Product resource.
+     * Replaces the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
      */
-    public function putProductItemWithHttpInfo($id, $body = null)
+    public function putProductCategoryItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductJsonld';
-        $request = $this->putProductItemRequest($id, $body);
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $request = $this->putProductCategoryItemRequest($id, $body);
 
         try {
             $options = $this->createHttpClientOption();
@@ -1464,7 +1446,7 @@ class ProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1475,19 +1457,19 @@ class ProductApi
     }
 
     /**
-     * Operation putProductItemAsync
+     * Operation putProductCategoryItemAsync
      *
-     * Replaces the Product resource.
+     * Replaces the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putProductItemAsync($id, $body = null)
+    public function putProductCategoryItemAsync($id, $body = null)
     {
-        return $this->putProductItemAsyncWithHttpInfo($id, $body)
+        return $this->putProductCategoryItemAsyncWithHttpInfo($id, $body)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -1496,20 +1478,20 @@ class ProductApi
     }
 
     /**
-     * Operation putProductItemAsyncWithHttpInfo
+     * Operation putProductCategoryItemAsyncWithHttpInfo
      *
-     * Replaces the Product resource.
+     * Replaces the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function putProductItemAsyncWithHttpInfo($id, $body = null)
+    public function putProductCategoryItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductJsonld';
-        $request = $this->putProductItemRequest($id, $body);
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $request = $this->putProductCategoryItemRequest($id, $body);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -1549,24 +1531,24 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'putProductItem'
+     * Create request for operation 'putProductCategoryItem'
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function putProductItemRequest($id, $body = null)
+    protected function putProductCategoryItemRequest($id, $body = null)
     {
         // verify the required parameter 'id' is set
         if ($id === null || (is_array($id) && count($id) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling putProductItem'
+                'Missing the required parameter $id when calling putProductCategoryItem'
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/api/product_categories/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

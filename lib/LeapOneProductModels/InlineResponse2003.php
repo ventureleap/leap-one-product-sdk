@@ -1,6 +1,6 @@
 <?php
 /**
- * Product
+ * InlineResponse2003
  *
  * PHP version 5
  *
@@ -30,14 +30,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * Product Class Doc Comment
+ * InlineResponse2003 Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Product implements ModelInterface, ArrayAccess
+class InlineResponse2003 implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -46,7 +46,7 @@ class Product implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Product';
+    protected static $swaggerModelName = 'inline_response_200_3';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -54,15 +54,10 @@ class Product implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'categories' => 'string[]',
-'internal_id' => 'string',
-'active' => 'bool',
-'name' => 'string',
-'priority' => 'int',
-'created_at' => '\DateTime',
-'updated_at' => '\DateTime',
-'application_id' => 'string',
-'custom_data' => 'string[]'    ];
+        'hydramember' => '\Swagger\Client\LeapOneProductModels\ProductJsonld[]',
+'hydratotal_items' => 'int',
+'hydraview' => '\Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview',
+'hydrasearch' => '\Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -70,15 +65,10 @@ class Product implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'categories' => 'iri-reference',
-'internal_id' => null,
-'active' => null,
-'name' => null,
-'priority' => null,
-'created_at' => 'date-time',
-'updated_at' => 'date-time',
-'application_id' => null,
-'custom_data' => null    ];
+        'hydramember' => null,
+'hydratotal_items' => null,
+'hydraview' => null,
+'hydrasearch' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -107,15 +97,10 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'categories' => 'categories',
-'internal_id' => 'internalId',
-'active' => 'active',
-'name' => 'name',
-'priority' => 'priority',
-'created_at' => 'createdAt',
-'updated_at' => 'updatedAt',
-'application_id' => 'applicationId',
-'custom_data' => 'customData'    ];
+        'hydramember' => 'hydra:member',
+'hydratotal_items' => 'hydra:totalItems',
+'hydraview' => 'hydra:view',
+'hydrasearch' => 'hydra:search'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -123,15 +108,10 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'categories' => 'setCategories',
-'internal_id' => 'setInternalId',
-'active' => 'setActive',
-'name' => 'setName',
-'priority' => 'setPriority',
-'created_at' => 'setCreatedAt',
-'updated_at' => 'setUpdatedAt',
-'application_id' => 'setApplicationId',
-'custom_data' => 'setCustomData'    ];
+        'hydramember' => 'setHydramember',
+'hydratotal_items' => 'setHydratotalItems',
+'hydraview' => 'setHydraview',
+'hydrasearch' => 'setHydrasearch'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -139,15 +119,10 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'categories' => 'getCategories',
-'internal_id' => 'getInternalId',
-'active' => 'getActive',
-'name' => 'getName',
-'priority' => 'getPriority',
-'created_at' => 'getCreatedAt',
-'updated_at' => 'getUpdatedAt',
-'application_id' => 'getApplicationId',
-'custom_data' => 'getCustomData'    ];
+        'hydramember' => 'getHydramember',
+'hydratotal_items' => 'getHydratotalItems',
+'hydraview' => 'getHydraview',
+'hydrasearch' => 'getHydrasearch'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -207,15 +182,10 @@ class Product implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
-        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
-        $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
+        $this->container['hydramember'] = isset($data['hydramember']) ? $data['hydramember'] : null;
+        $this->container['hydratotal_items'] = isset($data['hydratotal_items']) ? $data['hydratotal_items'] : null;
+        $this->container['hydraview'] = isset($data['hydraview']) ? $data['hydraview'] : null;
+        $this->container['hydrasearch'] = isset($data['hydrasearch']) ? $data['hydrasearch'] : null;
     }
 
     /**
@@ -227,6 +197,9 @@ class Product implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['hydramember'] === null) {
+            $invalidProperties[] = "'hydramember' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -243,217 +216,97 @@ class Product implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets categories
+     * Gets hydramember
      *
-     * @return string[]
+     * @return \Swagger\Client\LeapOneProductModels\ProductJsonld[]
      */
-    public function getCategories()
+    public function getHydramember()
     {
-        return $this->container['categories'];
+        return $this->container['hydramember'];
     }
 
     /**
-     * Sets categories
+     * Sets hydramember
      *
-     * @param string[] $categories categories
+     * @param \Swagger\Client\LeapOneProductModels\ProductJsonld[] $hydramember hydramember
      *
      * @return $this
      */
-    public function setCategories($categories)
+    public function setHydramember($hydramember)
     {
-        $this->container['categories'] = $categories;
+        $this->container['hydramember'] = $hydramember;
 
         return $this;
     }
 
     /**
-     * Gets internal_id
-     *
-     * @return string
-     */
-    public function getInternalId()
-    {
-        return $this->container['internal_id'];
-    }
-
-    /**
-     * Sets internal_id
-     *
-     * @param string $internal_id internal_id
-     *
-     * @return $this
-     */
-    public function setInternalId($internal_id)
-    {
-        $this->container['internal_id'] = $internal_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets active
-     *
-     * @return bool
-     */
-    public function getActive()
-    {
-        return $this->container['active'];
-    }
-
-    /**
-     * Sets active
-     *
-     * @param bool $active active
-     *
-     * @return $this
-     */
-    public function setActive($active)
-    {
-        $this->container['active'] = $active;
-
-        return $this;
-    }
-
-    /**
-     * Gets name
-     *
-     * @return string
-     */
-    public function getName()
-    {
-        return $this->container['name'];
-    }
-
-    /**
-     * Sets name
-     *
-     * @param string $name name
-     *
-     * @return $this
-     */
-    public function setName($name)
-    {
-        $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets priority
+     * Gets hydratotal_items
      *
      * @return int
      */
-    public function getPriority()
+    public function getHydratotalItems()
     {
-        return $this->container['priority'];
+        return $this->container['hydratotal_items'];
     }
 
     /**
-     * Sets priority
+     * Sets hydratotal_items
      *
-     * @param int $priority priority
+     * @param int $hydratotal_items hydratotal_items
      *
      * @return $this
      */
-    public function setPriority($priority)
+    public function setHydratotalItems($hydratotal_items)
     {
-        $this->container['priority'] = $priority;
+        $this->container['hydratotal_items'] = $hydratotal_items;
 
         return $this;
     }
 
     /**
-     * Gets created_at
+     * Gets hydraview
      *
-     * @return \DateTime
+     * @return \Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview
      */
-    public function getCreatedAt()
+    public function getHydraview()
     {
-        return $this->container['created_at'];
+        return $this->container['hydraview'];
     }
 
     /**
-     * Sets created_at
+     * Sets hydraview
      *
-     * @param \DateTime $created_at created_at
+     * @param \Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview $hydraview hydraview
      *
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setHydraview($hydraview)
     {
-        $this->container['created_at'] = $created_at;
+        $this->container['hydraview'] = $hydraview;
 
         return $this;
     }
 
     /**
-     * Gets updated_at
+     * Gets hydrasearch
      *
-     * @return \DateTime
+     * @return \Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch
      */
-    public function getUpdatedAt()
+    public function getHydrasearch()
     {
-        return $this->container['updated_at'];
+        return $this->container['hydrasearch'];
     }
 
     /**
-     * Sets updated_at
+     * Sets hydrasearch
      *
-     * @param \DateTime $updated_at updated_at
+     * @param \Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch $hydrasearch hydrasearch
      *
      * @return $this
      */
-    public function setUpdatedAt($updated_at)
+    public function setHydrasearch($hydrasearch)
     {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets application_id
-     *
-     * @return string
-     */
-    public function getApplicationId()
-    {
-        return $this->container['application_id'];
-    }
-
-    /**
-     * Sets application_id
-     *
-     * @param string $application_id application_id
-     *
-     * @return $this
-     */
-    public function setApplicationId($application_id)
-    {
-        $this->container['application_id'] = $application_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets custom_data
-     *
-     * @return string[]
-     */
-    public function getCustomData()
-    {
-        return $this->container['custom_data'];
-    }
-
-    /**
-     * Sets custom_data
-     *
-     * @param string[] $custom_data custom_data
-     *
-     * @return $this
-     */
-    public function setCustomData($custom_data)
-    {
-        $this->container['custom_data'] = $custom_data;
+        $this->container['hydrasearch'] = $hydrasearch;
 
         return $this;
     }

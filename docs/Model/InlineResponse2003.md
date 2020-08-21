@@ -1,9 +1,9 @@
-# InlineResponse2002
+# InlineResponse2003
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**hydramember** | [**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld[]**](ProductCategoryJsonld.md) |  | 
+**hydramember** | [**\Swagger\Client\LeapOneProductModels\ProductJsonld[]**](ProductJsonld.md) |  | 
 **hydratotal_items** | **int** |  | [optional] 
 **hydraview** | [**\Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview**](InlineResponse200Hydraview.md) |  | [optional] 
 **hydrasearch** | [**\Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch**](InlineResponse200Hydrasearch.md) |  | [optional] 

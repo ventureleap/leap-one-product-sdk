@@ -57,6 +57,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => 'string',
 'id' => 'string',
 'type' => 'string',
+'categories' => 'string[]',
 'internal_id' => 'string',
 'active' => 'bool',
 'name' => 'string',
@@ -75,6 +76,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => null,
 'id' => null,
 'type' => null,
+'categories' => 'iri-reference',
 'internal_id' => null,
 'active' => null,
 'name' => null,
@@ -114,6 +116,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => '@context',
 'id' => '@id',
 'type' => '@type',
+'categories' => 'categories',
 'internal_id' => 'internalId',
 'active' => 'active',
 'name' => 'name',
@@ -132,6 +135,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => 'setContext',
 'id' => 'setId',
 'type' => 'setType',
+'categories' => 'setCategories',
 'internal_id' => 'setInternalId',
 'active' => 'setActive',
 'name' => 'setName',
@@ -150,6 +154,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => 'getContext',
 'id' => 'getId',
 'type' => 'getType',
+'categories' => 'getCategories',
 'internal_id' => 'getInternalId',
 'active' => 'getActive',
 'name' => 'getName',
@@ -220,6 +225,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         $this->container['context'] = isset($data['context']) ? $data['context'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -322,6 +328,30 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets categories
+     *
+     * @return string[]
+     */
+    public function getCategories()
+    {
+        return $this->container['categories'];
+    }
+
+    /**
+     * Sets categories
+     *
+     * @param string[] $categories categories
+     *
+     * @return $this
+     */
+    public function setCategories($categories)
+    {
+        $this->container['categories'] = $categories;
 
         return $this;
     }

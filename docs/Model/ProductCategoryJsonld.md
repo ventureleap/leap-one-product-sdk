@@ -1,9 +1,12 @@
-# Product
+# ProductCategoryJsonld
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**categories** | **string[]** |  | [optional] 
+**context** | **string** |  | [optional] 
+**id** | **string** |  | [optional] 
+**type** | **string** |  | [optional] 
+**products** | **string[]** |  | [optional] 
 **internal_id** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **name** | **string** |  | [optional] 

@@ -1,27 +1,27 @@
-# Swagger\Client\ProductApi
+# Swagger\Client\ProductCategoryApi
 
 All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteProductItem**](ProductApi.md#deleteproductitem) | **DELETE** /api/products/{id} | Removes the Product resource.
-[**getProductCollection**](ProductApi.md#getproductcollection) | **GET** /api/products | Retrieves the collection of Product resources.
-[**getProductItem**](ProductApi.md#getproductitem) | **GET** /api/products/{id} | Retrieves a Product resource.
-[**patchProductItem**](ProductApi.md#patchproductitem) | **PATCH** /api/products/{id} | Updates the Product resource.
-[**postProductCollection**](ProductApi.md#postproductcollection) | **POST** /api/products | Creates a Product resource.
-[**putProductItem**](ProductApi.md#putproductitem) | **PUT** /api/products/{id} | Replaces the Product resource.
+[**deleteProductCategoryItem**](ProductCategoryApi.md#deleteproductcategoryitem) | **DELETE** /api/product_categories/{id} | Removes the ProductCategory resource.
+[**getProductCategoryCollection**](ProductCategoryApi.md#getproductcategorycollection) | **GET** /api/product_categories | Retrieves the collection of ProductCategory resources.
+[**getProductCategoryItem**](ProductCategoryApi.md#getproductcategoryitem) | **GET** /api/product_categories/{id} | Retrieves a ProductCategory resource.
+[**patchProductCategoryItem**](ProductCategoryApi.md#patchproductcategoryitem) | **PATCH** /api/product_categories/{id} | Updates the ProductCategory resource.
+[**postProductCategoryCollection**](ProductCategoryApi.md#postproductcategorycollection) | **POST** /api/product_categories | Creates a ProductCategory resource.
+[**putProductCategoryItem**](ProductCategoryApi.md#putproductcategoryitem) | **PUT** /api/product_categories/{id} | Replaces the ProductCategory resource.
 
-# **deleteProductItem**
-> deleteProductItem($id)
+# **deleteProductCategoryItem**
+> deleteProductCategoryItem($id)
 
-Removes the Product resource.
+Removes the ProductCategory resource.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -29,9 +29,9 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
 $id = "id_example"; // string | 
 
 try {
-    $apiInstance->deleteProductItem($id);
+    $apiInstance->deleteProductCategoryItem($id);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductApi->deleteProductItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductCategoryApi->deleteProductCategoryItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -57,32 +57,30 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getProductCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2003 getProductCollection($name, $application_id, $order_id, $order_name, $page)
+# **getProductCategoryCollection**
+> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCategoryCollection($application_id, $name, $page)
 
-Retrieves the collection of Product resources.
+Retrieves the collection of ProductCategory resources.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$name = "name_example"; // string | 
 $application_id = "application_id_example"; // string | 
-$order_id = "order_id_example"; // string | 
-$order_name = "order_name_example"; // string | 
+$name = "name_example"; // string | 
 $page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->getProductCollection($name, $application_id, $order_id, $order_name, $page);
+    $result = $apiInstance->getProductCategoryCollection($application_id, $name, $page);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductApi->getProductCollection: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductCategoryApi->getProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -91,15 +89,13 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **name** | **string**|  | [optional]
  **application_id** | **string**|  | [optional]
- **order_id** | **string**|  | [optional]
- **order_name** | **string**|  | [optional]
+ **name** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\InlineResponse2003**](../Model/InlineResponse2003.md)
+[**\Swagger\Client\LeapOneProductModels\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
@@ -112,17 +108,17 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **getProductItem**
-> \Swagger\Client\LeapOneProductModels\ProductJsonld getProductItem($id)
+# **getProductCategoryItem**
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld getProductCategoryItem($id)
 
-Retrieves a Product resource.
+Retrieves a ProductCategory resource.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
@@ -130,10 +126,10 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
 $id = "id_example"; // string | 
 
 try {
-    $result = $apiInstance->getProductItem($id);
+    $result = $apiInstance->getProductCategoryItem($id);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductApi->getProductItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductCategoryApi->getProductCategoryItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -146,7 +142,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
 
 ### Authorization
 
@@ -159,29 +155,29 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **patchProductItem**
-> \Swagger\Client\LeapOneProductModels\ProductJsonld patchProductItem($id, $body)
+# **patchProductCategoryItem**
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld patchProductCategoryItem($id, $body)
 
-Updates the Product resource.
+Updates the ProductCategory resource.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\Product(); // \Swagger\Client\LeapOneProductModels\Product | The updated Product resource
+$body = new \Swagger\Client\LeapOneProductModels\ProductCategory(); // \Swagger\Client\LeapOneProductModels\ProductCategory | The updated ProductCategory resource
 
 try {
-    $result = $apiInstance->patchProductItem($id, $body);
+    $result = $apiInstance->patchProductCategoryItem($id, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductApi->patchProductItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductCategoryApi->patchProductCategoryItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -191,11 +187,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\Product**](../Model/Product.md)| The updated Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductCategory**](../Model/ProductCategory.md)| The updated ProductCategory resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
 
 ### Authorization
 
@@ -208,28 +204,28 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **postProductCollection**
-> \Swagger\Client\LeapOneProductModels\ProductJsonld postProductCollection($body)
+# **postProductCategoryCollection**
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld postProductCategoryCollection($body)
 
-Creates a Product resource.
+Creates a ProductCategory resource.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\LeapOneProductModels\ProductJsonld(); // \Swagger\Client\LeapOneProductModels\ProductJsonld | The new Product resource
+$body = new \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld(); // \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld | The new ProductCategory resource
 
 try {
-    $result = $apiInstance->postProductCollection($body);
+    $result = $apiInstance->postProductCategoryCollection($body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductApi->postProductCollection: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductCategoryApi->postProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -238,11 +234,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)| The new Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The new ProductCategory resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
 
 ### Authorization
 
@@ -255,29 +251,29 @@ No authorization required
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **putProductItem**
-> \Swagger\Client\LeapOneProductModels\ProductJsonld putProductItem($id, $body)
+# **putProductCategoryItem**
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld putProductCategoryItem($id, $body)
 
-Replaces the Product resource.
+Replaces the ProductCategory resource.
 
 ### Example
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\ProductJsonld(); // \Swagger\Client\LeapOneProductModels\ProductJsonld | The updated Product resource
+$body = new \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld(); // \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld | The updated ProductCategory resource
 
 try {
-    $result = $apiInstance->putProductItem($id, $body);
+    $result = $apiInstance->putProductCategoryItem($id, $body);
     print_r($result);
 } catch (Exception $e) {
-    echo 'Exception when calling ProductApi->putProductItem: ', $e->getMessage(), PHP_EOL;
+    echo 'Exception when calling ProductCategoryApi->putProductCategoryItem: ', $e->getMessage(), PHP_EOL;
 }
 ?>
 ```
@@ -287,11 +283,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)| The updated Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The updated ProductCategory resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
 
 ### Authorization
 

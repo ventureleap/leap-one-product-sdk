@@ -1,6 +1,6 @@
 <?php
 /**
- * Product
+ * ProductCategoryJsonld
  *
  * PHP version 5
  *
@@ -30,14 +30,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * Product Class Doc Comment
+ * ProductCategoryJsonld Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Product implements ModelInterface, ArrayAccess
+class ProductCategoryJsonld implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -46,7 +46,7 @@ class Product implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Product';
+    protected static $swaggerModelName = 'ProductCategory:jsonld';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -54,7 +54,10 @@ class Product implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'categories' => 'string[]',
+        'context' => 'string',
+'id' => 'string',
+'type' => 'string',
+'products' => 'string[]',
 'internal_id' => 'string',
 'active' => 'bool',
 'name' => 'string',
@@ -70,7 +73,10 @@ class Product implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'categories' => 'iri-reference',
+        'context' => null,
+'id' => null,
+'type' => null,
+'products' => 'iri-reference',
 'internal_id' => null,
 'active' => null,
 'name' => null,
@@ -107,7 +113,10 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'categories' => 'categories',
+        'context' => '@context',
+'id' => '@id',
+'type' => '@type',
+'products' => 'products',
 'internal_id' => 'internalId',
 'active' => 'active',
 'name' => 'name',
@@ -123,7 +132,10 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'categories' => 'setCategories',
+        'context' => 'setContext',
+'id' => 'setId',
+'type' => 'setType',
+'products' => 'setProducts',
 'internal_id' => 'setInternalId',
 'active' => 'setActive',
 'name' => 'setName',
@@ -139,7 +151,10 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'categories' => 'getCategories',
+        'context' => 'getContext',
+'id' => 'getId',
+'type' => 'getType',
+'products' => 'getProducts',
 'internal_id' => 'getInternalId',
 'active' => 'getActive',
 'name' => 'getName',
@@ -207,7 +222,10 @@ class Product implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
+        $this->container['context'] = isset($data['context']) ? $data['context'] : null;
+        $this->container['id'] = isset($data['id']) ? $data['id'] : null;
+        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -243,25 +261,97 @@ class Product implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets categories
+     * Gets context
      *
-     * @return string[]
+     * @return string
      */
-    public function getCategories()
+    public function getContext()
     {
-        return $this->container['categories'];
+        return $this->container['context'];
     }
 
     /**
-     * Sets categories
+     * Sets context
      *
-     * @param string[] $categories categories
+     * @param string $context context
      *
      * @return $this
      */
-    public function setCategories($categories)
+    public function setContext($context)
     {
-        $this->container['categories'] = $categories;
+        $this->container['context'] = $context;
+
+        return $this;
+    }
+
+    /**
+     * Gets id
+     *
+     * @return string
+     */
+    public function getId()
+    {
+        return $this->container['id'];
+    }
+
+    /**
+     * Sets id
+     *
+     * @param string $id id
+     *
+     * @return $this
+     */
+    public function setId($id)
+    {
+        $this->container['id'] = $id;
+
+        return $this;
+    }
+
+    /**
+     * Gets type
+     *
+     * @return string
+     */
+    public function getType()
+    {
+        return $this->container['type'];
+    }
+
+    /**
+     * Sets type
+     *
+     * @param string $type type
+     *
+     * @return $this
+     */
+    public function setType($type)
+    {
+        $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets products
+     *
+     * @return string[]
+     */
+    public function getProducts()
+    {
+        return $this->container['products'];
+    }
+
+    /**
+     * Sets products
+     *
+     * @param string[] $products products
+     *
+     * @return $this
+     */
+    public function setProducts($products)
+    {
+        $this->container['products'] = $products;
 
         return $this;
     }

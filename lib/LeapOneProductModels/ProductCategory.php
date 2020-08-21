@@ -1,6 +1,6 @@
 <?php
 /**
- * Product
+ * ProductCategory
  *
  * PHP version 5
  *
@@ -30,14 +30,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * Product Class Doc Comment
+ * ProductCategory Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class Product implements ModelInterface, ArrayAccess
+class ProductCategory implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -46,7 +46,7 @@ class Product implements ModelInterface, ArrayAccess
       *
       * @var string
       */
-    protected static $swaggerModelName = 'Product';
+    protected static $swaggerModelName = 'ProductCategory';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -54,7 +54,7 @@ class Product implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'categories' => 'string[]',
+        'products' => 'string[]',
 'internal_id' => 'string',
 'active' => 'bool',
 'name' => 'string',
@@ -70,7 +70,7 @@ class Product implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'categories' => 'iri-reference',
+        'products' => 'iri-reference',
 'internal_id' => null,
 'active' => null,
 'name' => null,
@@ -107,7 +107,7 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'categories' => 'categories',
+        'products' => 'products',
 'internal_id' => 'internalId',
 'active' => 'active',
 'name' => 'name',
@@ -123,7 +123,7 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'categories' => 'setCategories',
+        'products' => 'setProducts',
 'internal_id' => 'setInternalId',
 'active' => 'setActive',
 'name' => 'setName',
@@ -139,7 +139,7 @@ class Product implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'categories' => 'getCategories',
+        'products' => 'getProducts',
 'internal_id' => 'getInternalId',
 'active' => 'getActive',
 'name' => 'getName',
@@ -207,7 +207,7 @@ class Product implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -243,25 +243,25 @@ class Product implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets categories
+     * Gets products
      *
      * @return string[]
      */
-    public function getCategories()
+    public function getProducts()
     {
-        return $this->container['categories'];
+        return $this->container['products'];
     }
 
     /**
-     * Sets categories
+     * Sets products
      *
-     * @param string[] $categories categories
+     * @param string[] $products products
      *
      * @return $this
      */
-    public function setCategories($categories)
+    public function setProducts($products)
     {
-        $this->container['categories'] = $categories;
+        $this->container['products'] = $products;
 
         return $this;
     }

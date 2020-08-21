@@ -1,6 +1,6 @@
 <?php
 /**
- * ProductTest
+ * ProductCategoryJsonldTest
  *
  * PHP version 5
  *
@@ -27,15 +27,15 @@
 namespace Swagger\Client;
 
 /**
- * ProductTest Class Doc Comment
+ * ProductCategoryJsonldTest Class Doc Comment
  *
  * @category    Class
- * @description Product
+ * @description ProductCategoryJsonld
  * @package     Swagger\Client
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
  */
-class ProductTest extends \PHPUnit_Framework_TestCase
+class ProductCategoryJsonldTest extends \PHPUnit_Framework_TestCase
 {
 
     /**
@@ -67,16 +67,37 @@ class ProductTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test "Product"
+     * Test "ProductCategoryJsonld"
      */
-    public function testProduct()
+    public function testProductCategoryJsonld()
     {
     }
 
     /**
-     * Test attribute "categories"
+     * Test attribute "context"
      */
-    public function testPropertyCategories()
+    public function testPropertyContext()
+    {
+    }
+
+    /**
+     * Test attribute "id"
+     */
+    public function testPropertyId()
+    {
+    }
+
+    /**
+     * Test attribute "type"
+     */
+    public function testPropertyType()
+    {
+    }
+
+    /**
+     * Test attribute "products"
+     */
+    public function testPropertyProducts()
     {
     }
 
