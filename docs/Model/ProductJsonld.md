@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **id** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
 **categories** | **string[]** |  | [optional] 
+**categories_internal_ids** | **string[]** |  | [optional] 
 **internal_id** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **name** | **string** |  | [optional] 

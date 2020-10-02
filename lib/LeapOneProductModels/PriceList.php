@@ -54,7 +54,8 @@ class PriceList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'internal_id' => 'string',
+        'availability_areas' => 'string[]',
+'internal_id' => 'string',
 'name' => 'string',
 'active' => 'bool',
 'created_at' => '\DateTime',
@@ -68,7 +69,8 @@ class PriceList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'internal_id' => null,
+        'availability_areas' => null,
+'internal_id' => null,
 'name' => null,
 'active' => null,
 'created_at' => 'date-time',
@@ -103,7 +105,8 @@ class PriceList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'internal_id' => 'internalId',
+        'availability_areas' => 'availabilityAreas',
+'internal_id' => 'internalId',
 'name' => 'name',
 'active' => 'active',
 'created_at' => 'createdAt',
@@ -117,7 +120,8 @@ class PriceList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'internal_id' => 'setInternalId',
+        'availability_areas' => 'setAvailabilityAreas',
+'internal_id' => 'setInternalId',
 'name' => 'setName',
 'active' => 'setActive',
 'created_at' => 'setCreatedAt',
@@ -131,7 +135,8 @@ class PriceList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'internal_id' => 'getInternalId',
+        'availability_areas' => 'getAvailabilityAreas',
+'internal_id' => 'getInternalId',
 'name' => 'getName',
 'active' => 'getActive',
 'created_at' => 'getCreatedAt',
@@ -197,6 +202,7 @@ class PriceList implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['availability_areas'] = isset($data['availability_areas']) ? $data['availability_areas'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
@@ -229,6 +235,30 @@ class PriceList implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets availability_areas
+     *
+     * @return string[]
+     */
+    public function getAvailabilityAreas()
+    {
+        return $this->container['availability_areas'];
+    }
+
+    /**
+     * Sets availability_areas
+     *
+     * @param string[] $availability_areas availability_areas
+     *
+     * @return $this
+     */
+    public function setAvailabilityAreas($availability_areas)
+    {
+        $this->container['availability_areas'] = $availability_areas;
+
+        return $this;
+    }
 
     /**
      * Gets internal_id

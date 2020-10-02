@@ -57,6 +57,7 @@ class PriceListJsonld implements ModelInterface, ArrayAccess
         'context' => 'string',
 'id' => 'string',
 'type' => 'string',
+'availability_areas' => 'string[]',
 'internal_id' => 'string',
 'name' => 'string',
 'active' => 'bool',
@@ -74,6 +75,7 @@ class PriceListJsonld implements ModelInterface, ArrayAccess
         'context' => null,
 'id' => null,
 'type' => null,
+'availability_areas' => null,
 'internal_id' => null,
 'name' => null,
 'active' => null,
@@ -112,6 +114,7 @@ class PriceListJsonld implements ModelInterface, ArrayAccess
         'context' => '@context',
 'id' => '@id',
 'type' => '@type',
+'availability_areas' => 'availabilityAreas',
 'internal_id' => 'internalId',
 'name' => 'name',
 'active' => 'active',
@@ -129,6 +132,7 @@ class PriceListJsonld implements ModelInterface, ArrayAccess
         'context' => 'setContext',
 'id' => 'setId',
 'type' => 'setType',
+'availability_areas' => 'setAvailabilityAreas',
 'internal_id' => 'setInternalId',
 'name' => 'setName',
 'active' => 'setActive',
@@ -146,6 +150,7 @@ class PriceListJsonld implements ModelInterface, ArrayAccess
         'context' => 'getContext',
 'id' => 'getId',
 'type' => 'getType',
+'availability_areas' => 'getAvailabilityAreas',
 'internal_id' => 'getInternalId',
 'name' => 'getName',
 'active' => 'getActive',
@@ -215,6 +220,7 @@ class PriceListJsonld implements ModelInterface, ArrayAccess
         $this->container['context'] = isset($data['context']) ? $data['context'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['availability_areas'] = isset($data['availability_areas']) ? $data['availability_areas'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
@@ -316,6 +322,30 @@ class PriceListJsonld implements ModelInterface, ArrayAccess
     public function setType($type)
     {
         $this->container['type'] = $type;
+
+        return $this;
+    }
+
+    /**
+     * Gets availability_areas
+     *
+     * @return string[]
+     */
+    public function getAvailabilityAreas()
+    {
+        return $this->container['availability_areas'];
+    }
+
+    /**
+     * Sets availability_areas
+     *
+     * @param string[] $availability_areas availability_areas
+     *
+     * @return $this
+     */
+    public function setAvailabilityAreas($availability_areas)
+    {
+        $this->container['availability_areas'] = $availability_areas;
 
         return $this;
     }

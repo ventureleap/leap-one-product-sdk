@@ -4,6 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **categories** | **string[]** |  | [optional] 
+**categories_internal_ids** | **string[]** |  | [optional] 
 **internal_id** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **name** | **string** |  | [optional] 

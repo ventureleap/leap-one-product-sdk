@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 **context** | **string** |  | [optional] 
 **id** | **string** |  | [optional] 
 **type** | **string** |  | [optional] 
+**availability_areas** | **string[]** |  | [optional] 
 **internal_id** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 

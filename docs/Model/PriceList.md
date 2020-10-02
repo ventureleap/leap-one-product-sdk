@@ -3,6 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**availability_areas** | **string[]** |  | [optional] 
 **internal_id** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 

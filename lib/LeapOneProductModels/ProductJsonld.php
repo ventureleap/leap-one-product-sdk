@@ -58,6 +58,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'id' => 'string',
 'type' => 'string',
 'categories' => 'string[]',
+'categories_internal_ids' => 'string[]',
 'internal_id' => 'string',
 'active' => 'bool',
 'name' => 'string',
@@ -77,6 +78,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'id' => null,
 'type' => null,
 'categories' => 'iri-reference',
+'categories_internal_ids' => null,
 'internal_id' => null,
 'active' => null,
 'name' => null,
@@ -117,6 +119,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'id' => '@id',
 'type' => '@type',
 'categories' => 'categories',
+'categories_internal_ids' => 'categoriesInternalIds',
 'internal_id' => 'internalId',
 'active' => 'active',
 'name' => 'name',
@@ -136,6 +139,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'id' => 'setId',
 'type' => 'setType',
 'categories' => 'setCategories',
+'categories_internal_ids' => 'setCategoriesInternalIds',
 'internal_id' => 'setInternalId',
 'active' => 'setActive',
 'name' => 'setName',
@@ -155,6 +159,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'id' => 'getId',
 'type' => 'getType',
 'categories' => 'getCategories',
+'categories_internal_ids' => 'getCategoriesInternalIds',
 'internal_id' => 'getInternalId',
 'active' => 'getActive',
 'name' => 'getName',
@@ -226,6 +231,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
+        $this->container['categories_internal_ids'] = isset($data['categories_internal_ids']) ? $data['categories_internal_ids'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -352,6 +358,30 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     public function setCategories($categories)
     {
         $this->container['categories'] = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Gets categories_internal_ids
+     *
+     * @return string[]
+     */
+    public function getCategoriesInternalIds()
+    {
+        return $this->container['categories_internal_ids'];
+    }
+
+    /**
+     * Sets categories_internal_ids
+     *
+     * @param string[] $categories_internal_ids categories_internal_ids
+     *
+     * @return $this
+     */
+    public function setCategoriesInternalIds($categories_internal_ids)
+    {
+        $this->container['categories_internal_ids'] = $categories_internal_ids;
 
         return $this;
     }
