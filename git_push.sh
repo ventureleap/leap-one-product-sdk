@@ -7,6 +7,7 @@
 release_note=$1
 git_user_id=ventureleap
 git_repo_id=leap-one-product-sdk
+git_remote_url=$2
 
 # Initialize the local directory as a Git repository
 git init
@@ -25,9 +26,13 @@ if [ "$git_remote" = "" ]; then # git remote not defined
         echo "[INFO] \$GIT_TOKEN (environment variable) is not set. Using the git credential in your environment."
         git remote add origin https://github.com/${git_user_id}/${git_repo_id}.git
     else
-        git remote add origin https://${git_user_id}:${GIT_TOKEN}@github.com/${git_user_id}/${git_repo_id}.git
+        git remote add origin git@github.com:${git_user_id}/${git_repo_id}.git
     fi
 
+fi
+
+if [ "git_remote_url" != "" ]; then
+    git remote set-url ${git_remote_url}.git
 fi
 
 git pull origin master
