@@ -2,7 +2,38 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a787b70-a700-4581-9db7-839fe25833fd" name="Default Changelist" comment="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
-      <change beforePath="$PROJECT_DIR$/git_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/git_push.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ProductApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/Collection.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/CollectionJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2001.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2002.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2003.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydrasearch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200HydrasearchHydramapping.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydraview.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProduct.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/Product.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategory.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/git_push.sh" beforeDir="false" afterPath="$PROJECT_DIR$/update_sdk_git.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductModels/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonld.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonld.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonld.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonld.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/ObjectSerializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ObjectSerializer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/phpunit.xml.dist" beforeDir="false" afterPath="$PROJECT_DIR$/phpunit.xml.dist" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -96,7 +127,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1601990988129</updated>
-      <workItem from="1601990989298" duration="1940000" />
+      <workItem from="1601990989298" duration="3003000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <created>1601992849321</created>
@@ -124,6 +155,10 @@
       <screen x="67" y="27" width="3773" height="1053" />
     </state>
     <state x="624" y="315" width="728" height="475" key="MultipleFileMergeDialog/67.27.3773.1053@67.27.3773.1053" timestamp="1601992699787" />
+    <state x="742" y="236" width="492" height="633" key="RollbackChangesDialog" timestamp="1601994370867">
+      <screen x="67" y="27" width="3773" height="1053" />
+    </state>
+    <state x="742" y="236" width="492" height="633" key="RollbackChangesDialog/67.27.3773.1053@67.27.3773.1053" timestamp="1601994370867" />
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1601992852886">
       <screen x="67" y="27" width="3773" height="1053" />
     </state>

@@ -9,9 +9,6 @@ git_user_id=ventureleap
 git_repo_id=leap-one-product-sdk
 git_remote_url=$2
 
-# Initialize the local directory as a Git repository
-git init
-
 # Adds the files in the local repository and stages them for commit.
 git add .
 

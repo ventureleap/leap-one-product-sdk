@@ -74,10 +74,9 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->getPriceListCollection($page);
+    $result = $apiInstance->getPriceListCollection();
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PriceListApi->getPriceListCollection: ', $e->getMessage(), PHP_EOL;
@@ -103,7 +102,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     new GuzzleHttp\Client()
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\Model\PriceList(); // \Swagger\Client\Model\PriceList | The updated PriceList resource
+$body = new \Swagger\Client\LeapOneProductModels\PriceList(); // \Swagger\Client\LeapOneProductModels\PriceList | The updated PriceList resource
 
 try {
     $result = $apiInstance->patchPriceListItem($id, $body);
@@ -117,7 +116,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client()
 );
-$body = new \Swagger\Client\Model\PriceListJsonld(); // \Swagger\Client\Model\PriceListJsonld | The new PriceList resource
+$body = new \Swagger\Client\LeapOneProductModels\PriceListJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListJsonld | The new PriceList resource
 
 try {
     $result = $apiInstance->postPriceListCollection($body);
@@ -132,7 +131,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     new GuzzleHttp\Client()
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\Model\PriceListJsonld(); // \Swagger\Client\Model\PriceListJsonld | The updated PriceList resource
+$body = new \Swagger\Client\LeapOneProductModels\PriceListJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListJsonld | The updated PriceList resource
 
 try {
     $result = $apiInstance->putPriceListItem($id, $body);
@@ -167,12 +166,19 @@ Class | Method | HTTP request | Description
 *ProductApi* | [**patchProductItem**](docs/Api/ProductApi.md#patchproductitem) | **PATCH** /api/products/{id} | Updates the Product resource.
 *ProductApi* | [**postProductCollection**](docs/Api/ProductApi.md#postproductcollection) | **POST** /api/products | Creates a Product resource.
 *ProductApi* | [**putProductItem**](docs/Api/ProductApi.md#putproductitem) | **PUT** /api/products/{id} | Replaces the Product resource.
+*ProductCategoryApi* | [**deleteProductCategoryItem**](docs/Api/ProductCategoryApi.md#deleteproductcategoryitem) | **DELETE** /api/product_categories/{id} | Removes the ProductCategory resource.
+*ProductCategoryApi* | [**getProductCategoryCollection**](docs/Api/ProductCategoryApi.md#getproductcategorycollection) | **GET** /api/product_categories | Retrieves the collection of ProductCategory resources.
+*ProductCategoryApi* | [**getProductCategoryItem**](docs/Api/ProductCategoryApi.md#getproductcategoryitem) | **GET** /api/product_categories/{id} | Retrieves a ProductCategory resource.
+*ProductCategoryApi* | [**patchProductCategoryItem**](docs/Api/ProductCategoryApi.md#patchproductcategoryitem) | **PATCH** /api/product_categories/{id} | Updates the ProductCategory resource.
+*ProductCategoryApi* | [**postProductCategoryCollection**](docs/Api/ProductCategoryApi.md#postproductcategorycollection) | **POST** /api/product_categories | Creates a ProductCategory resource.
+*ProductCategoryApi* | [**putProductCategoryItem**](docs/Api/ProductCategoryApi.md#putproductcategoryitem) | **PUT** /api/product_categories/{id} | Replaces the ProductCategory resource.
 
 ## Documentation For Models
 
  - [InlineResponse200](docs/Model/InlineResponse200.md)
  - [InlineResponse2001](docs/Model/InlineResponse2001.md)
  - [InlineResponse2002](docs/Model/InlineResponse2002.md)
+ - [InlineResponse2003](docs/Model/InlineResponse2003.md)
  - [InlineResponse200Hydrasearch](docs/Model/InlineResponse200Hydrasearch.md)
  - [InlineResponse200HydrasearchHydramapping](docs/Model/InlineResponse200HydrasearchHydramapping.md)
  - [InlineResponse200Hydraview](docs/Model/InlineResponse200Hydraview.md)
@@ -181,6 +187,8 @@ Class | Method | HTTP request | Description
  - [PriceListProduct](docs/Model/PriceListProduct.md)
  - [PriceListProductJsonld](docs/Model/PriceListProductJsonld.md)
  - [Product](docs/Model/Product.md)
+ - [ProductCategory](docs/Model/ProductCategory.md)
+ - [ProductCategoryJsonld](docs/Model/ProductCategoryJsonld.md)
  - [ProductJsonld](docs/Model/ProductJsonld.md)
 
 ## Documentation For Authorization
