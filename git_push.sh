@@ -31,7 +31,7 @@ if [ "$git_remote" = "" ]; then # git remote not defined
 
 fi
 
-if [ "git_remote_url" != "" ]; then
+if [ "$git_remote_url" != "" ]; then
     git remote set-url ${git_remote_url}.git
 fi
 
