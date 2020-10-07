@@ -62,7 +62,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'internal_id' => 'string',
 'active' => 'bool',
 'name' => 'string',
-'uuid' => 'string',
 'priority' => 'int',
 'created_at' => '\DateTime',
 'updated_at' => '\DateTime',
@@ -83,7 +82,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'internal_id' => null,
 'active' => null,
 'name' => null,
-'uuid' => null,
 'priority' => null,
 'created_at' => 'date-time',
 'updated_at' => 'date-time',
@@ -125,7 +123,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'internal_id' => 'internalId',
 'active' => 'active',
 'name' => 'name',
-'uuid' => 'uuid',
 'priority' => 'priority',
 'created_at' => 'createdAt',
 'updated_at' => 'updatedAt',
@@ -146,7 +143,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'internal_id' => 'setInternalId',
 'active' => 'setActive',
 'name' => 'setName',
-'uuid' => 'setUuid',
 'priority' => 'setPriority',
 'created_at' => 'setCreatedAt',
 'updated_at' => 'setUpdatedAt',
@@ -167,7 +163,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'internal_id' => 'getInternalId',
 'active' => 'getActive',
 'name' => 'getName',
-'uuid' => 'getUuid',
 'priority' => 'getPriority',
 'created_at' => 'getCreatedAt',
 'updated_at' => 'getUpdatedAt',
@@ -240,7 +235,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
@@ -460,30 +454,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
-
-        return $this;
-    }
-
-    /**
-     * Gets uuid
-     *
-     * @return string
-     */
-    public function getUuid()
-    {
-        return $this->container['uuid'];
-    }
-
-    /**
-     * Sets uuid
-     *
-     * @param string $uuid uuid
-     *
-     * @return $this
-     */
-    public function setUuid($uuid)
-    {
-        $this->container['uuid'] = $uuid;
 
         return $this;
     }
