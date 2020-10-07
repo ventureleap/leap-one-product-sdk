@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCategoryCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCategoryCollection($application_id, $name, $page)
+> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCategoryCollection($uuid, $name, $page)
 
 Retrieves the collection of ProductCategory resources.
 
@@ -82,12 +82,12 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$application_id = "application_id_example"; // string | 
+$uuid = "uuid_example"; // string | 
 $name = "name_example"; // string | 
 $page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->getProductCategoryCollection($application_id, $name, $page);
+    $result = $apiInstance->getProductCategoryCollection($uuid, $name, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCategoryApi->getProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
@@ -99,7 +99,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **application_id** | **string**|  | [optional]
+ **uuid** | **string**|  | [optional]
  **name** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
 
@@ -114,7 +114,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/ld+json
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -166,7 +166,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/ld+json
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -220,7 +220,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/merge-patch+json
- - **Accept**: application/ld+json
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -271,8 +271,60 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+json
- - **Accept**: application/ld+json
+ - **Content-Type**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json, application/json, text/html
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **postProductCategoryCollection**
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld postProductCategoryCollection($body)
+
+Creates a ProductCategory resource.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$body = new \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld(); // \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld | The new ProductCategory resource
+
+try {
+    $result = $apiInstance->postProductCategoryCollection($body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductCategoryApi->postProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The new ProductCategory resource | [optional]
+
+### Return type
+
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
+
+### Authorization
+
+[applicationId](../../README.md#applicationId)
+
+### HTTP request headers
+
+ - **Content-Type**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -325,8 +377,62 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+json
- - **Accept**: application/ld+json
+ - **Content-Type**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json, application/json, text/html
+
+[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
+
+# **putProductCategoryItem**
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld putProductCategoryItem($id, $body)
+
+Replaces the ProductCategory resource.
+
+### Example
+```php
+<?php
+require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+
+$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
+    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
+    // This is optional, `GuzzleHttp\Client` will be used as default.
+    new GuzzleHttp\Client(),
+    $config
+);
+$id = "id_example"; // string | 
+$body = new \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld(); // \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld | The updated ProductCategory resource
+
+try {
+    $result = $apiInstance->putProductCategoryItem($id, $body);
+    print_r($result);
+} catch (Exception $e) {
+    echo 'Exception when calling ProductCategoryApi->putProductCategoryItem: ', $e->getMessage(), PHP_EOL;
+}
+?>
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **string**|  |
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The updated ProductCategory resource | [optional]
+
+### Return type
+
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
+
+### Authorization
+
+[applicationId](../../README.md#applicationId)
+
+### HTTP request headers
+
+ - **Content-Type**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json, application/json, text/html
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
