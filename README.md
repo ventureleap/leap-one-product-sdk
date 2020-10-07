@@ -56,10 +56,16 @@ Please follow the [installation procedure](#installation--usage) and then run th
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
 
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 
@@ -69,10 +75,16 @@ try {
     echo 'Exception when calling PriceListApi->deletePriceListItem: ', $e->getMessage(), PHP_EOL;
 }
 
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 
 try {
@@ -82,10 +94,16 @@ try {
     echo 'Exception when calling PriceListApi->getPriceListCollection: ', $e->getMessage(), PHP_EOL;
 }
 
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 
@@ -96,10 +114,16 @@ try {
     echo 'Exception when calling PriceListApi->getPriceListItem: ', $e->getMessage(), PHP_EOL;
 }
 
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 $body = new \Swagger\Client\LeapOneProductModels\PriceList(); // \Swagger\Client\LeapOneProductModels\PriceList | The updated PriceList resource
@@ -111,10 +135,16 @@ try {
     echo 'Exception when calling PriceListApi->patchPriceListItem: ', $e->getMessage(), PHP_EOL;
 }
 
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $body = new \Swagger\Client\LeapOneProductModels\PriceListJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListJsonld | The new PriceList resource
 
@@ -125,10 +155,16 @@ try {
     echo 'Exception when calling PriceListApi->postPriceListCollection: ', $e->getMessage(), PHP_EOL;
 }
 
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 $body = new \Swagger\Client\LeapOneProductModels\PriceListJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListJsonld | The updated PriceList resource
@@ -193,7 +229,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Authorization
 
- All endpoints do not require authorization.
+
+## applicationId
+
+- **Type**: API key
+- **API key parameter name**: ApplicationId
+- **Location**: HTTP header
 
 
 ## Author

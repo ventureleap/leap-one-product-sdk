@@ -20,11 +20,16 @@ Removes the Product resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 
@@ -48,7 +53,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -66,11 +71,16 @@ Retrieves the collection of Product resources.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $name = "name_example"; // string | 
 $application_id = "application_id_example"; // string | 
@@ -103,7 +113,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -121,11 +131,16 @@ Retrieves a Product resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 
@@ -150,7 +165,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -168,11 +183,16 @@ Updates the Product resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 $body = new \Swagger\Client\LeapOneProductModels\Product(); // \Swagger\Client\LeapOneProductModels\Product | The updated Product resource
@@ -199,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -217,11 +237,16 @@ Creates a Product resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $body = new \Swagger\Client\LeapOneProductModels\ProductJsonld(); // \Swagger\Client\LeapOneProductModels\ProductJsonld | The new Product resource
 
@@ -246,7 +271,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -264,11 +289,16 @@ Replaces the Product resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 $body = new \Swagger\Client\LeapOneProductModels\ProductJsonld(); // \Swagger\Client\LeapOneProductModels\ProductJsonld | The updated Product resource
@@ -295,7 +325,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 

@@ -20,11 +20,16 @@ Removes the PriceListProduct resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 
@@ -48,7 +53,7 @@ void (empty response body)
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -66,11 +71,16 @@ Retrieves the collection of PriceListProduct resources.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $product = "product_example"; // string | 
 $price_list = "price_list_example"; // string | 
@@ -99,7 +109,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -117,11 +127,16 @@ Retrieves a PriceListProduct resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 
@@ -146,7 +161,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -164,11 +179,16 @@ Updates the PriceListProduct resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 $body = new \Swagger\Client\LeapOneProductModels\PriceListProduct(); // \Swagger\Client\LeapOneProductModels\PriceListProduct | The updated PriceListProduct resource
@@ -195,7 +215,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -213,11 +233,16 @@ Creates a PriceListProduct resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $body = new \Swagger\Client\LeapOneProductModels\PriceListProductJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListProductJsonld | The new PriceListProduct resource
 
@@ -242,7 +267,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
@@ -260,11 +285,16 @@ Replaces the PriceListProduct resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
+// Configure API key authorization: applicationId
+$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
 
 $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client()
+    new GuzzleHttp\Client(),
+    $config
 );
 $id = "id_example"; // string | 
 $body = new \Swagger\Client\LeapOneProductModels\PriceListProductJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListProductJsonld | The updated PriceListProduct resource
@@ -291,7 +321,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[applicationId](../../README.md#applicationId)
 
 ### HTTP request headers
 
