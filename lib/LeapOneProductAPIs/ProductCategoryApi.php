@@ -319,7 +319,6 @@ class ProductCategoryApi
      *
      * Retrieves the collection of ProductCategory resources.
      *
-     * @param  string $uuid uuid (optional)
      * @param  string $name name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
@@ -327,9 +326,9 @@ class ProductCategoryApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\LeapOneProductModels\InlineResponse2002
      */
-    public function getProductCategoryCollection($uuid = null, $name = null, $page = '1')
+    public function getProductCategoryCollection($name = null, $page = '1')
     {
-        list($response) = $this->getProductCategoryCollectionWithHttpInfo($uuid, $name, $page);
+        list($response) = $this->getProductCategoryCollectionWithHttpInfo($name, $page);
         return $response;
     }
 
@@ -338,7 +337,6 @@ class ProductCategoryApi
      *
      * Retrieves the collection of ProductCategory resources.
      *
-     * @param  string $uuid (optional)
      * @param  string $name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
@@ -346,10 +344,10 @@ class ProductCategoryApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCategoryCollectionWithHttpInfo($uuid = null, $name = null, $page = '1')
+    public function getProductCategoryCollectionWithHttpInfo($name = null, $page = '1')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2002';
-        $request = $this->getProductCategoryCollectionRequest($uuid, $name, $page);
+        $request = $this->getProductCategoryCollectionRequest($name, $page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -415,16 +413,15 @@ class ProductCategoryApi
      *
      * Retrieves the collection of ProductCategory resources.
      *
-     * @param  string $uuid (optional)
      * @param  string $name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCategoryCollectionAsync($uuid = null, $name = null, $page = '1')
+    public function getProductCategoryCollectionAsync($name = null, $page = '1')
     {
-        return $this->getProductCategoryCollectionAsyncWithHttpInfo($uuid, $name, $page)
+        return $this->getProductCategoryCollectionAsyncWithHttpInfo($name, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -437,17 +434,16 @@ class ProductCategoryApi
      *
      * Retrieves the collection of ProductCategory resources.
      *
-     * @param  string $uuid (optional)
      * @param  string $name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCategoryCollectionAsyncWithHttpInfo($uuid = null, $name = null, $page = '1')
+    public function getProductCategoryCollectionAsyncWithHttpInfo($name = null, $page = '1')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2002';
-        $request = $this->getProductCategoryCollectionRequest($uuid, $name, $page);
+        $request = $this->getProductCategoryCollectionRequest($name, $page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -489,14 +485,13 @@ class ProductCategoryApi
     /**
      * Create request for operation 'getProductCategoryCollection'
      *
-     * @param  string $uuid (optional)
      * @param  string $name (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCategoryCollectionRequest($uuid = null, $name = null, $page = '1')
+    protected function getProductCategoryCollectionRequest($name = null, $page = '1')
     {
 
         $resourcePath = '/api/product_categories';
@@ -506,10 +501,6 @@ class ProductCategoryApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($uuid !== null) {
-            $queryParams['uuid'] = ObjectSerializer::toQueryValue($uuid, null);
-        }
         // query params
         if ($name !== null) {
             $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);

@@ -319,7 +319,6 @@ class ProductApi
      *
      * Retrieves the collection of Product resources.
      *
-     * @param  string $uuid uuid (optional)
      * @param  string $name name (optional)
      * @param  string $order_id order_id (optional)
      * @param  string $order_name order_name (optional)
@@ -329,9 +328,9 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\LeapOneProductModels\InlineResponse2003
      */
-    public function getProductCollection($uuid = null, $name = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCollection($name = null, $order_id = null, $order_name = null, $page = '1')
     {
-        list($response) = $this->getProductCollectionWithHttpInfo($uuid, $name, $order_id, $order_name, $page);
+        list($response) = $this->getProductCollectionWithHttpInfo($name, $order_id, $order_name, $page);
         return $response;
     }
 
@@ -340,7 +339,6 @@ class ProductApi
      *
      * Retrieves the collection of Product resources.
      *
-     * @param  string $uuid (optional)
      * @param  string $name (optional)
      * @param  string $order_id (optional)
      * @param  string $order_name (optional)
@@ -350,10 +348,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCollectionWithHttpInfo($uuid = null, $name = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCollectionWithHttpInfo($name = null, $order_id = null, $order_name = null, $page = '1')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2003';
-        $request = $this->getProductCollectionRequest($uuid, $name, $order_id, $order_name, $page);
+        $request = $this->getProductCollectionRequest($name, $order_id, $order_name, $page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -419,7 +417,6 @@ class ProductApi
      *
      * Retrieves the collection of Product resources.
      *
-     * @param  string $uuid (optional)
      * @param  string $name (optional)
      * @param  string $order_id (optional)
      * @param  string $order_name (optional)
@@ -428,9 +425,9 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsync($uuid = null, $name = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCollectionAsync($name = null, $order_id = null, $order_name = null, $page = '1')
     {
-        return $this->getProductCollectionAsyncWithHttpInfo($uuid, $name, $order_id, $order_name, $page)
+        return $this->getProductCollectionAsyncWithHttpInfo($name, $order_id, $order_name, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -443,7 +440,6 @@ class ProductApi
      *
      * Retrieves the collection of Product resources.
      *
-     * @param  string $uuid (optional)
      * @param  string $name (optional)
      * @param  string $order_id (optional)
      * @param  string $order_name (optional)
@@ -452,10 +448,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsyncWithHttpInfo($uuid = null, $name = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCollectionAsyncWithHttpInfo($name = null, $order_id = null, $order_name = null, $page = '1')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2003';
-        $request = $this->getProductCollectionRequest($uuid, $name, $order_id, $order_name, $page);
+        $request = $this->getProductCollectionRequest($name, $order_id, $order_name, $page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -497,7 +493,6 @@ class ProductApi
     /**
      * Create request for operation 'getProductCollection'
      *
-     * @param  string $uuid (optional)
      * @param  string $name (optional)
      * @param  string $order_id (optional)
      * @param  string $order_name (optional)
@@ -506,7 +501,7 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCollectionRequest($uuid = null, $name = null, $order_id = null, $order_name = null, $page = '1')
+    protected function getProductCollectionRequest($name = null, $order_id = null, $order_name = null, $page = '1')
     {
 
         $resourcePath = '/api/products';
@@ -516,10 +511,6 @@ class ProductApi
         $httpBody = '';
         $multipart = false;
 
-        // query params
-        if ($uuid !== null) {
-            $queryParams['uuid'] = ObjectSerializer::toQueryValue($uuid, null);
-        }
         // query params
         if ($name !== null) {
             $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);

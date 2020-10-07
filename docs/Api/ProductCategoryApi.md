@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCategoryCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCategoryCollection($uuid, $name, $page)
+> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCategoryCollection($name, $page)
 
 Retrieves the collection of ProductCategory resources.
 
@@ -82,12 +82,11 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$uuid = "uuid_example"; // string | 
 $name = "name_example"; // string | 
 $page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->getProductCategoryCollection($uuid, $name, $page);
+    $result = $apiInstance->getProductCategoryCollection($name, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCategoryApi->getProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
@@ -99,7 +98,6 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **uuid** | **string**|  | [optional]
  **name** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
 
