@@ -55,7 +55,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
       */
     protected static $swaggerTypes = [
         'products' => 'string[]',
-'old_uuid' => 'string',
 'internal_id' => 'string',
 'active' => 'bool',
 'name' => 'string',
@@ -72,7 +71,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
       */
     protected static $swaggerFormats = [
         'products' => 'iri-reference',
-'old_uuid' => null,
 'internal_id' => null,
 'active' => null,
 'name' => null,
@@ -110,7 +108,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
      */
     protected static $attributeMap = [
         'products' => 'products',
-'old_uuid' => 'oldUuid',
 'internal_id' => 'internalId',
 'active' => 'active',
 'name' => 'name',
@@ -127,7 +124,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
      */
     protected static $setters = [
         'products' => 'setProducts',
-'old_uuid' => 'setOldUuid',
 'internal_id' => 'setInternalId',
 'active' => 'setActive',
 'name' => 'setName',
@@ -144,7 +140,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
      */
     protected static $getters = [
         'products' => 'getProducts',
-'old_uuid' => 'getOldUuid',
 'internal_id' => 'getInternalId',
 'active' => 'getActive',
 'name' => 'getName',
@@ -213,7 +208,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['products'] = isset($data['products']) ? $data['products'] : null;
-        $this->container['old_uuid'] = isset($data['old_uuid']) ? $data['old_uuid'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -268,30 +262,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
     public function setProducts($products)
     {
         $this->container['products'] = $products;
-
-        return $this;
-    }
-
-    /**
-     * Gets old_uuid
-     *
-     * @return string
-     */
-    public function getOldUuid()
-    {
-        return $this->container['old_uuid'];
-    }
-
-    /**
-     * Sets old_uuid
-     *
-     * @param string $old_uuid old_uuid
-     *
-     * @return $this
-     */
-    public function setOldUuid($old_uuid)
-    {
-        $this->container['old_uuid'] = $old_uuid;
 
         return $this;
     }

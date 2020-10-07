@@ -58,7 +58,6 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
 'id' => 'string',
 'type' => 'string',
 'products' => 'string[]',
-'old_uuid' => 'string',
 'internal_id' => 'string',
 'active' => 'bool',
 'name' => 'string',
@@ -78,7 +77,6 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
 'id' => null,
 'type' => null,
 'products' => 'iri-reference',
-'old_uuid' => null,
 'internal_id' => null,
 'active' => null,
 'name' => null,
@@ -119,7 +117,6 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
 'id' => '@id',
 'type' => '@type',
 'products' => 'products',
-'old_uuid' => 'oldUuid',
 'internal_id' => 'internalId',
 'active' => 'active',
 'name' => 'name',
@@ -139,7 +136,6 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
 'id' => 'setId',
 'type' => 'setType',
 'products' => 'setProducts',
-'old_uuid' => 'setOldUuid',
 'internal_id' => 'setInternalId',
 'active' => 'setActive',
 'name' => 'setName',
@@ -159,7 +155,6 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
 'id' => 'getId',
 'type' => 'getType',
 'products' => 'getProducts',
-'old_uuid' => 'getOldUuid',
 'internal_id' => 'getInternalId',
 'active' => 'getActive',
 'name' => 'getName',
@@ -231,7 +226,6 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['products'] = isset($data['products']) ? $data['products'] : null;
-        $this->container['old_uuid'] = isset($data['old_uuid']) ? $data['old_uuid'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
@@ -358,30 +352,6 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
     public function setProducts($products)
     {
         $this->container['products'] = $products;
-
-        return $this;
-    }
-
-    /**
-     * Gets old_uuid
-     *
-     * @return string
-     */
-    public function getOldUuid()
-    {
-        return $this->container['old_uuid'];
-    }
-
-    /**
-     * Sets old_uuid
-     *
-     * @param string $old_uuid old_uuid
-     *
-     * @return $this
-     */
-    public function setOldUuid($old_uuid)
-    {
-        $this->container['old_uuid'] = $old_uuid;
 
         return $this;
     }
