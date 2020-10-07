@@ -525,11 +525,11 @@ class ProductCategoryApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json', 'application/json', 'text/html']
+                ['application/ld+json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json', 'application/json', 'text/html'],
+                ['application/ld+json'],
                 []
             );
         }
@@ -792,11 +792,11 @@ class ProductCategoryApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json', 'application/json', 'text/html']
+                ['application/ld+json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json', 'application/json', 'text/html'],
+                ['application/ld+json'],
                 []
             );
         }
@@ -1067,11 +1067,11 @@ class ProductCategoryApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json', 'application/json', 'text/html']
+                ['application/ld+json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json', 'application/json', 'text/html'],
+                ['application/ld+json'],
                 ['application/merge-patch+json']
             );
         }
@@ -1323,268 +1323,12 @@ class ProductCategoryApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json', 'application/json', 'text/html']
+                ['application/ld+json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json', 'application/json', 'text/html'],
-                ['application/ld+json', 'application/json', 'text/html']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('ApplicationId');
-        if ($apiKey !== null) {
-            $headers['ApplicationId'] = $apiKey;
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'POST',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation postProductCategoryCollection
-     *
-     * Creates a ProductCategory resource.
-     *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
-     */
-    public function postProductCategoryCollection($body = null)
-    {
-        list($response) = $this->postProductCategoryCollectionWithHttpInfo($body);
-        return $response;
-    }
-
-    /**
-     * Operation postProductCategoryCollectionWithHttpInfo
-     *
-     * Creates a ProductCategory resource.
-     *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function postProductCategoryCollectionWithHttpInfo($body = null)
-    {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
-        $request = $this->postProductCategoryCollectionRequest($body);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 201:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation postProductCategoryCollectionAsync
-     *
-     * Creates a ProductCategory resource.
-     *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function postProductCategoryCollectionAsync($body = null)
-    {
-        return $this->postProductCategoryCollectionAsyncWithHttpInfo($body)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation postProductCategoryCollectionAsyncWithHttpInfo
-     *
-     * Creates a ProductCategory resource.
-     *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function postProductCategoryCollectionAsyncWithHttpInfo($body = null)
-    {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
-        $request = $this->postProductCategoryCollectionRequest($body);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'postProductCategoryCollection'
-     *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The new ProductCategory resource (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function postProductCategoryCollectionRequest($body = null)
-    {
-
-        $resourcePath = '/api/product_categories';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json', 'application/json', 'text/html']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json', 'application/json', 'text/html'],
-                ['application/ld+json', 'application/json', 'text/html']
+                ['application/ld+json'],
+                ['application/ld+json']
             );
         }
 
@@ -1854,287 +1598,12 @@ class ProductCategoryApi
 
         if ($multipart) {
             $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json', 'application/json', 'text/html']
+                ['application/ld+json']
             );
         } else {
             $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json', 'application/json', 'text/html'],
-                ['application/ld+json', 'application/json', 'text/html']
-            );
-        }
-
-        // for model (json/xml)
-        if (isset($_tempBody)) {
-            // $_tempBody is the method argument, if present
-            $httpBody = $_tempBody;
-            // \stdClass has no __toString(), so we should encode it manually
-            if ($httpBody instanceof \stdClass && $headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($httpBody);
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $multipartContents[] = [
-                        'name' => $formParamName,
-                        'contents' => $formParamValue
-                    ];
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif ($headers['Content-Type'] === 'application/json') {
-                $httpBody = \GuzzleHttp\json_encode($formParams);
-
-            } else {
-                // for HTTP post (form)
-                $httpBody = \GuzzleHttp\Psr7\build_query($formParams);
-            }
-        }
-
-        // this endpoint requires API key authentication
-        $apiKey = $this->config->getApiKeyWithPrefix('ApplicationId');
-        if ($apiKey !== null) {
-            $headers['ApplicationId'] = $apiKey;
-        }
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $query = \GuzzleHttp\Psr7\build_query($queryParams);
-        return new Request(
-            'PUT',
-            $this->config->getHost() . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation putProductCategoryItem
-     *
-     * Replaces the ProductCategory resource.
-     *
-     * @param  string $id id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
-     */
-    public function putProductCategoryItem($id, $body = null)
-    {
-        list($response) = $this->putProductCategoryItemWithHttpInfo($id, $body);
-        return $response;
-    }
-
-    /**
-     * Operation putProductCategoryItemWithHttpInfo
-     *
-     * Replaces the ProductCategory resource.
-     *
-     * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
-     *
-     * @throws \Swagger\Client\ApiException on non-2xx response
-     * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function putProductCategoryItemWithHttpInfo($id, $body = null)
-    {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
-        $request = $this->putProductCategoryItemRequest($id, $body);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? $e->getResponse()->getBody()->getContents() : null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    $response->getBody()
-                );
-            }
-
-            $responseBody = $response->getBody();
-            if ($returnType === '\SplFileObject') {
-                $content = $responseBody; //stream goes to serializer
-            } else {
-                $content = $responseBody->getContents();
-                if (!in_array($returnType, ['string','integer','bool'])) {
-                    $content = json_decode($content);
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation putProductCategoryItemAsync
-     *
-     * Replaces the ProductCategory resource.
-     *
-     * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function putProductCategoryItemAsync($id, $body = null)
-    {
-        return $this->putProductCategoryItemAsyncWithHttpInfo($id, $body)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation putProductCategoryItemAsyncWithHttpInfo
-     *
-     * Replaces the ProductCategory resource.
-     *
-     * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function putProductCategoryItemAsyncWithHttpInfo($id, $body = null)
-    {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
-        $request = $this->putProductCategoryItemRequest($id, $body);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    $responseBody = $response->getBody();
-                    if ($returnType === '\SplFileObject') {
-                        $content = $responseBody; //stream goes to serializer
-                    } else {
-                        $content = $responseBody->getContents();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'putProductCategoryItem'
-     *
-     * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    protected function putProductCategoryItemRequest($id, $body = null)
-    {
-        // verify the required parameter 'id' is set
-        if ($id === null || (is_array($id) && count($id) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $id when calling putProductCategoryItem'
-            );
-        }
-
-        $resourcePath = '/api/product_categories/{id}';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-        // path params
-        if ($id !== null) {
-            $resourcePath = str_replace(
-                '{' . 'id' . '}',
-                ObjectSerializer::toPathValue($id),
-                $resourcePath
-            );
-        }
-
-        // body params
-        $_tempBody = null;
-        if (isset($body)) {
-            $_tempBody = $body;
-        }
-
-        if ($multipart) {
-            $headers = $this->headerSelector->selectHeadersForMultipart(
-                ['application/ld+json', 'application/json', 'text/html']
-            );
-        } else {
-            $headers = $this->headerSelector->selectHeaders(
-                ['application/ld+json', 'application/json', 'text/html'],
-                ['application/ld+json', 'application/json', 'text/html']
+                ['application/ld+json'],
+                ['application/ld+json']
             );
         }
 

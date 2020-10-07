@@ -106,7 +106,7 @@ This endpoint does not need any parameter.
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: Not defined
- - **Accept**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -212,7 +212,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/merge-patch+json
- - **Accept**: application/ld+json, application/json, text/html
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -263,60 +263,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+json, application/json, text/html
- - **Accept**: application/ld+json, application/json, text/html
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **postPriceListCollection**
-> \Swagger\Client\LeapOneProductModels\PriceListJsonld postPriceListCollection($body)
-
-Creates a PriceList resource.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
-
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$body = new \Swagger\Client\LeapOneProductModels\PriceListJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListJsonld | The new PriceList resource
-
-try {
-    $result = $apiInstance->postPriceListCollection($body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PriceListApi->postPriceListCollection: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)| The new PriceList resource | [optional]
-
-### Return type
-
-[**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)
-
-### Authorization
-
-[applicationId](../../README.md#applicationId)
-
-### HTTP request headers
-
- - **Content-Type**: application/ld+json, application/json, text/html
- - **Accept**: application/ld+json, application/json, text/html
+ - **Content-Type**: application/ld+json
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
@@ -369,62 +317,8 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/ld+json, application/json, text/html
- - **Accept**: application/ld+json, application/json, text/html
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
-# **putPriceListItem**
-> \Swagger\Client\LeapOneProductModels\PriceListJsonld putPriceListItem($id, $body)
-
-Replaces the PriceList resource.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
-
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\PriceListJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListJsonld | The updated PriceList resource
-
-try {
-    $result = $apiInstance->putPriceListItem($id, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling PriceListApi->putPriceListItem: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)| The updated PriceList resource | [optional]
-
-### Return type
-
-[**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)
-
-### Authorization
-
-[applicationId](../../README.md#applicationId)
-
-### HTTP request headers
-
- - **Content-Type**: application/ld+json, application/json, text/html
- - **Accept**: application/ld+json, application/json, text/html
+ - **Content-Type**: application/ld+json
+ - **Accept**: application/ld+json
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
