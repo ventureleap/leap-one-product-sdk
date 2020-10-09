@@ -228,7 +228,7 @@ class ProductApi
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/products/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -320,6 +320,7 @@ class ProductApi
      * Retrieves the collection of Product resources.
      *
      * @param  string $name name (optional)
+     * @param  string $categories categories (optional)
      * @param  string $order_id order_id (optional)
      * @param  string $order_name order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
@@ -328,9 +329,9 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\LeapOneProductModels\InlineResponse2003
      */
-    public function getProductCollection($name = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCollection($name = null, $categories = null, $order_id = null, $order_name = null, $page = '1')
     {
-        list($response) = $this->getProductCollectionWithHttpInfo($name, $order_id, $order_name, $page);
+        list($response) = $this->getProductCollectionWithHttpInfo($name, $categories, $order_id, $order_name, $page);
         return $response;
     }
 
@@ -340,6 +341,7 @@ class ProductApi
      * Retrieves the collection of Product resources.
      *
      * @param  string $name (optional)
+     * @param  string $categories (optional)
      * @param  string $order_id (optional)
      * @param  string $order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
@@ -348,10 +350,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCollectionWithHttpInfo($name = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCollectionWithHttpInfo($name = null, $categories = null, $order_id = null, $order_name = null, $page = '1')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2003';
-        $request = $this->getProductCollectionRequest($name, $order_id, $order_name, $page);
+        $request = $this->getProductCollectionRequest($name, $categories, $order_id, $order_name, $page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -418,6 +420,7 @@ class ProductApi
      * Retrieves the collection of Product resources.
      *
      * @param  string $name (optional)
+     * @param  string $categories (optional)
      * @param  string $order_id (optional)
      * @param  string $order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
@@ -425,9 +428,9 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsync($name = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCollectionAsync($name = null, $categories = null, $order_id = null, $order_name = null, $page = '1')
     {
-        return $this->getProductCollectionAsyncWithHttpInfo($name, $order_id, $order_name, $page)
+        return $this->getProductCollectionAsyncWithHttpInfo($name, $categories, $order_id, $order_name, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -441,6 +444,7 @@ class ProductApi
      * Retrieves the collection of Product resources.
      *
      * @param  string $name (optional)
+     * @param  string $categories (optional)
      * @param  string $order_id (optional)
      * @param  string $order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
@@ -448,10 +452,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsyncWithHttpInfo($name = null, $order_id = null, $order_name = null, $page = '1')
+    public function getProductCollectionAsyncWithHttpInfo($name = null, $categories = null, $order_id = null, $order_name = null, $page = '1')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2003';
-        $request = $this->getProductCollectionRequest($name, $order_id, $order_name, $page);
+        $request = $this->getProductCollectionRequest($name, $categories, $order_id, $order_name, $page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -494,6 +498,7 @@ class ProductApi
      * Create request for operation 'getProductCollection'
      *
      * @param  string $name (optional)
+     * @param  string $categories (optional)
      * @param  string $order_id (optional)
      * @param  string $order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
@@ -501,10 +506,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCollectionRequest($name = null, $order_id = null, $order_name = null, $page = '1')
+    protected function getProductCollectionRequest($name = null, $categories = null, $order_id = null, $order_name = null, $page = '1')
     {
 
-        $resourcePath = '/api/products';
+        $resourcePath = '/products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -514,6 +519,10 @@ class ProductApi
         // query params
         if ($name !== null) {
             $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);
+        }
+        // query params
+        if ($categories !== null) {
+            $queryParams['categories'] = ObjectSerializer::toQueryValue($categories, null);
         }
         // query params
         if ($order_id !== null) {
@@ -779,7 +788,7 @@ class ProductApi
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/products/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1051,7 +1060,7 @@ class ProductApi
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/products/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1315,7 +1324,7 @@ class ProductApi
     protected function postProductCollectionRequest($body = null)
     {
 
-        $resourcePath = '/api/products';
+        $resourcePath = '/products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1582,7 +1591,7 @@ class ProductApi
             );
         }
 
-        $resourcePath = '/api/products/{id}';
+        $resourcePath = '/products/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

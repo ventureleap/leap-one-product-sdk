@@ -3,7 +3,14 @@
   <component name="ChangeListManager">
     <list default="true" id="8a787b70-a700-4581-9db7-839fe25833fd" name="Default Changelist" comment="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/ObjectSerializer.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/ObjectSerializer.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/PriceListApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ProductApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/ProductApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +112,9 @@
       <updated>1601990988129</updated>
       <workItem from="1601990989298" duration="3609000" />
       <workItem from="1602057692774" duration="6562000" />
-      <workItem from="1602086559245" duration="1217000" />
+      <workItem from="1602086559245" duration="1915000" />
+      <workItem from="1602163988375" duration="13000" />
+      <workItem from="1602169031153" duration="873000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <created>1601992849321</created>
@@ -146,5 +155,16 @@
       <screen x="67" y="27" width="3773" height="1053" />
     </state>
     <state x="774" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.3773.1053@67.27.3773.1053" timestamp="1601991185102" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/lib/ObjectSerializer.php</url>
+          <line>227</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

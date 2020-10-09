@@ -228,7 +228,7 @@ class ProductCategoryApi
             );
         }
 
-        $resourcePath = '/api/product_categories/{id}';
+        $resourcePath = '/product_categories/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -494,7 +494,7 @@ class ProductCategoryApi
     protected function getProductCategoryCollectionRequest($name = null, $page = '1')
     {
 
-        $resourcePath = '/api/product_categories';
+        $resourcePath = '/product_categories';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -761,7 +761,7 @@ class ProductCategoryApi
             );
         }
 
-        $resourcePath = '/api/product_categories/{id}';
+        $resourcePath = '/product_categories/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1033,7 +1033,7 @@ class ProductCategoryApi
             );
         }
 
-        $resourcePath = '/api/product_categories/{id}';
+        $resourcePath = '/product_categories/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1297,7 +1297,7 @@ class ProductCategoryApi
     protected function postProductCategoryCollectionRequest($body = null)
     {
 
-        $resourcePath = '/api/product_categories';
+        $resourcePath = '/product_categories';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1564,7 +1564,7 @@ class ProductCategoryApi
             );
         }
 
-        $resourcePath = '/api/product_categories/{id}';
+        $resourcePath = '/product_categories/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

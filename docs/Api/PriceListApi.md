@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletePriceListItem**](PriceListApi.md#deletepricelistitem) | **DELETE** /api/price_lists/{id} | Removes the PriceList resource.
-[**getPriceListCollection**](PriceListApi.md#getpricelistcollection) | **GET** /api/price_lists | Retrieves the collection of PriceList resources.
-[**getPriceListItem**](PriceListApi.md#getpricelistitem) | **GET** /api/price_lists/{id} | Retrieves a PriceList resource.
-[**patchPriceListItem**](PriceListApi.md#patchpricelistitem) | **PATCH** /api/price_lists/{id} | Updates the PriceList resource.
-[**postPriceListCollection**](PriceListApi.md#postpricelistcollection) | **POST** /api/price_lists | Creates a PriceList resource.
-[**putPriceListItem**](PriceListApi.md#putpricelistitem) | **PUT** /api/price_lists/{id} | Replaces the PriceList resource.
+[**deletePriceListItem**](PriceListApi.md#deletepricelistitem) | **DELETE** /price_lists/{id} | Removes the PriceList resource.
+[**getPriceListCollection**](PriceListApi.md#getpricelistcollection) | **GET** /price_lists | Retrieves the collection of PriceList resources.
+[**getPriceListItem**](PriceListApi.md#getpricelistitem) | **GET** /price_lists/{id} | Retrieves a PriceList resource.
+[**patchPriceListItem**](PriceListApi.md#patchpricelistitem) | **PATCH** /price_lists/{id} | Updates the PriceList resource.
+[**postPriceListCollection**](PriceListApi.md#postpricelistcollection) | **POST** /price_lists | Creates a PriceList resource.
+[**putPriceListItem**](PriceListApi.md#putpricelistitem) | **PUT** /price_lists/{id} | Replaces the PriceList resource.
 
 # **deletePriceListItem**
 > deletePriceListItem($id)

@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteProductItem**](ProductApi.md#deleteproductitem) | **DELETE** /api/products/{id} | Removes the Product resource.
-[**getProductCollection**](ProductApi.md#getproductcollection) | **GET** /api/products | Retrieves the collection of Product resources.
-[**getProductItem**](ProductApi.md#getproductitem) | **GET** /api/products/{id} | Retrieves a Product resource.
-[**patchProductItem**](ProductApi.md#patchproductitem) | **PATCH** /api/products/{id} | Updates the Product resource.
-[**postProductCollection**](ProductApi.md#postproductcollection) | **POST** /api/products | Creates a Product resource.
-[**putProductItem**](ProductApi.md#putproductitem) | **PUT** /api/products/{id} | Replaces the Product resource.
+[**deleteProductItem**](ProductApi.md#deleteproductitem) | **DELETE** /products/{id} | Removes the Product resource.
+[**getProductCollection**](ProductApi.md#getproductcollection) | **GET** /products | Retrieves the collection of Product resources.
+[**getProductItem**](ProductApi.md#getproductitem) | **GET** /products/{id} | Retrieves a Product resource.
+[**patchProductItem**](ProductApi.md#patchproductitem) | **PATCH** /products/{id} | Updates the Product resource.
+[**postProductCollection**](ProductApi.md#postproductcollection) | **POST** /products | Creates a Product resource.
+[**putProductItem**](ProductApi.md#putproductitem) | **PUT** /products/{id} | Replaces the Product resource.
 
 # **deleteProductItem**
 > deleteProductItem($id)
@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2003 getProductCollection($name, $order_id, $order_name, $page)
+> \Swagger\Client\LeapOneProductModels\InlineResponse2003 getProductCollection($name, $categories, $order_id, $order_name, $page)
 
 Retrieves the collection of Product resources.
 
@@ -83,12 +83,13 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     $config
 );
 $name = "name_example"; // string | 
+$categories = "categories_example"; // string | 
 $order_id = "order_id_example"; // string | 
 $order_name = "order_name_example"; // string | 
 $page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->getProductCollection($name, $order_id, $order_name, $page);
+    $result = $apiInstance->getProductCollection($name, $categories, $order_id, $order_name, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductApi->getProductCollection: ', $e->getMessage(), PHP_EOL;
@@ -101,6 +102,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**|  | [optional]
+ **categories** | **string**|  | [optional]
  **order_id** | **string**|  | [optional]
  **order_name** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]

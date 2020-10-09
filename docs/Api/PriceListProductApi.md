@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletePriceListProductItem**](PriceListProductApi.md#deletepricelistproductitem) | **DELETE** /api/price_list_products/{id} | Removes the PriceListProduct resource.
-[**getPriceListProductCollection**](PriceListProductApi.md#getpricelistproductcollection) | **GET** /api/price_list_products | Retrieves the collection of PriceListProduct resources.
-[**getPriceListProductItem**](PriceListProductApi.md#getpricelistproductitem) | **GET** /api/price_list_products/{id} | Retrieves a PriceListProduct resource.
-[**patchPriceListProductItem**](PriceListProductApi.md#patchpricelistproductitem) | **PATCH** /api/price_list_products/{id} | Updates the PriceListProduct resource.
-[**postPriceListProductCollection**](PriceListProductApi.md#postpricelistproductcollection) | **POST** /api/price_list_products | Creates a PriceListProduct resource.
-[**putPriceListProductItem**](PriceListProductApi.md#putpricelistproductitem) | **PUT** /api/price_list_products/{id} | Replaces the PriceListProduct resource.
+[**deletePriceListProductItem**](PriceListProductApi.md#deletepricelistproductitem) | **DELETE** /price_list_products/{id} | Removes the PriceListProduct resource.
+[**getPriceListProductCollection**](PriceListProductApi.md#getpricelistproductcollection) | **GET** /price_list_products | Retrieves the collection of PriceListProduct resources.
+[**getPriceListProductItem**](PriceListProductApi.md#getpricelistproductitem) | **GET** /price_list_products/{id} | Retrieves a PriceListProduct resource.
+[**patchPriceListProductItem**](PriceListProductApi.md#patchpricelistproductitem) | **PATCH** /price_list_products/{id} | Updates the PriceListProduct resource.
+[**postPriceListProductCollection**](PriceListProductApi.md#postpricelistproductcollection) | **POST** /price_list_products | Creates a PriceListProduct resource.
+[**putPriceListProductItem**](PriceListProductApi.md#putpricelistproductitem) | **PUT** /price_list_products/{id} | Replaces the PriceListProduct resource.
 
 # **deletePriceListProductItem**
 > deletePriceListProductItem($id)

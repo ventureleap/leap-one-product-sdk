@@ -228,7 +228,7 @@ class PriceListProductApi
             );
         }
 
-        $resourcePath = '/api/price_list_products/{id}';
+        $resourcePath = '/price_list_products/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -499,7 +499,7 @@ class PriceListProductApi
     protected function getPriceListProductCollectionRequest($product = null, $price_list = null, $page = '1')
     {
 
-        $resourcePath = '/api/price_list_products';
+        $resourcePath = '/price_list_products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -770,7 +770,7 @@ class PriceListProductApi
             );
         }
 
-        $resourcePath = '/api/price_list_products/{id}';
+        $resourcePath = '/price_list_products/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1042,7 +1042,7 @@ class PriceListProductApi
             );
         }
 
-        $resourcePath = '/api/price_list_products/{id}';
+        $resourcePath = '/price_list_products/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1306,7 +1306,7 @@ class PriceListProductApi
     protected function postPriceListProductCollectionRequest($body = null)
     {
 
-        $resourcePath = '/api/price_list_products';
+        $resourcePath = '/price_list_products';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1573,7 +1573,7 @@ class PriceListProductApi
             );
         }
 
-        $resourcePath = '/api/price_list_products/{id}';
+        $resourcePath = '/price_list_products/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

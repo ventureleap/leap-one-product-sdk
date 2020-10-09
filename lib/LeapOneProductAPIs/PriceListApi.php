@@ -228,7 +228,7 @@ class PriceListApi
             );
         }
 
-        $resourcePath = '/api/price_lists/{id}';
+        $resourcePath = '/price_lists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -484,7 +484,7 @@ class PriceListApi
     protected function getPriceListCollectionRequest()
     {
 
-        $resourcePath = '/api/price_lists';
+        $resourcePath = '/price_lists';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -743,7 +743,7 @@ class PriceListApi
             );
         }
 
-        $resourcePath = '/api/price_lists/{id}';
+        $resourcePath = '/price_lists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1015,7 +1015,7 @@ class PriceListApi
             );
         }
 
-        $resourcePath = '/api/price_lists/{id}';
+        $resourcePath = '/price_lists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1279,7 +1279,7 @@ class PriceListApi
     protected function postPriceListCollectionRequest($body = null)
     {
 
-        $resourcePath = '/api/price_lists';
+        $resourcePath = '/price_lists';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];
@@ -1546,7 +1546,7 @@ class PriceListApi
             );
         }
 
-        $resourcePath = '/api/price_lists/{id}';
+        $resourcePath = '/price_lists/{id}';
         $formParams = [];
         $queryParams = [];
         $headerParams = [];

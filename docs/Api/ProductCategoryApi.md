@@ -4,12 +4,12 @@ All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteProductCategoryItem**](ProductCategoryApi.md#deleteproductcategoryitem) | **DELETE** /api/product_categories/{id} | Removes the ProductCategory resource.
-[**getProductCategoryCollection**](ProductCategoryApi.md#getproductcategorycollection) | **GET** /api/product_categories | Retrieves the collection of ProductCategory resources.
-[**getProductCategoryItem**](ProductCategoryApi.md#getproductcategoryitem) | **GET** /api/product_categories/{id} | Retrieves a ProductCategory resource.
-[**patchProductCategoryItem**](ProductCategoryApi.md#patchproductcategoryitem) | **PATCH** /api/product_categories/{id} | Updates the ProductCategory resource.
-[**postProductCategoryCollection**](ProductCategoryApi.md#postproductcategorycollection) | **POST** /api/product_categories | Creates a ProductCategory resource.
-[**putProductCategoryItem**](ProductCategoryApi.md#putproductcategoryitem) | **PUT** /api/product_categories/{id} | Replaces the ProductCategory resource.
+[**deleteProductCategoryItem**](ProductCategoryApi.md#deleteproductcategoryitem) | **DELETE** /product_categories/{id} | Removes the ProductCategory resource.
+[**getProductCategoryCollection**](ProductCategoryApi.md#getproductcategorycollection) | **GET** /product_categories | Retrieves the collection of ProductCategory resources.
+[**getProductCategoryItem**](ProductCategoryApi.md#getproductcategoryitem) | **GET** /product_categories/{id} | Retrieves a ProductCategory resource.
+[**patchProductCategoryItem**](ProductCategoryApi.md#patchproductcategoryitem) | **PATCH** /product_categories/{id} | Updates the ProductCategory resource.
+[**postProductCategoryCollection**](ProductCategoryApi.md#postproductcategorycollection) | **POST** /product_categories | Creates a ProductCategory resource.
+[**putProductCategoryItem**](ProductCategoryApi.md#putproductcategoryitem) | **PUT** /product_categories/{id} | Replaces the ProductCategory resource.
 
 # **deleteProductCategoryItem**
 > deleteProductCategoryItem($id)
