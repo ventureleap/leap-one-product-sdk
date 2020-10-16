@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCategoryCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCategoryCollection($name, $page)
+> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCategoryCollection($name, $products, $page)
 
 Retrieves the collection of ProductCategory resources.
 
@@ -83,10 +83,11 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
     $config
 );
 $name = "name_example"; // string | 
+$products = "products_example"; // string | 
 $page = 1; // int | The collection page number
 
 try {
-    $result = $apiInstance->getProductCategoryCollection($name, $page);
+    $result = $apiInstance->getProductCategoryCollection($name, $products, $page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCategoryApi->getProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
@@ -99,6 +100,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**|  | [optional]
+ **products** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
 
 ### Return type

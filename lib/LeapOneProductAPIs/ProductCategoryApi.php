@@ -320,15 +320,16 @@ class ProductCategoryApi
      * Retrieves the collection of ProductCategory resources.
      *
      * @param  string $name name (optional)
+     * @param  string $products products (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\LeapOneProductModels\InlineResponse2002
      */
-    public function getProductCategoryCollection($name = null, $page = '1')
+    public function getProductCategoryCollection($name = null, $products = null, $page = '1')
     {
-        list($response) = $this->getProductCategoryCollectionWithHttpInfo($name, $page);
+        list($response) = $this->getProductCategoryCollectionWithHttpInfo($name, $products, $page);
         return $response;
     }
 
@@ -338,16 +339,17 @@ class ProductCategoryApi
      * Retrieves the collection of ProductCategory resources.
      *
      * @param  string $name (optional)
+     * @param  string $products (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse2002, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCategoryCollectionWithHttpInfo($name = null, $page = '1')
+    public function getProductCategoryCollectionWithHttpInfo($name = null, $products = null, $page = '1')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2002';
-        $request = $this->getProductCategoryCollectionRequest($name, $page);
+        $request = $this->getProductCategoryCollectionRequest($name, $products, $page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -414,14 +416,15 @@ class ProductCategoryApi
      * Retrieves the collection of ProductCategory resources.
      *
      * @param  string $name (optional)
+     * @param  string $products (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCategoryCollectionAsync($name = null, $page = '1')
+    public function getProductCategoryCollectionAsync($name = null, $products = null, $page = '1')
     {
-        return $this->getProductCategoryCollectionAsyncWithHttpInfo($name, $page)
+        return $this->getProductCategoryCollectionAsyncWithHttpInfo($name, $products, $page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -435,15 +438,16 @@ class ProductCategoryApi
      * Retrieves the collection of ProductCategory resources.
      *
      * @param  string $name (optional)
+     * @param  string $products (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCategoryCollectionAsyncWithHttpInfo($name = null, $page = '1')
+    public function getProductCategoryCollectionAsyncWithHttpInfo($name = null, $products = null, $page = '1')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2002';
-        $request = $this->getProductCategoryCollectionRequest($name, $page);
+        $request = $this->getProductCategoryCollectionRequest($name, $products, $page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -486,12 +490,13 @@ class ProductCategoryApi
      * Create request for operation 'getProductCategoryCollection'
      *
      * @param  string $name (optional)
+     * @param  string $products (optional)
      * @param  int $page The collection page number (optional, default to 1)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCategoryCollectionRequest($name = null, $page = '1')
+    protected function getProductCategoryCollectionRequest($name = null, $products = null, $page = '1')
     {
 
         $resourcePath = '/product_categories';
@@ -504,6 +509,10 @@ class ProductCategoryApi
         // query params
         if ($name !== null) {
             $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);
+        }
+        // query params
+        if ($products !== null) {
+            $queryParams['products'] = ObjectSerializer::toQueryValue($products, null);
         }
         // query params
         if ($page !== null) {
