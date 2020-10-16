@@ -3,14 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="8a787b70-a700-4581-9db7-839fe25833fd" name="Default Changelist" comment="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/PriceListApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Api/ProductApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/ProductApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -115,6 +109,7 @@
       <workItem from="1602086559245" duration="1915000" />
       <workItem from="1602163988375" duration="13000" />
       <workItem from="1602169031153" duration="873000" />
+      <workItem from="1602774589526" duration="2012000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <created>1601992849321</created>
