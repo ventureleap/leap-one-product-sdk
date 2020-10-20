@@ -54,7 +54,7 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'hydramember' => '\Swagger\Client\LeapOneProductModels\ProductJsonld[]',
+        'hydramember' => '\Swagger\Client\LeapOneProductModels\ProductJsonldProductRead[]',
 'hydratotal_items' => 'int',
 'hydraview' => '\Swagger\Client\LeapOneProductModels\InlineResponse200Hydraview',
 'hydrasearch' => '\Swagger\Client\LeapOneProductModels\InlineResponse200Hydrasearch'    ];
@@ -218,7 +218,7 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
     /**
      * Gets hydramember
      *
-     * @return \Swagger\Client\LeapOneProductModels\ProductJsonld[]
+     * @return \Swagger\Client\LeapOneProductModels\ProductJsonldProductRead[]
      */
     public function getHydramember()
     {
@@ -228,7 +228,7 @@ class InlineResponse2003 implements ModelInterface, ArrayAccess
     /**
      * Sets hydramember
      *
-     * @param \Swagger\Client\LeapOneProductModels\ProductJsonld[] $hydramember hydramember
+     * @param \Swagger\Client\LeapOneProductModels\ProductJsonldProductRead[] $hydramember hydramember
      *
      * @return $this
      */

@@ -54,15 +54,13 @@ class ProductCategory implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'products' => 'string[]',
-'internal_id' => 'string',
-'active' => 'bool',
+        'internal_id' => 'string',
 'name' => 'string',
+'active' => 'bool',
 'priority' => 'int',
-'created_at' => '\DateTime',
-'updated_at' => '\DateTime',
-'application_id' => 'string',
-'custom_data' => 'string[]'    ];
+'products' => 'string[]',
+'custom_data' => 'string[]',
+'application_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -70,15 +68,13 @@ class ProductCategory implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'products' => 'iri-reference',
-'internal_id' => null,
-'active' => null,
+        'internal_id' => null,
 'name' => null,
+'active' => null,
 'priority' => null,
-'created_at' => 'date-time',
-'updated_at' => 'date-time',
-'application_id' => null,
-'custom_data' => null    ];
+'products' => 'iri-reference',
+'custom_data' => null,
+'application_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -107,15 +103,13 @@ class ProductCategory implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'products' => 'products',
-'internal_id' => 'internalId',
-'active' => 'active',
+        'internal_id' => 'internalId',
 'name' => 'name',
+'active' => 'active',
 'priority' => 'priority',
-'created_at' => 'createdAt',
-'updated_at' => 'updatedAt',
-'application_id' => 'applicationId',
-'custom_data' => 'customData'    ];
+'products' => 'products',
+'custom_data' => 'customData',
+'application_id' => 'applicationId'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -123,15 +117,13 @@ class ProductCategory implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'products' => 'setProducts',
-'internal_id' => 'setInternalId',
-'active' => 'setActive',
+        'internal_id' => 'setInternalId',
 'name' => 'setName',
+'active' => 'setActive',
 'priority' => 'setPriority',
-'created_at' => 'setCreatedAt',
-'updated_at' => 'setUpdatedAt',
-'application_id' => 'setApplicationId',
-'custom_data' => 'setCustomData'    ];
+'products' => 'setProducts',
+'custom_data' => 'setCustomData',
+'application_id' => 'setApplicationId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -139,15 +131,13 @@ class ProductCategory implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'products' => 'getProducts',
-'internal_id' => 'getInternalId',
-'active' => 'getActive',
+        'internal_id' => 'getInternalId',
 'name' => 'getName',
+'active' => 'getActive',
 'priority' => 'getPriority',
-'created_at' => 'getCreatedAt',
-'updated_at' => 'getUpdatedAt',
-'application_id' => 'getApplicationId',
-'custom_data' => 'getCustomData'    ];
+'products' => 'getProducts',
+'custom_data' => 'getCustomData',
+'application_id' => 'getApplicationId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -207,15 +197,13 @@ class ProductCategory implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
+        $this->container['products'] = isset($data['products']) ? $data['products'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
+        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
     }
 
     /**
@@ -243,30 +231,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets products
-     *
-     * @return string[]
-     */
-    public function getProducts()
-    {
-        return $this->container['products'];
-    }
-
-    /**
-     * Sets products
-     *
-     * @param string[] $products products
-     *
-     * @return $this
-     */
-    public function setProducts($products)
-    {
-        $this->container['products'] = $products;
-
-        return $this;
-    }
-
-    /**
      * Gets internal_id
      *
      * @return string
@@ -286,30 +250,6 @@ class ProductCategory implements ModelInterface, ArrayAccess
     public function setInternalId($internal_id)
     {
         $this->container['internal_id'] = $internal_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets active
-     *
-     * @return bool
-     */
-    public function getActive()
-    {
-        return $this->container['active'];
-    }
-
-    /**
-     * Sets active
-     *
-     * @param bool $active active
-     *
-     * @return $this
-     */
-    public function setActive($active)
-    {
-        $this->container['active'] = $active;
 
         return $this;
     }
@@ -339,6 +279,30 @@ class ProductCategory implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets active
+     *
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool $active active
+     *
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
      * Gets priority
      *
      * @return int
@@ -363,73 +327,25 @@ class ProductCategory implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets created_at
+     * Gets products
      *
-     * @return \DateTime
+     * @return string[]
      */
-    public function getCreatedAt()
+    public function getProducts()
     {
-        return $this->container['created_at'];
+        return $this->container['products'];
     }
 
     /**
-     * Sets created_at
+     * Sets products
      *
-     * @param \DateTime $created_at created_at
+     * @param string[] $products products
      *
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setProducts($products)
     {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     *
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     *
-     * @param \DateTime $updated_at updated_at
-     *
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets application_id
-     *
-     * @return string
-     */
-    public function getApplicationId()
-    {
-        return $this->container['application_id'];
-    }
-
-    /**
-     * Sets application_id
-     *
-     * @param string $application_id application_id
-     *
-     * @return $this
-     */
-    public function setApplicationId($application_id)
-    {
-        $this->container['application_id'] = $application_id;
+        $this->container['products'] = $products;
 
         return $this;
     }
@@ -454,6 +370,30 @@ class ProductCategory implements ModelInterface, ArrayAccess
     public function setCustomData($custom_data)
     {
         $this->container['custom_data'] = $custom_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets application_id
+     *
+     * @return string
+     */
+    public function getApplicationId()
+    {
+        return $this->container['application_id'];
+    }
+
+    /**
+     * Sets application_id
+     *
+     * @param string $application_id application_id
+     *
+     * @return $this
+     */
+    public function setApplicationId($application_id)
+    {
+        $this->container['application_id'] = $application_id;
 
         return $this;
     }

@@ -598,7 +598,7 @@ class ProductCategoryApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead
      */
     public function getProductCategoryItem($id)
     {
@@ -615,11 +615,11 @@ class ProductCategoryApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function getProductCategoryItemWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead';
         $request = $this->getProductCategoryItemRequest($id);
 
         try {
@@ -671,7 +671,7 @@ class ProductCategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
+                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -713,7 +713,7 @@ class ProductCategoryApi
      */
     public function getProductCategoryItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead';
         $request = $this->getProductCategoryItemRequest($id);
 
         return $this->client
@@ -866,7 +866,7 @@ class ProductCategoryApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead
      */
     public function patchProductCategoryItem($id, $body = null)
     {
@@ -884,11 +884,11 @@ class ProductCategoryApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchProductCategoryItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead';
         $request = $this->patchProductCategoryItemRequest($id, $body);
 
         try {
@@ -940,7 +940,7 @@ class ProductCategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
+                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -984,7 +984,7 @@ class ProductCategoryApi
      */
     public function patchProductCategoryItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead';
         $request = $this->patchProductCategoryItemRequest($id, $body);
 
         return $this->client
@@ -1140,7 +1140,7 @@ class ProductCategoryApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead
      */
     public function postProductCategoryCollection($body = null)
     {
@@ -1157,11 +1157,11 @@ class ProductCategoryApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function postProductCategoryCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead';
         $request = $this->postProductCategoryCollectionRequest($body);
 
         try {
@@ -1213,7 +1213,7 @@ class ProductCategoryApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
+                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1255,7 +1255,7 @@ class ProductCategoryApi
      */
     public function postProductCategoryCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead';
         $request = $this->postProductCategoryCollectionRequest($body);
 
         return $this->client
@@ -1397,7 +1397,7 @@ class ProductCategoryApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead
      */
     public function putProductCategoryItem($id, $body = null)
     {
@@ -1415,11 +1415,11 @@ class ProductCategoryApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function putProductCategoryItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead';
         $request = $this->putProductCategoryItemRequest($id, $body);
 
         try {
@@ -1471,7 +1471,7 @@ class ProductCategoryApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld',
+                        '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1515,7 +1515,7 @@ class ProductCategoryApi
      */
     public function putProductCategoryItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead';
         $request = $this->putProductCategoryItemRequest($id, $body);
 
         return $this->client

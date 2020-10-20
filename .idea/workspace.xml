@@ -3,6 +3,45 @@
   <component name="ChangeListManager">
     <list default="true" id="8a787b70-a700-4581-9db7-839fe25833fd" name="Default Changelist" comment="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ProductApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2001.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2002.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2003.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydrasearch.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200HydrasearchHydramapping.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydraview.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceList.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProduct.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/Product.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategory.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonld.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListApi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2001.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2002.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2003.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200Hydrasearch.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200HydrasearchHydramapping.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200Hydraview.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ModelInterface.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceList.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListJsonld.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProduct.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductJsonld.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/Product.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategory.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonld.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonld.php" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -107,7 +146,10 @@
       <workItem from="1602086559245" duration="1915000" />
       <workItem from="1602163988375" duration="13000" />
       <workItem from="1602169031153" duration="873000" />
-      <workItem from="1602774589526" duration="2709000" />
+      <workItem from="1602774589526" duration="7480000" />
+      <workItem from="1603094308103" duration="26000" />
+      <workItem from="1603102561376" duration="2987000" />
+      <workItem from="1603191235698" duration="1217000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <created>1601992849321</created>
@@ -135,9 +177,10 @@
       <screen x="67" y="27" width="3773" height="1053" />
     </state>
     <state x="624" y="315" width="728" height="475" key="MultipleFileMergeDialog/67.27.3773.1053@67.27.3773.1053" timestamp="1601992699787" />
-    <state x="399" y="236" width="272" height="633" key="RollbackChangesDialog" timestamp="1602079000928">
-      <screen x="67" y="27" width="1853" height="1053" />
+    <state x="2904" y="214" width="272" height="633" key="RollbackChangesDialog" timestamp="1603191815353">
+      <screen x="2560" y="0" width="1920" height="1080" />
     </state>
+    <state x="2904" y="214" key="RollbackChangesDialog/2560.0.1920.1080/0.27.2560.988@2560.0.1920.1080" timestamp="1603191815353" />
     <state x="399" y="236" width="272" height="633" key="RollbackChangesDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1602079000928" />
     <state x="742" y="236" width="492" height="633" key="RollbackChangesDialog/67.27.3773.1053@67.27.3773.1053" timestamp="1601994370867" />
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1601992852886">
@@ -148,16 +191,9 @@
       <screen x="67" y="27" width="3773" height="1053" />
     </state>
     <state x="774" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.3773.1053@67.27.3773.1053" timestamp="1601991185102" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="php">
-          <url>file://$PROJECT_DIR$/lib/ObjectSerializer.php</url>
-          <line>227</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="3183" y="241" width="672" height="678" key="search.everywhere.popup" timestamp="1603105474636">
+      <screen x="2560" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3183" y="241" width="672" height="678" key="search.everywhere.popup/2560.0.1920.1080/0.27.2560.988@2560.0.1920.1080" timestamp="1603105474636" />
   </component>
 </project>

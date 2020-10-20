@@ -54,9 +54,9 @@ class PriceList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'availability_areas' => 'string[]',
-'internal_id' => 'string',
+        'internal_id' => 'string',
 'name' => 'string',
+'availability_areas' => 'string[]',
 'active' => 'bool',
 'created_at' => '\DateTime',
 'updated_at' => '\DateTime',
@@ -69,9 +69,9 @@ class PriceList implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'availability_areas' => null,
-'internal_id' => null,
+        'internal_id' => null,
 'name' => null,
+'availability_areas' => null,
 'active' => null,
 'created_at' => 'date-time',
 'updated_at' => 'date-time',
@@ -105,9 +105,9 @@ class PriceList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'availability_areas' => 'availabilityAreas',
-'internal_id' => 'internalId',
+        'internal_id' => 'internalId',
 'name' => 'name',
+'availability_areas' => 'availabilityAreas',
 'active' => 'active',
 'created_at' => 'createdAt',
 'updated_at' => 'updatedAt',
@@ -120,9 +120,9 @@ class PriceList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'availability_areas' => 'setAvailabilityAreas',
-'internal_id' => 'setInternalId',
+        'internal_id' => 'setInternalId',
 'name' => 'setName',
+'availability_areas' => 'setAvailabilityAreas',
 'active' => 'setActive',
 'created_at' => 'setCreatedAt',
 'updated_at' => 'setUpdatedAt',
@@ -135,9 +135,9 @@ class PriceList implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'availability_areas' => 'getAvailabilityAreas',
-'internal_id' => 'getInternalId',
+        'internal_id' => 'getInternalId',
 'name' => 'getName',
+'availability_areas' => 'getAvailabilityAreas',
 'active' => 'getActive',
 'created_at' => 'getCreatedAt',
 'updated_at' => 'getUpdatedAt',
@@ -202,9 +202,9 @@ class PriceList implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['availability_areas'] = isset($data['availability_areas']) ? $data['availability_areas'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['availability_areas'] = isset($data['availability_areas']) ? $data['availability_areas'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
         $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
@@ -235,30 +235,6 @@ class PriceList implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
-
-    /**
-     * Gets availability_areas
-     *
-     * @return string[]
-     */
-    public function getAvailabilityAreas()
-    {
-        return $this->container['availability_areas'];
-    }
-
-    /**
-     * Sets availability_areas
-     *
-     * @param string[] $availability_areas availability_areas
-     *
-     * @return $this
-     */
-    public function setAvailabilityAreas($availability_areas)
-    {
-        $this->container['availability_areas'] = $availability_areas;
-
-        return $this;
-    }
 
     /**
      * Gets internal_id
@@ -304,6 +280,30 @@ class PriceList implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets availability_areas
+     *
+     * @return string[]
+     */
+    public function getAvailabilityAreas()
+    {
+        return $this->container['availability_areas'];
+    }
+
+    /**
+     * Sets availability_areas
+     *
+     * @param string[] $availability_areas availability_areas
+     *
+     * @return $this
+     */
+    public function setAvailabilityAreas($availability_areas)
+    {
+        $this->container['availability_areas'] = $availability_areas;
 
         return $this;
     }

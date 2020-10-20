@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPriceListProductItem**
-> \Swagger\Client\LeapOneProductModels\PriceListProductJsonld getPriceListProductItem($id)
+> \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead getPriceListProductItem($id)
 
 Retrieves a PriceListProduct resource.
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\PriceListProductJsonld**](../Model/PriceListProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead**](../Model/PriceListProductJsonldPriceListProductRead.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchPriceListProductItem**
-> \Swagger\Client\LeapOneProductModels\PriceListProductJsonld patchPriceListProductItem($id, $body)
+> \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead patchPriceListProductItem($id, $body)
 
 Updates the PriceListProduct resource.
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\PriceListProductJsonld**](../Model/PriceListProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead**](../Model/PriceListProductJsonldPriceListProductRead.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPriceListProductCollection**
-> \Swagger\Client\LeapOneProductModels\PriceListProductJsonld postPriceListProductCollection($body)
+> \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead postPriceListProductCollection($body)
 
 Creates a PriceListProduct resource.
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\PriceListProductJsonld**](../Model/PriceListProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead**](../Model/PriceListProductJsonldPriceListProductRead.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putPriceListProductItem**
-> \Swagger\Client\LeapOneProductModels\PriceListProductJsonld putPriceListProductItem($id, $body)
+> \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead putPriceListProductItem($id, $body)
 
 Replaces the PriceListProduct resource.
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\PriceListProductJsonld**](../Model/PriceListProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead**](../Model/PriceListProductJsonldPriceListProductRead.md)
 
 ### Authorization
 

@@ -121,7 +121,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductItem**
-> \Swagger\Client\LeapOneProductModels\ProductJsonld getProductItem($id)
+> \Swagger\Client\LeapOneProductModels\ProductJsonldProductRead getProductItem($id)
 
 Retrieves a Product resource.
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductJsonldProductRead**](../Model/ProductJsonldProductRead.md)
 
 ### Authorization
 
@@ -173,7 +173,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchProductItem**
-> \Swagger\Client\LeapOneProductModels\ProductJsonld patchProductItem($id, $body)
+> \Swagger\Client\LeapOneProductModels\ProductJsonldProductRead patchProductItem($id, $body)
 
 Updates the Product resource.
 
@@ -213,7 +213,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductJsonldProductRead**](../Model/ProductJsonldProductRead.md)
 
 ### Authorization
 
@@ -227,7 +227,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postProductCollection**
-> \Swagger\Client\LeapOneProductModels\ProductJsonld postProductCollection($body)
+> \Swagger\Client\LeapOneProductModels\ProductJsonldProductRead postProductCollection($body)
 
 Creates a Product resource.
 
@@ -265,7 +265,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductJsonldProductRead**](../Model/ProductJsonldProductRead.md)
 
 ### Authorization
 
@@ -279,7 +279,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putProductItem**
-> \Swagger\Client\LeapOneProductModels\ProductJsonld putProductItem($id, $body)
+> \Swagger\Client\LeapOneProductModels\ProductJsonldProductRead putProductItem($id, $body)
 
 Replaces the Product resource.
 
@@ -319,7 +319,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductJsonldProductRead**](../Model/ProductJsonldProductRead.md)
 
 ### Authorization
 

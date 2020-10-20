@@ -598,7 +598,7 @@ class PriceListProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead
      */
     public function getPriceListProductItem($id)
     {
@@ -615,11 +615,11 @@ class PriceListProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceListProductItemWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->getPriceListProductItemRequest($id);
 
         try {
@@ -671,7 +671,7 @@ class PriceListProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -713,7 +713,7 @@ class PriceListProductApi
      */
     public function getPriceListProductItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->getPriceListProductItemRequest($id);
 
         return $this->client
@@ -866,7 +866,7 @@ class PriceListProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead
      */
     public function patchPriceListProductItem($id, $body = null)
     {
@@ -884,11 +884,11 @@ class PriceListProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchPriceListProductItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->patchPriceListProductItemRequest($id, $body);
 
         try {
@@ -940,7 +940,7 @@ class PriceListProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -984,7 +984,7 @@ class PriceListProductApi
      */
     public function patchPriceListProductItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->patchPriceListProductItemRequest($id, $body);
 
         return $this->client
@@ -1140,7 +1140,7 @@ class PriceListProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead
      */
     public function postPriceListProductCollection($body = null)
     {
@@ -1157,11 +1157,11 @@ class PriceListProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPriceListProductCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->postPriceListProductCollectionRequest($body);
 
         try {
@@ -1213,7 +1213,7 @@ class PriceListProductApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1255,7 +1255,7 @@ class PriceListProductApi
      */
     public function postPriceListProductCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->postPriceListProductCollectionRequest($body);
 
         return $this->client
@@ -1397,7 +1397,7 @@ class PriceListProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead
      */
     public function putPriceListProductItem($id, $body = null)
     {
@@ -1415,11 +1415,11 @@ class PriceListProductApi
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function putPriceListProductItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->putPriceListProductItemRequest($id, $body);
 
         try {
@@ -1471,7 +1471,7 @@ class PriceListProductApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld',
+                        '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1515,7 +1515,7 @@ class PriceListProductApi
      */
     public function putPriceListProductItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld';
+        $returnType = '\Swagger\Client\LeapOneProductModels\PriceListProductJsonldPriceListProductRead';
         $request = $this->putPriceListProductItemRequest($id, $body);
 
         return $this->client

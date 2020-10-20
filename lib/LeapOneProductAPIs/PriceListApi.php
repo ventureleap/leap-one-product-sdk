@@ -319,14 +319,15 @@ class PriceListApi
      *
      * Retrieves the collection of PriceList resources.
      *
+     * @param  string $name name (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\LeapOneProductModels\InlineResponse2001
      */
-    public function getPriceListCollection()
+    public function getPriceListCollection($name = null)
     {
-        list($response) = $this->getPriceListCollectionWithHttpInfo();
+        list($response) = $this->getPriceListCollectionWithHttpInfo($name);
         return $response;
     }
 
@@ -335,15 +336,16 @@ class PriceListApi
      *
      * Retrieves the collection of PriceList resources.
      *
+     * @param  string $name (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse2001, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPriceListCollectionWithHttpInfo()
+    public function getPriceListCollectionWithHttpInfo($name = null)
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2001';
-        $request = $this->getPriceListCollectionRequest();
+        $request = $this->getPriceListCollectionRequest($name);
 
         try {
             $options = $this->createHttpClientOption();
@@ -409,13 +411,14 @@ class PriceListApi
      *
      * Retrieves the collection of PriceList resources.
      *
+     * @param  string $name (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPriceListCollectionAsync()
+    public function getPriceListCollectionAsync($name = null)
     {
-        return $this->getPriceListCollectionAsyncWithHttpInfo()
+        return $this->getPriceListCollectionAsyncWithHttpInfo($name)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -428,14 +431,15 @@ class PriceListApi
      *
      * Retrieves the collection of PriceList resources.
      *
+     * @param  string $name (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPriceListCollectionAsyncWithHttpInfo()
+    public function getPriceListCollectionAsyncWithHttpInfo($name = null)
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2001';
-        $request = $this->getPriceListCollectionRequest();
+        $request = $this->getPriceListCollectionRequest($name);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -477,11 +481,12 @@ class PriceListApi
     /**
      * Create request for operation 'getPriceListCollection'
      *
+     * @param  string $name (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPriceListCollectionRequest()
+    protected function getPriceListCollectionRequest($name = null)
     {
 
         $resourcePath = '/price_lists';
@@ -491,6 +496,10 @@ class PriceListApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($name !== null) {
+            $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);
+        }
 
 
         // body params

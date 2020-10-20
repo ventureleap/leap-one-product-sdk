@@ -3,18 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**internal_id** | **string** |  | [optional] 
 **gross_price_per_unit** | **float** |  | [optional] 
 **tax_percentage** | **string** |  | [optional] 
 **price_list** | **string** |  | [optional] 
-**product** | **string** |  | [optional] 
-**vat_per_unit** | **float** |  | [optional] 
-**net_price_per_unit** | **float** |  | [optional] 
-**price_list_id** | **string** |  | [optional] 
-**product_id** | **string** |  | [optional] 
-**internal_id** | **string** |  | [optional] 
+**product** | [**AnyOfPriceListProductProduct**](AnyOfPriceListProductProduct.md) |  | [optional] 
 **active** | **bool** |  | [optional] 
-**created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
-**updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **application_id** | **string** |  | [optional] 
 **custom_data** | **string[]** |  | [optional] 
 

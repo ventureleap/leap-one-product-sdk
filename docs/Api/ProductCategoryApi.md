@@ -119,7 +119,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCategoryItem**
-> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld getProductCategoryItem($id)
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead getProductCategoryItem($id)
 
 Retrieves a ProductCategory resource.
 
@@ -157,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
 
 ### Authorization
 
@@ -171,7 +171,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchProductCategoryItem**
-> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld patchProductCategoryItem($id, $body)
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead patchProductCategoryItem($id, $body)
 
 Updates the ProductCategory resource.
 
@@ -211,7 +211,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
 
 ### Authorization
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postProductCategoryCollection**
-> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld postProductCategoryCollection($body)
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead postProductCategoryCollection($body)
 
 Creates a ProductCategory resource.
 
@@ -263,7 +263,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
 
 ### Authorization
 
@@ -277,7 +277,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putProductCategoryItem**
-> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld putProductCategoryItem($id, $body)
+> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead putProductCategoryItem($id, $body)
 
 Replaces the ProductCategory resource.
 
@@ -317,7 +317,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)
+[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
 
 ### Authorization
 

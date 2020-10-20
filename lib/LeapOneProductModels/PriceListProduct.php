@@ -54,18 +54,12 @@ class PriceListProduct implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'gross_price_per_unit' => 'float',
+        'internal_id' => 'string',
+'gross_price_per_unit' => 'float',
 'tax_percentage' => 'string',
 'price_list' => 'string',
-'product' => 'string',
-'vat_per_unit' => 'float',
-'net_price_per_unit' => 'float',
-'price_list_id' => 'string',
-'product_id' => 'string',
-'internal_id' => 'string',
+'product' => 'AnyOfPriceListProductProduct',
 'active' => 'bool',
-'created_at' => '\DateTime',
-'updated_at' => '\DateTime',
 'application_id' => 'string',
 'custom_data' => 'string[]'    ];
 
@@ -75,18 +69,12 @@ class PriceListProduct implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'gross_price_per_unit' => null,
+        'internal_id' => null,
+'gross_price_per_unit' => null,
 'tax_percentage' => null,
 'price_list' => 'iri-reference',
-'product' => 'iri-reference',
-'vat_per_unit' => null,
-'net_price_per_unit' => null,
-'price_list_id' => null,
-'product_id' => null,
-'internal_id' => null,
+'product' => null,
 'active' => null,
-'created_at' => 'date-time',
-'updated_at' => 'date-time',
 'application_id' => null,
 'custom_data' => null    ];
 
@@ -117,18 +105,12 @@ class PriceListProduct implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'gross_price_per_unit' => 'grossPricePerUnit',
+        'internal_id' => 'internalId',
+'gross_price_per_unit' => 'grossPricePerUnit',
 'tax_percentage' => 'taxPercentage',
 'price_list' => 'priceList',
 'product' => 'product',
-'vat_per_unit' => 'vatPerUnit',
-'net_price_per_unit' => 'netPricePerUnit',
-'price_list_id' => 'priceListId',
-'product_id' => 'productId',
-'internal_id' => 'internalId',
 'active' => 'active',
-'created_at' => 'createdAt',
-'updated_at' => 'updatedAt',
 'application_id' => 'applicationId',
 'custom_data' => 'customData'    ];
 
@@ -138,18 +120,12 @@ class PriceListProduct implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'gross_price_per_unit' => 'setGrossPricePerUnit',
+        'internal_id' => 'setInternalId',
+'gross_price_per_unit' => 'setGrossPricePerUnit',
 'tax_percentage' => 'setTaxPercentage',
 'price_list' => 'setPriceList',
 'product' => 'setProduct',
-'vat_per_unit' => 'setVatPerUnit',
-'net_price_per_unit' => 'setNetPricePerUnit',
-'price_list_id' => 'setPriceListId',
-'product_id' => 'setProductId',
-'internal_id' => 'setInternalId',
 'active' => 'setActive',
-'created_at' => 'setCreatedAt',
-'updated_at' => 'setUpdatedAt',
 'application_id' => 'setApplicationId',
 'custom_data' => 'setCustomData'    ];
 
@@ -159,18 +135,12 @@ class PriceListProduct implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'gross_price_per_unit' => 'getGrossPricePerUnit',
+        'internal_id' => 'getInternalId',
+'gross_price_per_unit' => 'getGrossPricePerUnit',
 'tax_percentage' => 'getTaxPercentage',
 'price_list' => 'getPriceList',
 'product' => 'getProduct',
-'vat_per_unit' => 'getVatPerUnit',
-'net_price_per_unit' => 'getNetPricePerUnit',
-'price_list_id' => 'getPriceListId',
-'product_id' => 'getProductId',
-'internal_id' => 'getInternalId',
 'active' => 'getActive',
-'created_at' => 'getCreatedAt',
-'updated_at' => 'getUpdatedAt',
 'application_id' => 'getApplicationId',
 'custom_data' => 'getCustomData'    ];
 
@@ -232,18 +202,12 @@ class PriceListProduct implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
         $this->container['tax_percentage'] = isset($data['tax_percentage']) ? $data['tax_percentage'] : null;
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
-        $this->container['vat_per_unit'] = isset($data['vat_per_unit']) ? $data['vat_per_unit'] : null;
-        $this->container['net_price_per_unit'] = isset($data['net_price_per_unit']) ? $data['net_price_per_unit'] : null;
-        $this->container['price_list_id'] = isset($data['price_list_id']) ? $data['price_list_id'] : null;
-        $this->container['product_id'] = isset($data['product_id']) ? $data['product_id'] : null;
-        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
         $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
     }
@@ -271,6 +235,30 @@ class PriceListProduct implements ModelInterface, ArrayAccess
         return count($this->listInvalidProperties()) === 0;
     }
 
+
+    /**
+     * Gets internal_id
+     *
+     * @return string
+     */
+    public function getInternalId()
+    {
+        return $this->container['internal_id'];
+    }
+
+    /**
+     * Sets internal_id
+     *
+     * @param string $internal_id internal_id
+     *
+     * @return $this
+     */
+    public function setInternalId($internal_id)
+    {
+        $this->container['internal_id'] = $internal_id;
+
+        return $this;
+    }
 
     /**
      * Gets gross_price_per_unit
@@ -347,7 +335,7 @@ class PriceListProduct implements ModelInterface, ArrayAccess
     /**
      * Gets product
      *
-     * @return string
+     * @return AnyOfPriceListProductProduct
      */
     public function getProduct()
     {
@@ -357,133 +345,13 @@ class PriceListProduct implements ModelInterface, ArrayAccess
     /**
      * Sets product
      *
-     * @param string $product product
+     * @param AnyOfPriceListProductProduct $product product
      *
      * @return $this
      */
     public function setProduct($product)
     {
         $this->container['product'] = $product;
-
-        return $this;
-    }
-
-    /**
-     * Gets vat_per_unit
-     *
-     * @return float
-     */
-    public function getVatPerUnit()
-    {
-        return $this->container['vat_per_unit'];
-    }
-
-    /**
-     * Sets vat_per_unit
-     *
-     * @param float $vat_per_unit vat_per_unit
-     *
-     * @return $this
-     */
-    public function setVatPerUnit($vat_per_unit)
-    {
-        $this->container['vat_per_unit'] = $vat_per_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets net_price_per_unit
-     *
-     * @return float
-     */
-    public function getNetPricePerUnit()
-    {
-        return $this->container['net_price_per_unit'];
-    }
-
-    /**
-     * Sets net_price_per_unit
-     *
-     * @param float $net_price_per_unit net_price_per_unit
-     *
-     * @return $this
-     */
-    public function setNetPricePerUnit($net_price_per_unit)
-    {
-        $this->container['net_price_per_unit'] = $net_price_per_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets price_list_id
-     *
-     * @return string
-     */
-    public function getPriceListId()
-    {
-        return $this->container['price_list_id'];
-    }
-
-    /**
-     * Sets price_list_id
-     *
-     * @param string $price_list_id price_list_id
-     *
-     * @return $this
-     */
-    public function setPriceListId($price_list_id)
-    {
-        $this->container['price_list_id'] = $price_list_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets product_id
-     *
-     * @return string
-     */
-    public function getProductId()
-    {
-        return $this->container['product_id'];
-    }
-
-    /**
-     * Sets product_id
-     *
-     * @param string $product_id product_id
-     *
-     * @return $this
-     */
-    public function setProductId($product_id)
-    {
-        $this->container['product_id'] = $product_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets internal_id
-     *
-     * @return string
-     */
-    public function getInternalId()
-    {
-        return $this->container['internal_id'];
-    }
-
-    /**
-     * Sets internal_id
-     *
-     * @param string $internal_id internal_id
-     *
-     * @return $this
-     */
-    public function setInternalId($internal_id)
-    {
-        $this->container['internal_id'] = $internal_id;
 
         return $this;
     }
@@ -508,54 +376,6 @@ class PriceListProduct implements ModelInterface, ArrayAccess
     public function setActive($active)
     {
         $this->container['active'] = $active;
-
-        return $this;
-    }
-
-    /**
-     * Gets created_at
-     *
-     * @return \DateTime
-     */
-    public function getCreatedAt()
-    {
-        return $this->container['created_at'];
-    }
-
-    /**
-     * Sets created_at
-     *
-     * @param \DateTime $created_at created_at
-     *
-     * @return $this
-     */
-    public function setCreatedAt($created_at)
-    {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     *
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     *
-     * @param \DateTime $updated_at updated_at
-     *
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
 
         return $this;
     }

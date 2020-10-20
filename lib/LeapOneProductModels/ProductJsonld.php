@@ -57,16 +57,14 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => 'string',
 'id' => 'string',
 'type' => 'string',
-'categories' => 'string[]',
-'categories_internal_ids' => 'string[]',
 'internal_id' => 'string',
-'active' => 'bool',
 'name' => 'string',
+'active' => 'bool',
 'priority' => 'int',
-'created_at' => '\DateTime',
-'updated_at' => '\DateTime',
-'application_id' => 'string',
-'custom_data' => 'string[]'    ];
+'categories' => '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld[]',
+'custom_data' => 'string[]',
+'price_list_products' => '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld[]',
+'application_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -77,16 +75,14 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => null,
 'id' => null,
 'type' => null,
-'categories' => 'iri-reference',
-'categories_internal_ids' => null,
 'internal_id' => null,
-'active' => null,
 'name' => null,
+'active' => null,
 'priority' => null,
-'created_at' => 'date-time',
-'updated_at' => 'date-time',
-'application_id' => null,
-'custom_data' => null    ];
+'categories' => null,
+'custom_data' => null,
+'price_list_products' => null,
+'application_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -118,16 +114,14 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => '@context',
 'id' => '@id',
 'type' => '@type',
-'categories' => 'categories',
-'categories_internal_ids' => 'categoriesInternalIds',
 'internal_id' => 'internalId',
-'active' => 'active',
 'name' => 'name',
+'active' => 'active',
 'priority' => 'priority',
-'created_at' => 'createdAt',
-'updated_at' => 'updatedAt',
-'application_id' => 'applicationId',
-'custom_data' => 'customData'    ];
+'categories' => 'categories',
+'custom_data' => 'customData',
+'price_list_products' => 'priceListProducts',
+'application_id' => 'applicationId'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -138,16 +132,14 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => 'setContext',
 'id' => 'setId',
 'type' => 'setType',
-'categories' => 'setCategories',
-'categories_internal_ids' => 'setCategoriesInternalIds',
 'internal_id' => 'setInternalId',
-'active' => 'setActive',
 'name' => 'setName',
+'active' => 'setActive',
 'priority' => 'setPriority',
-'created_at' => 'setCreatedAt',
-'updated_at' => 'setUpdatedAt',
-'application_id' => 'setApplicationId',
-'custom_data' => 'setCustomData'    ];
+'categories' => 'setCategories',
+'custom_data' => 'setCustomData',
+'price_list_products' => 'setPriceListProducts',
+'application_id' => 'setApplicationId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -158,16 +150,14 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         'context' => 'getContext',
 'id' => 'getId',
 'type' => 'getType',
-'categories' => 'getCategories',
-'categories_internal_ids' => 'getCategoriesInternalIds',
 'internal_id' => 'getInternalId',
-'active' => 'getActive',
 'name' => 'getName',
+'active' => 'getActive',
 'priority' => 'getPriority',
-'created_at' => 'getCreatedAt',
-'updated_at' => 'getUpdatedAt',
-'application_id' => 'getApplicationId',
-'custom_data' => 'getCustomData'    ];
+'categories' => 'getCategories',
+'custom_data' => 'getCustomData',
+'price_list_products' => 'getPriceListProducts',
+'application_id' => 'getApplicationId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -230,16 +220,14 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         $this->container['context'] = isset($data['context']) ? $data['context'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
-        $this->container['categories_internal_ids'] = isset($data['categories_internal_ids']) ? $data['categories_internal_ids'] : null;
         $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
-        $this->container['created_at'] = isset($data['created_at']) ? $data['created_at'] : null;
-        $this->container['updated_at'] = isset($data['updated_at']) ? $data['updated_at'] : null;
-        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
+        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
+        $this->container['price_list_products'] = isset($data['price_list_products']) ? $data['price_list_products'] : null;
+        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
     }
 
     /**
@@ -339,54 +327,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets categories
-     *
-     * @return string[]
-     */
-    public function getCategories()
-    {
-        return $this->container['categories'];
-    }
-
-    /**
-     * Sets categories
-     *
-     * @param string[] $categories categories
-     *
-     * @return $this
-     */
-    public function setCategories($categories)
-    {
-        $this->container['categories'] = $categories;
-
-        return $this;
-    }
-
-    /**
-     * Gets categories_internal_ids
-     *
-     * @return string[]
-     */
-    public function getCategoriesInternalIds()
-    {
-        return $this->container['categories_internal_ids'];
-    }
-
-    /**
-     * Sets categories_internal_ids
-     *
-     * @param string[] $categories_internal_ids categories_internal_ids
-     *
-     * @return $this
-     */
-    public function setCategoriesInternalIds($categories_internal_ids)
-    {
-        $this->container['categories_internal_ids'] = $categories_internal_ids;
-
-        return $this;
-    }
-
-    /**
      * Gets internal_id
      *
      * @return string
@@ -406,30 +346,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     public function setInternalId($internal_id)
     {
         $this->container['internal_id'] = $internal_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets active
-     *
-     * @return bool
-     */
-    public function getActive()
-    {
-        return $this->container['active'];
-    }
-
-    /**
-     * Sets active
-     *
-     * @param bool $active active
-     *
-     * @return $this
-     */
-    public function setActive($active)
-    {
-        $this->container['active'] = $active;
 
         return $this;
     }
@@ -459,6 +375,30 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets active
+     *
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool $active active
+     *
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
      * Gets priority
      *
      * @return int
@@ -483,73 +423,25 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets created_at
+     * Gets categories
      *
-     * @return \DateTime
+     * @return \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld[]
      */
-    public function getCreatedAt()
+    public function getCategories()
     {
-        return $this->container['created_at'];
+        return $this->container['categories'];
     }
 
     /**
-     * Sets created_at
+     * Sets categories
      *
-     * @param \DateTime $created_at created_at
+     * @param \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld[] $categories categories
      *
      * @return $this
      */
-    public function setCreatedAt($created_at)
+    public function setCategories($categories)
     {
-        $this->container['created_at'] = $created_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets updated_at
-     *
-     * @return \DateTime
-     */
-    public function getUpdatedAt()
-    {
-        return $this->container['updated_at'];
-    }
-
-    /**
-     * Sets updated_at
-     *
-     * @param \DateTime $updated_at updated_at
-     *
-     * @return $this
-     */
-    public function setUpdatedAt($updated_at)
-    {
-        $this->container['updated_at'] = $updated_at;
-
-        return $this;
-    }
-
-    /**
-     * Gets application_id
-     *
-     * @return string
-     */
-    public function getApplicationId()
-    {
-        return $this->container['application_id'];
-    }
-
-    /**
-     * Sets application_id
-     *
-     * @param string $application_id application_id
-     *
-     * @return $this
-     */
-    public function setApplicationId($application_id)
-    {
-        $this->container['application_id'] = $application_id;
+        $this->container['categories'] = $categories;
 
         return $this;
     }
@@ -574,6 +466,54 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     public function setCustomData($custom_data)
     {
         $this->container['custom_data'] = $custom_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_list_products
+     *
+     * @return \Swagger\Client\LeapOneProductModels\PriceListProductJsonld[]
+     */
+    public function getPriceListProducts()
+    {
+        return $this->container['price_list_products'];
+    }
+
+    /**
+     * Sets price_list_products
+     *
+     * @param \Swagger\Client\LeapOneProductModels\PriceListProductJsonld[] $price_list_products price_list_products
+     *
+     * @return $this
+     */
+    public function setPriceListProducts($price_list_products)
+    {
+        $this->container['price_list_products'] = $price_list_products;
+
+        return $this;
+    }
+
+    /**
+     * Gets application_id
+     *
+     * @return string
+     */
+    public function getApplicationId()
+    {
+        return $this->container['application_id'];
+    }
+
+    /**
+     * Sets application_id
+     *
+     * @param string $application_id application_id
+     *
+     * @return $this
+     */
+    public function setApplicationId($application_id)
+    {
+        $this->container['application_id'] = $application_id;
 
         return $this;
     }

@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPriceListCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2001 getPriceListCollection()
+> \Swagger\Client\LeapOneProductModels\InlineResponse2001 getPriceListCollection($name)
 
 Retrieves the collection of PriceList resources.
 
@@ -82,9 +82,10 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
     new GuzzleHttp\Client(),
     $config
 );
+$name = "name_example"; // string | 
 
 try {
-    $result = $apiInstance->getPriceListCollection();
+    $result = $apiInstance->getPriceListCollection($name);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PriceListApi->getPriceListCollection: ', $e->getMessage(), PHP_EOL;
@@ -93,7 +94,10 @@ try {
 ```
 
 ### Parameters
-This endpoint does not need any parameter.
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **name** | **string**|  | [optional]
 
 ### Return type
 
