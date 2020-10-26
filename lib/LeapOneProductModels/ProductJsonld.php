@@ -63,8 +63,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'priority' => 'int',
 'categories' => '\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld[]',
 'custom_data' => 'string[]',
-'price_list_products' => '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld[]',
-'application_id' => 'string'    ];
+'price_list_products' => '\Swagger\Client\LeapOneProductModels\PriceListProductJsonld[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -81,8 +80,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'priority' => null,
 'categories' => null,
 'custom_data' => null,
-'price_list_products' => null,
-'application_id' => null    ];
+'price_list_products' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -120,8 +118,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'priority' => 'priority',
 'categories' => 'categories',
 'custom_data' => 'customData',
-'price_list_products' => 'priceListProducts',
-'application_id' => 'applicationId'    ];
+'price_list_products' => 'priceListProducts'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -138,8 +135,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'priority' => 'setPriority',
 'categories' => 'setCategories',
 'custom_data' => 'setCustomData',
-'price_list_products' => 'setPriceListProducts',
-'application_id' => 'setApplicationId'    ];
+'price_list_products' => 'setPriceListProducts'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -156,8 +152,7 @@ class ProductJsonld implements ModelInterface, ArrayAccess
 'priority' => 'getPriority',
 'categories' => 'getCategories',
 'custom_data' => 'getCustomData',
-'price_list_products' => 'getPriceListProducts',
-'application_id' => 'getApplicationId'    ];
+'price_list_products' => 'getPriceListProducts'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -227,7 +222,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
         $this->container['price_list_products'] = isset($data['price_list_products']) ? $data['price_list_products'] : null;
-        $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
     }
 
     /**
@@ -490,30 +484,6 @@ class ProductJsonld implements ModelInterface, ArrayAccess
     public function setPriceListProducts($price_list_products)
     {
         $this->container['price_list_products'] = $price_list_products;
-
-        return $this;
-    }
-
-    /**
-     * Gets application_id
-     *
-     * @return string
-     */
-    public function getApplicationId()
-    {
-        return $this->container['application_id'];
-    }
-
-    /**
-     * Sets application_id
-     *
-     * @param string $application_id application_id
-     *
-     * @return $this
-     */
-    public function setApplicationId($application_id)
-    {
-        $this->container['application_id'] = $application_id;
 
         return $this;
     }

@@ -193,7 +193,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     $config
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\Product(); // \Swagger\Client\LeapOneProductModels\Product | The updated Product resource
+$body = new \Swagger\Client\LeapOneProductModels\ProductProductWrite(); // \Swagger\Client\LeapOneProductModels\ProductProductWrite | The updated Product resource
 
 try {
     $result = $apiInstance->patchProductItem($id, $body);
@@ -209,7 +209,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\Product**](../Model/Product.md)| The updated Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductProductWrite**](../Model/ProductProductWrite.md)| The updated Product resource | [optional]
 
 ### Return type
 
@@ -246,7 +246,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\LeapOneProductModels\ProductJsonld(); // \Swagger\Client\LeapOneProductModels\ProductJsonld | The new Product resource
+$body = new \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite(); // \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite | The new Product resource
 
 try {
     $result = $apiInstance->postProductCollection($body);
@@ -261,7 +261,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)| The new Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite**](../Model/ProductJsonldProductWrite.md)| The new Product resource | [optional]
 
 ### Return type
 
@@ -299,7 +299,7 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductApi(
     $config
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\ProductJsonld(); // \Swagger\Client\LeapOneProductModels\ProductJsonld | The updated Product resource
+$body = new \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite(); // \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite | The updated Product resource
 
 try {
     $result = $apiInstance->putProductItem($id, $body);
@@ -315,7 +315,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\ProductJsonld**](../Model/ProductJsonld.md)| The updated Product resource | [optional]
+ **body** | [**\Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite**](../Model/ProductJsonldProductWrite.md)| The updated Product resource | [optional]
 
 ### Return type
 

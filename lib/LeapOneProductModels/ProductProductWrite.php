@@ -1,6 +1,6 @@
 <?php
 /**
- * PriceListProductPriceListProductRead
+ * ProductProductWrite
  *
  * PHP version 5
  *
@@ -30,14 +30,14 @@ use \ArrayAccess;
 use \Swagger\Client\ObjectSerializer;
 
 /**
- * PriceListProductPriceListProductRead Class Doc Comment
+ * ProductProductWrite Class Doc Comment
  *
  * @category Class
  * @package  Swagger\Client
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PriceListProductPriceListProductRead implements ModelInterface, ArrayAccess
+class ProductProductWrite implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -46,7 +46,7 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PriceListProduct-priceListProduct:read';
+    protected static $swaggerModelName = 'Product-product:write';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -54,12 +54,12 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'internal_id' => 'string',
-'gross_price_per_unit' => 'float',
-'price_list' => 'string',
-'product' => 'AnyOfPriceListProductPriceListProductReadProduct',
+        'name' => 'string',
 'active' => 'bool',
-'price_list_id' => 'string'    ];
+'priority' => 'int',
+'categories' => 'string[]',
+'custom_data' => 'string[]',
+'price_list_products' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -67,12 +67,12 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'internal_id' => null,
-'gross_price_per_unit' => null,
-'price_list' => 'iri-reference',
-'product' => null,
+        'name' => null,
 'active' => null,
-'price_list_id' => null    ];
+'priority' => null,
+'categories' => 'iri-reference',
+'custom_data' => null,
+'price_list_products' => 'iri-reference'    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -101,12 +101,12 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'internal_id' => 'internalId',
-'gross_price_per_unit' => 'grossPricePerUnit',
-'price_list' => 'priceList',
-'product' => 'product',
+        'name' => 'name',
 'active' => 'active',
-'price_list_id' => 'priceListId'    ];
+'priority' => 'priority',
+'categories' => 'categories',
+'custom_data' => 'customData',
+'price_list_products' => 'priceListProducts'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -114,12 +114,12 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'internal_id' => 'setInternalId',
-'gross_price_per_unit' => 'setGrossPricePerUnit',
-'price_list' => 'setPriceList',
-'product' => 'setProduct',
+        'name' => 'setName',
 'active' => 'setActive',
-'price_list_id' => 'setPriceListId'    ];
+'priority' => 'setPriority',
+'categories' => 'setCategories',
+'custom_data' => 'setCustomData',
+'price_list_products' => 'setPriceListProducts'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -127,12 +127,12 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'internal_id' => 'getInternalId',
-'gross_price_per_unit' => 'getGrossPricePerUnit',
-'price_list' => 'getPriceList',
-'product' => 'getProduct',
+        'name' => 'getName',
 'active' => 'getActive',
-'price_list_id' => 'getPriceListId'    ];
+'priority' => 'getPriority',
+'categories' => 'getCategories',
+'custom_data' => 'getCustomData',
+'price_list_products' => 'getPriceListProducts'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -192,12 +192,12 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
-        $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
-        $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
-        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['price_list_id'] = isset($data['price_list_id']) ? $data['price_list_id'] : null;
+        $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
+        $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
+        $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
+        $this->container['price_list_products'] = isset($data['price_list_products']) ? $data['price_list_products'] : null;
     }
 
     /**
@@ -225,97 +225,25 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
 
 
     /**
-     * Gets internal_id
+     * Gets name
      *
      * @return string
      */
-    public function getInternalId()
+    public function getName()
     {
-        return $this->container['internal_id'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets internal_id
+     * Sets name
      *
-     * @param string $internal_id internal_id
+     * @param string $name name
      *
      * @return $this
      */
-    public function setInternalId($internal_id)
+    public function setName($name)
     {
-        $this->container['internal_id'] = $internal_id;
-
-        return $this;
-    }
-
-    /**
-     * Gets gross_price_per_unit
-     *
-     * @return float
-     */
-    public function getGrossPricePerUnit()
-    {
-        return $this->container['gross_price_per_unit'];
-    }
-
-    /**
-     * Sets gross_price_per_unit
-     *
-     * @param float $gross_price_per_unit gross_price_per_unit
-     *
-     * @return $this
-     */
-    public function setGrossPricePerUnit($gross_price_per_unit)
-    {
-        $this->container['gross_price_per_unit'] = $gross_price_per_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets price_list
-     *
-     * @return string
-     */
-    public function getPriceList()
-    {
-        return $this->container['price_list'];
-    }
-
-    /**
-     * Sets price_list
-     *
-     * @param string $price_list price_list
-     *
-     * @return $this
-     */
-    public function setPriceList($price_list)
-    {
-        $this->container['price_list'] = $price_list;
-
-        return $this;
-    }
-
-    /**
-     * Gets product
-     *
-     * @return AnyOfPriceListProductPriceListProductReadProduct
-     */
-    public function getProduct()
-    {
-        return $this->container['product'];
-    }
-
-    /**
-     * Sets product
-     *
-     * @param AnyOfPriceListProductPriceListProductReadProduct $product product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        $this->container['product'] = $product;
+        $this->container['name'] = $name;
 
         return $this;
     }
@@ -345,25 +273,97 @@ class PriceListProductPriceListProductRead implements ModelInterface, ArrayAcces
     }
 
     /**
-     * Gets price_list_id
+     * Gets priority
      *
-     * @return string
+     * @return int
      */
-    public function getPriceListId()
+    public function getPriority()
     {
-        return $this->container['price_list_id'];
+        return $this->container['priority'];
     }
 
     /**
-     * Sets price_list_id
+     * Sets priority
      *
-     * @param string $price_list_id price_list_id
+     * @param int $priority priority
      *
      * @return $this
      */
-    public function setPriceListId($price_list_id)
+    public function setPriority($priority)
     {
-        $this->container['price_list_id'] = $price_list_id;
+        $this->container['priority'] = $priority;
+
+        return $this;
+    }
+
+    /**
+     * Gets categories
+     *
+     * @return string[]
+     */
+    public function getCategories()
+    {
+        return $this->container['categories'];
+    }
+
+    /**
+     * Sets categories
+     *
+     * @param string[] $categories categories
+     *
+     * @return $this
+     */
+    public function setCategories($categories)
+    {
+        $this->container['categories'] = $categories;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_data
+     *
+     * @return string[]
+     */
+    public function getCustomData()
+    {
+        return $this->container['custom_data'];
+    }
+
+    /**
+     * Sets custom_data
+     *
+     * @param string[] $custom_data custom_data
+     *
+     * @return $this
+     */
+    public function setCustomData($custom_data)
+    {
+        $this->container['custom_data'] = $custom_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_list_products
+     *
+     * @return string[]
+     */
+    public function getPriceListProducts()
+    {
+        return $this->container['price_list_products'];
+    }
+
+    /**
+     * Sets price_list_products
+     *
+     * @param string[] $price_list_products price_list_products
+     *
+     * @return $this
+     */
+    public function setPriceListProducts($price_list_products)
+    {
+        $this->container['price_list_products'] = $price_list_products;
 
         return $this;
     }

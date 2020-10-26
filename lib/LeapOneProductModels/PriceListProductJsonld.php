@@ -61,7 +61,8 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'gross_price_per_unit' => 'float',
 'tax_percentage' => 'string',
 'price_list' => 'string',
-'product' => 'AnyOfPriceListProductJsonldProduct',
+'product' => 'string',
+'price_list_id' => 'string',
 'active' => 'bool',
 'application_id' => 'string',
 'custom_data' => 'string[]'    ];
@@ -80,6 +81,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'tax_percentage' => null,
 'price_list' => 'iri-reference',
 'product' => null,
+'price_list_id' => null,
 'active' => null,
 'application_id' => null,
 'custom_data' => null    ];
@@ -119,6 +121,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'tax_percentage' => 'taxPercentage',
 'price_list' => 'priceList',
 'product' => 'product',
+'price_list_id' => 'priceListId',
 'active' => 'active',
 'application_id' => 'applicationId',
 'custom_data' => 'customData'    ];
@@ -137,6 +140,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'tax_percentage' => 'setTaxPercentage',
 'price_list' => 'setPriceList',
 'product' => 'setProduct',
+'price_list_id' => 'setPriceListId',
 'active' => 'setActive',
 'application_id' => 'setApplicationId',
 'custom_data' => 'setCustomData'    ];
@@ -155,6 +159,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
 'tax_percentage' => 'getTaxPercentage',
 'price_list' => 'getPriceList',
 'product' => 'getProduct',
+'price_list_id' => 'getPriceListId',
 'active' => 'getActive',
 'application_id' => 'getApplicationId',
 'custom_data' => 'getCustomData'    ];
@@ -225,6 +230,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
         $this->container['tax_percentage'] = isset($data['tax_percentage']) ? $data['tax_percentage'] : null;
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
+        $this->container['price_list_id'] = isset($data['price_list_id']) ? $data['price_list_id'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['application_id'] = isset($data['application_id']) ? $data['application_id'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
@@ -425,7 +431,7 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
     /**
      * Gets product
      *
-     * @return AnyOfPriceListProductJsonldProduct
+     * @return string
      */
     public function getProduct()
     {
@@ -435,13 +441,37 @@ class PriceListProductJsonld implements ModelInterface, ArrayAccess
     /**
      * Sets product
      *
-     * @param AnyOfPriceListProductJsonldProduct $product product
+     * @param string $product product
      *
      * @return $this
      */
     public function setProduct($product)
     {
         $this->container['product'] = $product;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_list_id
+     *
+     * @return string
+     */
+    public function getPriceListId()
+    {
+        return $this->container['price_list_id'];
+    }
+
+    /**
+     * Sets price_list_id
+     *
+     * @param string $price_list_id price_list_id
+     *
+     * @return $this
+     */
+    public function setPriceListId($price_list_id)
+    {
+        $this->container['price_list_id'] = $price_list_id;
 
         return $this;
     }

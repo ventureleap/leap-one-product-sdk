@@ -871,7 +871,7 @@ class ProductApi
      * Updates the Product resource.
      *
      * @param  string $id id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductProductWrite $body The updated Product resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -889,7 +889,7 @@ class ProductApi
      * Updates the Product resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductProductWrite $body The updated Product resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -965,7 +965,7 @@ class ProductApi
      * Updates the Product resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductProductWrite $body The updated Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -986,7 +986,7 @@ class ProductApi
      * Updates the Product resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductProductWrite $body The updated Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1037,7 +1037,7 @@ class ProductApi
      * Create request for operation 'patchProductItem'
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\Product $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductProductWrite $body The updated Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1145,7 +1145,7 @@ class ProductApi
      *
      * Creates a Product resource.
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The new Product resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1162,7 +1162,7 @@ class ProductApi
      *
      * Creates a Product resource.
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The new Product resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1237,7 +1237,7 @@ class ProductApi
      *
      * Creates a Product resource.
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The new Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1257,7 +1257,7 @@ class ProductApi
      *
      * Creates a Product resource.
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The new Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1307,7 +1307,7 @@ class ProductApi
     /**
      * Create request for operation 'postProductCollection'
      *
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The new Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The new Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1402,7 +1402,7 @@ class ProductApi
      * Replaces the Product resource.
      *
      * @param  string $id id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The updated Product resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1420,7 +1420,7 @@ class ProductApi
      * Replaces the Product resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The updated Product resource (optional)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
@@ -1496,7 +1496,7 @@ class ProductApi
      * Replaces the Product resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The updated Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1517,7 +1517,7 @@ class ProductApi
      * Replaces the Product resource.
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The updated Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1568,7 +1568,7 @@ class ProductApi
      * Create request for operation 'putProductItem'
      *
      * @param  string $id (required)
-     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonld $body The updated Product resource (optional)
+     * @param  \Swagger\Client\LeapOneProductModels\ProductJsonldProductWrite $body The updated Product resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

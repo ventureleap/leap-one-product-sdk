@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **categories** | [**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld[]**](ProductCategoryJsonld.md) |  | [optional] 
 **custom_data** | **string[]** |  | [optional] 
 **price_list_products** | [**\Swagger\Client\LeapOneProductModels\PriceListProductJsonld[]**](PriceListProductJsonld.md) |  | [optional] 
-**application_id** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

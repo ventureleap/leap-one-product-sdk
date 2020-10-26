@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **internal_id** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
-**availability_areas** | **string[]** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
 **updated_at** | [**\DateTime**](\DateTime.md) |  | [optional] 

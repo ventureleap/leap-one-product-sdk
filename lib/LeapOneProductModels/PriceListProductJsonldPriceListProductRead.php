@@ -61,7 +61,8 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'gross_price_per_unit' => 'float',
 'price_list' => 'string',
 'product' => '\Swagger\Client\LeapOneProductModels\ProductJsonldPriceListProductRead',
-'active' => 'bool'    ];
+'active' => 'bool',
+'price_list_id' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -76,7 +77,8 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'gross_price_per_unit' => null,
 'price_list' => 'iri-reference',
 'product' => null,
-'active' => null    ];
+'active' => null,
+'price_list_id' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -112,7 +114,8 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'gross_price_per_unit' => 'grossPricePerUnit',
 'price_list' => 'priceList',
 'product' => 'product',
-'active' => 'active'    ];
+'active' => 'active',
+'price_list_id' => 'priceListId'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -127,7 +130,8 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'gross_price_per_unit' => 'setGrossPricePerUnit',
 'price_list' => 'setPriceList',
 'product' => 'setProduct',
-'active' => 'setActive'    ];
+'active' => 'setActive',
+'price_list_id' => 'setPriceListId'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -142,7 +146,8 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'gross_price_per_unit' => 'getGrossPricePerUnit',
 'price_list' => 'getPriceList',
 'product' => 'getProduct',
-'active' => 'getActive'    ];
+'active' => 'getActive',
+'price_list_id' => 'getPriceListId'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -210,6 +215,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['price_list_id'] = isset($data['price_list_id']) ? $data['price_list_id'] : null;
     }
 
     /**
@@ -424,6 +430,30 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     public function setActive($active)
     {
         $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets price_list_id
+     *
+     * @return string
+     */
+    public function getPriceListId()
+    {
+        return $this->container['price_list_id'];
+    }
+
+    /**
+     * Sets price_list_id
+     *
+     * @param string $price_list_id price_list_id
+     *
+     * @return $this
+     */
+    public function setPriceListId($price_list_id)
+    {
+        $this->container['price_list_id'] = $price_list_id;
 
         return $this;
     }

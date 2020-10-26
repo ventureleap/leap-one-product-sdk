@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **tax_percentage** | **string** |  | [optional] 
 **price_list** | **string** |  | [optional] 
 **product** | [**AnyOfPriceListProductProduct**](AnyOfPriceListProductProduct.md) |  | [optional] 
+**price_list_id** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **application_id** | **string** |  | [optional] 
 **custom_data** | **string[]** |  | [optional] 

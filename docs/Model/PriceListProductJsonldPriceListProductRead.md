@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **price_list** | **string** |  | [optional] 
 **product** | [**\Swagger\Client\LeapOneProductModels\ProductJsonldPriceListProductRead**](ProductJsonldPriceListProductRead.md) |  | [optional] 
 **active** | **bool** |  | [optional] 
+**price_list_id** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
