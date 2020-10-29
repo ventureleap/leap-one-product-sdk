@@ -57,7 +57,9 @@ class ProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
         'context' => 'string',
 'id' => 'string',
 'type' => 'string',
-'name' => 'string'    ];
+'internal_id' => 'string',
+'name' => 'string',
+'custom_data' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,7 +70,9 @@ class ProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
         'context' => null,
 'id' => null,
 'type' => null,
-'name' => null    ];
+'internal_id' => null,
+'name' => null,
+'custom_data' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -100,7 +104,9 @@ class ProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
         'context' => '@context',
 'id' => '@id',
 'type' => '@type',
-'name' => 'name'    ];
+'internal_id' => 'internalId',
+'name' => 'name',
+'custom_data' => 'customData'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -111,7 +117,9 @@ class ProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
         'context' => 'setContext',
 'id' => 'setId',
 'type' => 'setType',
-'name' => 'setName'    ];
+'internal_id' => 'setInternalId',
+'name' => 'setName',
+'custom_data' => 'setCustomData'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -122,7 +130,9 @@ class ProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
         'context' => 'getContext',
 'id' => 'getId',
 'type' => 'getType',
-'name' => 'getName'    ];
+'internal_id' => 'getInternalId',
+'name' => 'getName',
+'custom_data' => 'getCustomData'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -185,7 +195,9 @@ class ProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
         $this->container['context'] = isset($data['context']) ? $data['context'] : null;
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
+        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
     }
 
     /**
@@ -285,6 +297,30 @@ class ProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
     }
 
     /**
+     * Gets internal_id
+     *
+     * @return string
+     */
+    public function getInternalId()
+    {
+        return $this->container['internal_id'];
+    }
+
+    /**
+     * Sets internal_id
+     *
+     * @param string $internal_id internal_id
+     *
+     * @return $this
+     */
+    public function setInternalId($internal_id)
+    {
+        $this->container['internal_id'] = $internal_id;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      *
      * @return string
@@ -304,6 +340,30 @@ class ProductJsonldPriceListProductRead implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_data
+     *
+     * @return string[]
+     */
+    public function getCustomData()
+    {
+        return $this->container['custom_data'];
+    }
+
+    /**
+     * Sets custom_data
+     *
+     * @param string[] $custom_data custom_data
+     *
+     * @return $this
+     */
+    public function setCustomData($custom_data)
+    {
+        $this->container['custom_data'] = $custom_data;
 
         return $this;
     }

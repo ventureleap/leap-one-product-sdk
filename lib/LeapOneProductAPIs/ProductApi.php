@@ -323,14 +323,15 @@ class ProductApi
      * @param  string $categories categories (optional)
      * @param  string $order_name order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\LeapOneProductModels\InlineResponse2003
      */
-    public function getProductCollection($name = null, $categories = null, $order_name = null, $page = '1')
+    public function getProductCollection($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30')
     {
-        list($response) = $this->getProductCollectionWithHttpInfo($name, $categories, $order_name, $page);
+        list($response) = $this->getProductCollectionWithHttpInfo($name, $categories, $order_name, $page, $items_per_page);
         return $response;
     }
 
@@ -343,15 +344,16 @@ class ProductApi
      * @param  string $categories (optional)
      * @param  string $order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCollectionWithHttpInfo($name = null, $categories = null, $order_name = null, $page = '1')
+    public function getProductCollectionWithHttpInfo($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2003';
-        $request = $this->getProductCollectionRequest($name, $categories, $order_name, $page);
+        $request = $this->getProductCollectionRequest($name, $categories, $order_name, $page, $items_per_page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -421,13 +423,14 @@ class ProductApi
      * @param  string $categories (optional)
      * @param  string $order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsync($name = null, $categories = null, $order_name = null, $page = '1')
+    public function getProductCollectionAsync($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30')
     {
-        return $this->getProductCollectionAsyncWithHttpInfo($name, $categories, $order_name, $page)
+        return $this->getProductCollectionAsyncWithHttpInfo($name, $categories, $order_name, $page, $items_per_page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -444,14 +447,15 @@ class ProductApi
      * @param  string $categories (optional)
      * @param  string $order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsyncWithHttpInfo($name = null, $categories = null, $order_name = null, $page = '1')
+    public function getProductCollectionAsyncWithHttpInfo($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse2003';
-        $request = $this->getProductCollectionRequest($name, $categories, $order_name, $page);
+        $request = $this->getProductCollectionRequest($name, $categories, $order_name, $page, $items_per_page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -497,11 +501,12 @@ class ProductApi
      * @param  string $categories (optional)
      * @param  string $order_name (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCollectionRequest($name = null, $categories = null, $order_name = null, $page = '1')
+    protected function getProductCollectionRequest($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30')
     {
 
         $resourcePath = '/products';
@@ -526,6 +531,10 @@ class ProductApi
         // query params
         if ($page !== null) {
             $queryParams['page'] = ObjectSerializer::toQueryValue($page, null);
+        }
+        // query params
+        if ($items_per_page !== null) {
+            $queryParams['itemsPerPage'] = ObjectSerializer::toQueryValue($items_per_page, null);
         }
 
 

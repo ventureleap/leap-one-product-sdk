@@ -3,114 +3,16 @@
   <component name="ChangeListManager">
     <list default="true" id="8a787b70-a700-4581-9db7-839fe25833fd" name="Default Changelist" comment="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Api/ProductApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/AnyOfPriceListProductJsonldPriceListProductReadProduct.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/AnyOfPriceListProductJsonldProduct.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/AnyOfPriceListProductJsonldProductReadPriceList.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/AnyOfPriceListProductProduct.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2001.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2002.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2003.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydrasearch.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200HydrasearchHydramapping.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydraview.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceList.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListJsonld.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListJsonldProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProduct.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductJsonld.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductJsonldPriceListProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductJsonldProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductPriceListProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/Product.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategory.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonld.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonldProductCategoryRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonldProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryProductCategoryRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonld.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonldPriceListProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonldProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductPriceListProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/Model/ProductProductRead.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListApi.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductJsonldPriceListProductReadProduct.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductJsonldProduct.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductJsonldProductReadPriceList.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductProduct.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2001.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2002.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2003.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200Hydrasearch.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200HydrasearchHydramapping.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200Hydraview.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceList.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListJsonld.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListJsonldProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProduct.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductJsonld.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductJsonldPriceListProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductJsonldProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductPriceListProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/Product.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategory.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonld.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonldProductCategoryRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonldProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryProductCategoryRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonld.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldPriceListProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductPriceListProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductProductRead.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Api/PriceListApiTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Api/PriceListProductApiTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Api/ProductApiTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Api/ProductCategoryApiTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/AnyOfPriceListProductJsonldPriceListProductReadProductTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/AnyOfPriceListProductJsonldProductReadPriceListTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/AnyOfPriceListProductJsonldProductTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/AnyOfPriceListProductProductTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse2001Test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse2002Test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse2003Test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydrasearchHydramappingTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydrasearchTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200HydraviewTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/InlineResponse200Test.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListJsonldProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListJsonldTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListProductJsonldPriceListProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListProductJsonldProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListProductJsonldTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListProductPriceListProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListProductProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListProductTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/PriceListTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductCategoryJsonldProductCategoryReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductCategoryJsonldProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductCategoryJsonldTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductCategoryProductCategoryReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductCategoryProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductCategoryTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductJsonldPriceListProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductJsonldProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductJsonldTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductPriceListProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductProductReadTest.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/test/Model/ProductTest.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ProductApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/ProductApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonldPriceListProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductJsonldPriceListProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductPriceListProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductPriceListProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldPriceListProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldPriceListProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductPriceListProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductPriceListProductRead.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -220,6 +122,8 @@
       <workItem from="1603102561376" duration="2987000" />
       <workItem from="1603191235698" duration="1839000" />
       <workItem from="1603275407777" duration="4325000" />
+      <workItem from="1603794674944" duration="1386000" />
+      <workItem from="1603888352490" duration="3954000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <created>1601992849321</created>
@@ -261,6 +165,10 @@
       <screen x="67" y="27" width="3773" height="1053" />
     </state>
     <state x="774" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/67.27.3773.1053@67.27.3773.1053" timestamp="1601991185102" />
+    <state x="3211" y="258" width="618" height="522" key="find.popup" timestamp="1603901876550">
+      <screen x="2560" y="0" width="1920" height="1080" />
+    </state>
+    <state x="3211" y="258" width="618" height="522" key="find.popup/2560.0.1920.1080/0.27.2560.985@2560.0.1920.1080" timestamp="1603901876550" />
     <state x="3183" y="241" width="672" height="678" key="search.everywhere.popup" timestamp="1603445788169">
       <screen x="2560" y="0" width="1920" height="1080" />
     </state>

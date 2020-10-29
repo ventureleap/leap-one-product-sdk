@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2003 getProductCollection($name, $categories, $order_name, $page)
+> \Swagger\Client\LeapOneProductModels\InlineResponse2003 getProductCollection($name, $categories, $order_name, $page, $items_per_page)
 
 Retrieves the collection of Product resources.
 
@@ -86,9 +86,10 @@ $name = "name_example"; // string |
 $categories = "categories_example"; // string | 
 $order_name = "order_name_example"; // string | 
 $page = 1; // int | The collection page number
+$items_per_page = 30; // int | The number of items per page
 
 try {
-    $result = $apiInstance->getProductCollection($name, $categories, $order_name, $page);
+    $result = $apiInstance->getProductCollection($name, $categories, $order_name, $page, $items_per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductApi->getProductCollection: ', $e->getMessage(), PHP_EOL;
@@ -104,6 +105,7 @@ Name | Type | Description  | Notes
  **categories** | **string**|  | [optional]
  **order_name** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
+ **items_per_page** | **int**| The number of items per page | [optional] [default to 30]
 
 ### Return type
 

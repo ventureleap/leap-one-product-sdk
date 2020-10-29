@@ -54,7 +54,9 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'name' => 'string'    ];
+        'internal_id' => 'string',
+'name' => 'string',
+'custom_data' => 'string[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -62,7 +64,9 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'name' => null    ];
+        'internal_id' => null,
+'name' => null,
+'custom_data' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -91,7 +95,9 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'name' => 'name'    ];
+        'internal_id' => 'internalId',
+'name' => 'name',
+'custom_data' => 'customData'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -99,7 +105,9 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'name' => 'setName'    ];
+        'internal_id' => 'setInternalId',
+'name' => 'setName',
+'custom_data' => 'setCustomData'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -107,7 +115,9 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'name' => 'getName'    ];
+        'internal_id' => 'getInternalId',
+'name' => 'getName',
+'custom_data' => 'getCustomData'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -167,7 +177,9 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
+        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
     }
 
     /**
@@ -195,6 +207,30 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
 
 
     /**
+     * Gets internal_id
+     *
+     * @return string
+     */
+    public function getInternalId()
+    {
+        return $this->container['internal_id'];
+    }
+
+    /**
+     * Sets internal_id
+     *
+     * @param string $internal_id internal_id
+     *
+     * @return $this
+     */
+    public function setInternalId($internal_id)
+    {
+        $this->container['internal_id'] = $internal_id;
+
+        return $this;
+    }
+
+    /**
      * Gets name
      *
      * @return string
@@ -214,6 +250,30 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_data
+     *
+     * @return string[]
+     */
+    public function getCustomData()
+    {
+        return $this->container['custom_data'];
+    }
+
+    /**
+     * Sets custom_data
+     *
+     * @param string[] $custom_data custom_data
+     *
+     * @return $this
+     */
+    public function setCustomData($custom_data)
+    {
+        $this->container['custom_data'] = $custom_data;
 
         return $this;
     }

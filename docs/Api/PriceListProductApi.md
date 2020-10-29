@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPriceListProductCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse200 getPriceListProductCollection($product, $price_list, $page)
+> \Swagger\Client\LeapOneProductModels\InlineResponse200 getPriceListProductCollection($product, $price_list, $page, $items_per_page)
 
 Retrieves the collection of PriceListProduct resources.
 
@@ -85,9 +85,10 @@ $apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListProductApi(
 $product = "product_example"; // string | 
 $price_list = "price_list_example"; // string | 
 $page = 1; // int | The collection page number
+$items_per_page = 30; // int | The number of items per page
 
 try {
-    $result = $apiInstance->getPriceListProductCollection($product, $price_list, $page);
+    $result = $apiInstance->getPriceListProductCollection($product, $price_list, $page, $items_per_page);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PriceListProductApi->getPriceListProductCollection: ', $e->getMessage(), PHP_EOL;
@@ -102,6 +103,7 @@ Name | Type | Description  | Notes
  **product** | **string**|  | [optional]
  **price_list** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
+ **items_per_page** | **int**| The number of items per page | [optional] [default to 30]
 
 ### Return type
 

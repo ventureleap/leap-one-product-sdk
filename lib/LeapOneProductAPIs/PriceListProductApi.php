@@ -322,14 +322,15 @@ class PriceListProductApi
      * @param  string $product product (optional)
      * @param  string $price_list price_list (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return \Swagger\Client\LeapOneProductModels\InlineResponse200
      */
-    public function getPriceListProductCollection($product = null, $price_list = null, $page = '1')
+    public function getPriceListProductCollection($product = null, $price_list = null, $page = '1', $items_per_page = '30')
     {
-        list($response) = $this->getPriceListProductCollectionWithHttpInfo($product, $price_list, $page);
+        list($response) = $this->getPriceListProductCollectionWithHttpInfo($product, $price_list, $page, $items_per_page);
         return $response;
     }
 
@@ -341,15 +342,16 @@ class PriceListProductApi
      * @param  string $product (optional)
      * @param  string $price_list (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \Swagger\Client\ApiException on non-2xx response
      * @throws \InvalidArgumentException
      * @return array of \Swagger\Client\LeapOneProductModels\InlineResponse200, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getPriceListProductCollectionWithHttpInfo($product = null, $price_list = null, $page = '1')
+    public function getPriceListProductCollectionWithHttpInfo($product = null, $price_list = null, $page = '1', $items_per_page = '30')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse200';
-        $request = $this->getPriceListProductCollectionRequest($product, $price_list, $page);
+        $request = $this->getPriceListProductCollectionRequest($product, $price_list, $page, $items_per_page);
 
         try {
             $options = $this->createHttpClientOption();
@@ -418,13 +420,14 @@ class PriceListProductApi
      * @param  string $product (optional)
      * @param  string $price_list (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPriceListProductCollectionAsync($product = null, $price_list = null, $page = '1')
+    public function getPriceListProductCollectionAsync($product = null, $price_list = null, $page = '1', $items_per_page = '30')
     {
-        return $this->getPriceListProductCollectionAsyncWithHttpInfo($product, $price_list, $page)
+        return $this->getPriceListProductCollectionAsyncWithHttpInfo($product, $price_list, $page, $items_per_page)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -440,14 +443,15 @@ class PriceListProductApi
      * @param  string $product (optional)
      * @param  string $price_list (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getPriceListProductCollectionAsyncWithHttpInfo($product = null, $price_list = null, $page = '1')
+    public function getPriceListProductCollectionAsyncWithHttpInfo($product = null, $price_list = null, $page = '1', $items_per_page = '30')
     {
         $returnType = '\Swagger\Client\LeapOneProductModels\InlineResponse200';
-        $request = $this->getPriceListProductCollectionRequest($product, $price_list, $page);
+        $request = $this->getPriceListProductCollectionRequest($product, $price_list, $page, $items_per_page);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -492,11 +496,12 @@ class PriceListProductApi
      * @param  string $product (optional)
      * @param  string $price_list (optional)
      * @param  int $page The collection page number (optional, default to 1)
+     * @param  int $items_per_page The number of items per page (optional, default to 30)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getPriceListProductCollectionRequest($product = null, $price_list = null, $page = '1')
+    protected function getPriceListProductCollectionRequest($product = null, $price_list = null, $page = '1', $items_per_page = '30')
     {
 
         $resourcePath = '/price_list_products';
@@ -517,6 +522,10 @@ class PriceListProductApi
         // query params
         if ($page !== null) {
             $queryParams['page'] = ObjectSerializer::toQueryValue($page, null);
+        }
+        // query params
+        if ($items_per_page !== null) {
+            $queryParams['itemsPerPage'] = ObjectSerializer::toQueryValue($items_per_page, null);
         }
 
 
