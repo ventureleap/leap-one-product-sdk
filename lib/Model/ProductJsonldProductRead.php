@@ -64,7 +64,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
 'active' => 'bool',
 'priority' => 'int',
 'categories' => '\VentureLeap\ProductService\Model\ProductCategoryJsonldProductRead[]',
-'custom_data' => 'string[]',
+'custom_data' => 'string',
 'price_list_products' => '\VentureLeap\ProductService\Model\PriceListProductJsonldProductRead[]'    ];
 
     /**
@@ -237,6 +237,9 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
 
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['custom_data'] === null) {
+            $invalidProperties[] = "'custom_data' can't be null";
         }
         return $invalidProperties;
     }
@@ -448,7 +451,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
     /**
      * Gets custom_data
      *
-     * @return string[]
+     * @return string
      */
     public function getCustomData()
     {
@@ -458,7 +461,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
     /**
      * Sets custom_data
      *
-     * @param string[] $custom_data custom_data
+     * @param string $custom_data custom_data
      *
      * @return $this
      */
