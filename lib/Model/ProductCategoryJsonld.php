@@ -64,7 +64,7 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
 'active' => 'bool',
 'priority' => 'int',
 'products' => 'string[]',
-'custom_data' => 'string[]',
+'custom_data' => 'string',
 'application_id' => 'string',
 'translatable_locale' => ''    ];
 
@@ -243,6 +243,9 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
 
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['custom_data'] === null) {
+            $invalidProperties[] = "'custom_data' can't be null";
         }
         return $invalidProperties;
     }
@@ -454,7 +457,7 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
     /**
      * Gets custom_data
      *
-     * @return string[]
+     * @return string
      */
     public function getCustomData()
     {
@@ -464,7 +467,7 @@ class ProductCategoryJsonld implements ModelInterface, ArrayAccess
     /**
      * Sets custom_data
      *
-     * @param string[] $custom_data custom_data
+     * @param string $custom_data custom_data
      *
      * @return $this
      */

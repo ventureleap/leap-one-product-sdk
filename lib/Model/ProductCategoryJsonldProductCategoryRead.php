@@ -63,7 +63,7 @@ class ProductCategoryJsonldProductCategoryRead implements ModelInterface, ArrayA
 'name' => 'string',
 'active' => 'bool',
 'priority' => 'int',
-'custom_data' => 'string[]',
+'custom_data' => 'string',
 'products' => 'string[]'    ];
 
     /**
@@ -231,6 +231,9 @@ class ProductCategoryJsonldProductCategoryRead implements ModelInterface, ArrayA
 
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['custom_data'] === null) {
+            $invalidProperties[] = "'custom_data' can't be null";
         }
         return $invalidProperties;
     }
@@ -418,7 +421,7 @@ class ProductCategoryJsonldProductCategoryRead implements ModelInterface, ArrayA
     /**
      * Gets custom_data
      *
-     * @return string[]
+     * @return string
      */
     public function getCustomData()
     {
@@ -428,7 +431,7 @@ class ProductCategoryJsonldProductCategoryRead implements ModelInterface, ArrayA
     /**
      * Sets custom_data
      *
-     * @param string[] $custom_data custom_data
+     * @param string $custom_data custom_data
      *
      * @return $this
      */

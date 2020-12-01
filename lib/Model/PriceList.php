@@ -62,7 +62,7 @@ class PriceList implements ModelInterface, ArrayAccess
 'created_at' => '\DateTime',
 'updated_at' => '\DateTime',
 'application_id' => 'string',
-'custom_data' => 'string[]'    ];
+'custom_data' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -217,6 +217,9 @@ class PriceList implements ModelInterface, ArrayAccess
     {
         $invalidProperties = [];
 
+        if ($this->container['custom_data'] === null) {
+            $invalidProperties[] = "'custom_data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -379,7 +382,7 @@ class PriceList implements ModelInterface, ArrayAccess
     /**
      * Gets custom_data
      *
-     * @return string[]
+     * @return string
      */
     public function getCustomData()
     {
@@ -389,7 +392,7 @@ class PriceList implements ModelInterface, ArrayAccess
     /**
      * Sets custom_data
      *
-     * @param string[] $custom_data custom_data
+     * @param string $custom_data custom_data
      *
      * @return $this
      */

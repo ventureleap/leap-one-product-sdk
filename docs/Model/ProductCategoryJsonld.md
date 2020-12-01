@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **active** | **bool** |  | [optional] 
 **priority** | **int** |  | [optional] 
 **products** | **string[]** |  | [optional] 
-**custom_data** | **string[]** |  | [optional] 
+**custom_data** | **string** |  | 
 **application_id** | **string** |  | [optional] 
 **translatable_locale** | [****](.md) |  | [optional] 
 
