@@ -1,15 +1,14 @@
-# Swagger\Client\ProductCategoryApi
+# VentureLeap\ProductService\ProductCategoryApi
 
 All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deleteProductCategoryItem**](ProductCategoryApi.md#deleteproductcategoryitem) | **DELETE** /product_categories/{id} | Removes the ProductCategory resource.
-[**getProductCategoryCollection**](ProductCategoryApi.md#getproductcategorycollection) | **GET** /product_categories | Retrieves the collection of ProductCategory resources.
-[**getProductCategoryItem**](ProductCategoryApi.md#getproductcategoryitem) | **GET** /product_categories/{id} | Retrieves a ProductCategory resource.
-[**patchProductCategoryItem**](ProductCategoryApi.md#patchproductcategoryitem) | **PATCH** /product_categories/{id} | Updates the ProductCategory resource.
-[**postProductCategoryCollection**](ProductCategoryApi.md#postproductcategorycollection) | **POST** /product_categories | Creates a ProductCategory resource.
-[**putProductCategoryItem**](ProductCategoryApi.md#putproductcategoryitem) | **PUT** /product_categories/{id} | Replaces the ProductCategory resource.
+[**deleteProductCategoryItem**](ProductCategoryApi.md#deleteproductcategoryitem) | **DELETE** /product/product_categories/{id} | Removes the ProductCategory resource.
+[**getProductCategoryCollection**](ProductCategoryApi.md#getproductcategorycollection) | **GET** /product/product_categories | Retrieves the collection of ProductCategory resources.
+[**getProductCategoryItem**](ProductCategoryApi.md#getproductcategoryitem) | **GET** /product/product_categories/{id} | Retrieves a ProductCategory resource.
+[**postProductCategoryCollection**](ProductCategoryApi.md#postproductcategorycollection) | **POST** /product/product_categories | Creates a ProductCategory resource.
+[**putProductCategoryItem**](ProductCategoryApi.md#putproductcategoryitem) | **PUT** /product/product_categories/{id} | Replaces the ProductCategory resource.
 
 # **deleteProductCategoryItem**
 > deleteProductCategoryItem($id)
@@ -20,12 +19,12 @@ Removes the ProductCategory resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
+$apiInstance = new VentureLeap\ProductService\Api\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +52,7 @@ void (empty response body)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -63,7 +62,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCategoryCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2002 getProductCategoryCollection($name, $products, $type, $page)
+> \VentureLeap\ProductService\Model\InlineResponse2003 getProductCategoryCollection($name, $products, $type, $page, $items_per_page, $pagination, $accept_language)
 
 Retrieves the collection of ProductCategory resources.
 
@@ -71,12 +70,12 @@ Retrieves the collection of ProductCategory resources.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
+$apiInstance = new VentureLeap\ProductService\Api\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -86,9 +85,12 @@ $name = "name_example"; // string |
 $products = "products_example"; // string | 
 $type = "type_example"; // string | 
 $page = 1; // int | The collection page number
+$items_per_page = 30; // int | The number of items per page
+$pagination = true; // bool | Enable or disable pagination
+$accept_language = "accept_language_example"; // string | Locale
 
 try {
-    $result = $apiInstance->getProductCategoryCollection($name, $products, $type, $page);
+    $result = $apiInstance->getProductCategoryCollection($name, $products, $type, $page, $items_per_page, $pagination, $accept_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCategoryApi->getProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
@@ -104,14 +106,17 @@ Name | Type | Description  | Notes
  **products** | **string**|  | [optional]
  **type** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
+ **items_per_page** | **int**| The number of items per page | [optional] [default to 30]
+ **pagination** | **bool**| Enable or disable pagination | [optional]
+ **accept_language** | **string**| Locale | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\InlineResponse2002**](../Model/InlineResponse2002.md)
+[**\VentureLeap\ProductService\Model\InlineResponse2003**](../Model/InlineResponse2003.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -121,7 +126,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCategoryItem**
-> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead getProductCategoryItem($id)
+> \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryRead getProductCategoryItem($id, $accept_language)
 
 Retrieves a ProductCategory resource.
 
@@ -129,21 +134,22 @@ Retrieves a ProductCategory resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
+$apiInstance = new VentureLeap\ProductService\Api\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = "id_example"; // string | 
+$accept_language = "accept_language_example"; // string | Locale
 
 try {
-    $result = $apiInstance->getProductCategoryItem($id);
+    $result = $apiInstance->getProductCategoryItem($id, $accept_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCategoryApi->getProductCategoryItem: ', $e->getMessage(), PHP_EOL;
@@ -156,14 +162,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
+ **accept_language** | **string**| Locale | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
+[**\VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -172,62 +179,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
-# **patchProductCategoryItem**
-> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead patchProductCategoryItem($id, $body)
-
-Updates the ProductCategory resource.
-
-### Example
-```php
-<?php
-require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
-// Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
-
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
-    // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
-    // This is optional, `GuzzleHttp\Client` will be used as default.
-    new GuzzleHttp\Client(),
-    $config
-);
-$id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\ProductCategory(); // \Swagger\Client\LeapOneProductModels\ProductCategory | The updated ProductCategory resource
-
-try {
-    $result = $apiInstance->patchProductCategoryItem($id, $body);
-    print_r($result);
-} catch (Exception $e) {
-    echo 'Exception when calling ProductCategoryApi->patchProductCategoryItem: ', $e->getMessage(), PHP_EOL;
-}
-?>
-```
-
-### Parameters
-
-Name | Type | Description  | Notes
-------------- | ------------- | ------------- | -------------
- **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\ProductCategory**](../Model/ProductCategory.md)| The updated ProductCategory resource | [optional]
-
-### Return type
-
-[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
-
-### Authorization
-
-[applicationId](../../README.md#applicationId)
-
-### HTTP request headers
-
- - **Content-Type**: application/merge-patch+json
- - **Accept**: application/ld+json
-
-[[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
-
 # **postProductCategoryCollection**
-> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead postProductCategoryCollection($body)
+> \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryRead postProductCategoryCollection($body, $accept_language)
 
 Creates a ProductCategory resource.
 
@@ -235,21 +188,22 @@ Creates a ProductCategory resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
+$apiInstance = new VentureLeap\ProductService\Api\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld(); // \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld | The new ProductCategory resource
+$body = new \VentureLeap\ProductService\Model\ProductCategoryJsonld(); // \VentureLeap\ProductService\Model\ProductCategoryJsonld | The new ProductCategory resource
+$accept_language = "accept_language_example"; // string | Locale
 
 try {
-    $result = $apiInstance->postProductCategoryCollection($body);
+    $result = $apiInstance->postProductCategoryCollection($body, $accept_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCategoryApi->postProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
@@ -261,15 +215,16 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The new ProductCategory resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The new ProductCategory resource | [optional]
+ **accept_language** | **string**| Locale | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
+[**\VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -279,7 +234,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putProductCategoryItem**
-> \Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead putProductCategoryItem($id, $body)
+> \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryRead putProductCategoryItem($id, $body, $accept_language)
 
 Replaces the ProductCategory resource.
 
@@ -287,22 +242,23 @@ Replaces the ProductCategory resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\ProductCategoryApi(
+$apiInstance = new VentureLeap\ProductService\Api\ProductCategoryApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld(); // \Swagger\Client\LeapOneProductModels\ProductCategoryJsonld | The updated ProductCategory resource
+$body = new \VentureLeap\ProductService\Model\ProductCategoryJsonld(); // \VentureLeap\ProductService\Model\ProductCategoryJsonld | The updated ProductCategory resource
+$accept_language = "accept_language_example"; // string | Locale
 
 try {
-    $result = $apiInstance->putProductCategoryItem($id, $body);
+    $result = $apiInstance->putProductCategoryItem($id, $body, $accept_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCategoryApi->putProductCategoryItem: ', $e->getMessage(), PHP_EOL;
@@ -315,15 +271,16 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The updated ProductCategory resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The updated ProductCategory resource | [optional]
+ **accept_language** | **string**| Locale | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
+[**\VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryRead**](../Model/ProductCategoryJsonldProductCategoryRead.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 

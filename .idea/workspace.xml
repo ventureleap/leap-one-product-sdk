@@ -1,18 +1,97 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="8a787b70-a700-4581-9db7-839fe25833fd" name="Default Changelist" comment="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
+    <list default="true" id="8a787b70-a700-4581-9db7-839fe25833fd" name="Default Changelist" comment="sd">
+      <change afterPath="$PROJECT_DIR$/docs/Api/ConfigurationEntryApi.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Model/ConfigurationEntryConfigurationRead.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Model/ConfigurationEntryConfigurationWrite.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Model/ConfigurationEntryJsonldConfigurationRead.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Model/ConfigurationEntryJsonldConfigurationWrite.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Model/InlineResponse2004.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Model/PriceListProductJsonldPriceListProductWrite.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/docs/Model/PriceListProductPriceListProductWrite.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Api/ConfigurationEntryApi.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Model/ConfigurationEntryConfigurationRead.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Model/ConfigurationEntryJsonldConfigurationRead.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Model/InlineResponse2004.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Model/PriceListProductJsonldPriceListProductWrite.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/Model/PriceListProductPriceListProductWrite.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Api/ConfigurationEntryApiTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Model/ConfigurationEntryConfigurationReadTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Model/ConfigurationEntryConfigurationWriteTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Model/ConfigurationEntryJsonldConfigurationReadTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Model/ConfigurationEntryJsonldConfigurationWriteTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Model/InlineResponse2004Test.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Model/PriceListProductJsonldPriceListProductWriteTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test/Model/PriceListProductPriceListProductWriteTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Api/PriceListApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/PriceListApi.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/PriceListProductApi.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Api/ProductApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/ProductApi.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Api/ProductCategoryApi.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/InlineResponse200.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2001.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/InlineResponse2001.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2002.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/InlineResponse2002.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse2003.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/InlineResponse2003.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydrasearch.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/InlineResponse200Hydrasearch.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductJsonld.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/PriceListProductJsonld.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductJsonldPriceListProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/PriceListProductJsonldPriceListProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductJsonldProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/PriceListProductJsonldProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductPriceListProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/PriceListProductPriceListProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/PriceListProductProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/PriceListProductProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/Product.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/Product.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategory.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductCategory.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonld.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonld.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonldProductCategoryRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonldProductCategoryRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonldProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductCategoryJsonldProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryProductCategoryRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductCategoryProductCategoryRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductCategoryProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductCategoryProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonld.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductJsonld.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonldPriceListProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductJsonldPriceListProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonldProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductJsonldProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductJsonldProductWrite.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductJsonldProductWrite.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/Model/ProductPriceListProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductPriceListProductRead.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldPriceListProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldPriceListProductRead.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductPriceListProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductPriceListProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductProductRead.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductProductRead.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docs/Model/ProductProductWrite.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/Model/ProductProductWrite.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/PriceListApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/PriceListProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/PriceListProductApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/ProductApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductAPIs/ProductCategoryApi.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Api/ProductCategoryApi.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductJsonldPriceListProductReadProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/AnyOfPriceListProductJsonldPriceListProductReadProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductJsonldProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/AnyOfPriceListProductJsonldProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductJsonldProductReadPriceList.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ConfigurationEntryConfigurationWrite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductPriceListProductReadProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/AnyOfPriceListProductPriceListProductReadProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/AnyOfPriceListProductProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/AnyOfPriceListProductProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/InlineResponse200.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2001.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/InlineResponse2001.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2002.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/InlineResponse2002.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse2003.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/InlineResponse2003.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200Hydrasearch.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/InlineResponse200Hydrasearch.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200HydrasearchHydramapping.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/InlineResponse200HydrasearchHydramapping.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/InlineResponse200Hydraview.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/InlineResponse200Hydraview.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceList.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/PriceList.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListJsonld.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/PriceListJsonld.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListJsonldProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ConfigurationEntryJsonldConfigurationWrite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProduct.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/PriceListProduct.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductJsonld.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/PriceListProductJsonld.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductJsonldPriceListProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/PriceListProductJsonldPriceListProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductJsonldProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/PriceListProductJsonldProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductPriceListProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/PriceListProductPriceListProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/PriceListProductProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/PriceListProductProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/Product.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/Product.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategory.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductCategory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonld.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductCategoryJsonld.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonldProductCategoryRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductCategoryJsonldProductCategoryRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryJsonldProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductCategoryJsonldProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryProductCategoryRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductCategoryProductCategoryRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductCategoryProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductCategoryProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonld.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductJsonld.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldPriceListProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductJsonldPriceListProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductJsonldProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductJsonldProductWrite.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductJsonldProductWrite.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductPriceListProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductPriceListProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductProductRead.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductProductRead.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/LeapOneProductModels/ProductProductWrite.php" beforeDir="false" afterPath="$PROJECT_DIR$/lib/Model/ProductProductWrite.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +202,11 @@
       <workItem from="1603191235698" duration="1839000" />
       <workItem from="1603275407777" duration="4325000" />
       <workItem from="1603794674944" duration="1386000" />
-      <workItem from="1603888352490" duration="3954000" />
+      <workItem from="1603888352490" duration="3990000" />
+      <workItem from="1605172404942" duration="1329000" />
+      <workItem from="1605191149100" duration="11000" />
+      <workItem from="1605192084076" duration="5000" />
+      <workItem from="1606814181042" duration="3391000" />
     </task>
     <task id="LOCAL-00001" summary="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php">
       <created>1601992849321</created>
@@ -132,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1601992849321</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="work in progress">
+      <created>1603982522043</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1603982522043</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,12 +230,14 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php" />
-    <option name="LAST_COMMIT_MESSAGE" value="Merge branch 'master' of https://github.com/ventureleap/leap-one-product-sdk&#10;&#10;# Conflicts:&#10;#&#9;test/Model/PriceListJsonldTest.php&#10;#&#9;test/Model/PriceListTest.php&#10;#&#9;test/Model/ProductJsonldTest.php&#10;#&#9;test/Model/ProductTest.php" />
+    <MESSAGE value="work in progress" />
+    <option name="LAST_COMMIT_MESSAGE" value="work in progress" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="532" y="100" width="912" height="904" key="CommitChangelistDialog2" timestamp="1601994461453">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state x="2797" y="75" width="912" height="928" key="CommitChangelistDialog2" timestamp="1606827917059">
+      <screen x="2560" y="0" width="1920" height="1080" />
     </state>
+    <state x="2797" y="75" width="912" height="928" key="CommitChangelistDialog2/2560.0.1920.1080/0.27.2560.985@2560.0.1920.1080" timestamp="1606827917059" />
     <state x="532" y="100" width="912" height="904" key="CommitChangelistDialog2/67.27.3773.1053@67.27.3773.1053" timestamp="1601994461453" />
     <state x="624" y="315" width="728" height="475" key="MultipleFileMergeDialog" timestamp="1601992699787">
       <screen x="67" y="27" width="3773" height="1053" />
@@ -157,9 +249,10 @@
     <state x="2904" y="214" key="RollbackChangesDialog/2560.0.1920.1080/0.27.2560.988@2560.0.1920.1080" timestamp="1603191815353" />
     <state x="399" y="236" width="272" height="633" key="RollbackChangesDialog/67.27.1853.1053/1920.0.1920.1080@67.27.1853.1053" timestamp="1602079000928" />
     <state x="742" y="236" width="492" height="633" key="RollbackChangesDialog/67.27.3773.1053@67.27.3773.1053" timestamp="1601994370867" />
-    <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1601992852886">
-      <screen x="67" y="27" width="3773" height="1053" />
+    <state x="2825" y="268" width="528" height="542" key="Vcs.Push.Dialog.v2" timestamp="1603982525042">
+      <screen x="2560" y="0" width="1920" height="1080" />
     </state>
+    <state x="2825" y="268" width="528" height="542" key="Vcs.Push.Dialog.v2/2560.0.1920.1080/0.27.2560.985@2560.0.1920.1080" timestamp="1603982525042" />
     <state x="588" y="288" width="800" height="528" key="Vcs.Push.Dialog.v2/67.27.3773.1053@67.27.3773.1053" timestamp="1601992852886" />
     <state x="774" y="467" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1601991185102">
       <screen x="67" y="27" width="3773" height="1053" />

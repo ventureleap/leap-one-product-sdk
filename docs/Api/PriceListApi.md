@@ -1,15 +1,15 @@
-# Swagger\Client\PriceListApi
+# VentureLeap\ProductService\PriceListApi
 
 All URIs are relative to */*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**deletePriceListItem**](PriceListApi.md#deletepricelistitem) | **DELETE** /price_lists/{id} | Removes the PriceList resource.
-[**getPriceListCollection**](PriceListApi.md#getpricelistcollection) | **GET** /price_lists | Retrieves the collection of PriceList resources.
-[**getPriceListItem**](PriceListApi.md#getpricelistitem) | **GET** /price_lists/{id} | Retrieves a PriceList resource.
-[**patchPriceListItem**](PriceListApi.md#patchpricelistitem) | **PATCH** /price_lists/{id} | Updates the PriceList resource.
-[**postPriceListCollection**](PriceListApi.md#postpricelistcollection) | **POST** /price_lists | Creates a PriceList resource.
-[**putPriceListItem**](PriceListApi.md#putpricelistitem) | **PUT** /price_lists/{id} | Replaces the PriceList resource.
+[**deletePriceListItem**](PriceListApi.md#deletepricelistitem) | **DELETE** /product/price_lists/{id} | Removes the PriceList resource.
+[**getPriceListCollection**](PriceListApi.md#getpricelistcollection) | **GET** /product/price_lists | Retrieves the collection of PriceList resources.
+[**getPriceListItem**](PriceListApi.md#getpricelistitem) | **GET** /product/price_lists/{id} | Retrieves a PriceList resource.
+[**patchPriceListItem**](PriceListApi.md#patchpricelistitem) | **PATCH** /product/price_lists/{id} | Updates the PriceList resource.
+[**postPriceListCollection**](PriceListApi.md#postpricelistcollection) | **POST** /product/price_lists | Creates a PriceList resource.
+[**putPriceListItem**](PriceListApi.md#putpricelistitem) | **PUT** /product/price_lists/{id} | Replaces the PriceList resource.
 
 # **deletePriceListItem**
 > deletePriceListItem($id)
@@ -20,12 +20,12 @@ Removes the PriceList resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
+$apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -53,7 +53,7 @@ void (empty response body)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPriceListCollection**
-> \Swagger\Client\LeapOneProductModels\InlineResponse2001 getPriceListCollection($name)
+> \VentureLeap\ProductService\Model\InlineResponse2002 getPriceListCollection($name, $pagination)
 
 Retrieves the collection of PriceList resources.
 
@@ -71,21 +71,22 @@ Retrieves the collection of PriceList resources.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
+$apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $name = "name_example"; // string | 
+$pagination = true; // bool | Enable or disable pagination
 
 try {
-    $result = $apiInstance->getPriceListCollection($name);
+    $result = $apiInstance->getPriceListCollection($name, $pagination);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PriceListApi->getPriceListCollection: ', $e->getMessage(), PHP_EOL;
@@ -98,14 +99,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**|  | [optional]
+ **pagination** | **bool**| Enable or disable pagination | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\InlineResponse2001**](../Model/InlineResponse2001.md)
+[**\VentureLeap\ProductService\Model\InlineResponse2002**](../Model/InlineResponse2002.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -115,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPriceListItem**
-> \Swagger\Client\LeapOneProductModels\PriceListJsonld getPriceListItem($id)
+> \VentureLeap\ProductService\Model\PriceListJsonld getPriceListItem($id)
 
 Retrieves a PriceList resource.
 
@@ -123,12 +125,12 @@ Retrieves a PriceList resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
+$apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
@@ -153,11 +155,11 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)
+[**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -167,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchPriceListItem**
-> \Swagger\Client\LeapOneProductModels\PriceListJsonld patchPriceListItem($id, $body)
+> \VentureLeap\ProductService\Model\PriceListJsonld patchPriceListItem($id, $body)
 
 Updates the PriceList resource.
 
@@ -175,19 +177,19 @@ Updates the PriceList resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
+$apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\PriceList(); // \Swagger\Client\LeapOneProductModels\PriceList | The updated PriceList resource
+$body = new \VentureLeap\ProductService\Model\PriceList(); // \VentureLeap\ProductService\Model\PriceList | The updated PriceList resource
 
 try {
     $result = $apiInstance->patchPriceListItem($id, $body);
@@ -203,15 +205,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\PriceList**](../Model/PriceList.md)| The updated PriceList resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\PriceList**](../Model/PriceList.md)| The updated PriceList resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)
+[**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -221,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPriceListCollection**
-> \Swagger\Client\LeapOneProductModels\PriceListJsonld postPriceListCollection($body)
+> \VentureLeap\ProductService\Model\PriceListJsonld postPriceListCollection($body)
 
 Creates a PriceList resource.
 
@@ -229,18 +231,18 @@ Creates a PriceList resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
+$apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \Swagger\Client\LeapOneProductModels\PriceListJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListJsonld | The new PriceList resource
+$body = new \VentureLeap\ProductService\Model\PriceListJsonld(); // \VentureLeap\ProductService\Model\PriceListJsonld | The new PriceList resource
 
 try {
     $result = $apiInstance->postPriceListCollection($body);
@@ -255,15 +257,15 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)| The new PriceList resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)| The new PriceList resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)
+[**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 
@@ -273,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putPriceListItem**
-> \Swagger\Client\LeapOneProductModels\PriceListJsonld putPriceListItem($id, $body)
+> \VentureLeap\ProductService\Model\PriceListJsonld putPriceListItem($id, $body)
 
 Replaces the PriceList resource.
 
@@ -281,19 +283,19 @@ Replaces the PriceList resource.
 ```php
 <?php
 require_once(__DIR__ . '/vendor/autoload.php');
-// Configure API key authorization: applicationId
-$config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKey('ApplicationId', 'YOUR_API_KEY');
+// Configure API key authorization: apiKey
+$config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = Swagger\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('ApplicationId', 'Bearer');
+// $config = VentureLeap\ProductService\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
-$apiInstance = new Swagger\Client\LeapOneProductAPIs\PriceListApi(
+$apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
 $id = "id_example"; // string | 
-$body = new \Swagger\Client\LeapOneProductModels\PriceListJsonld(); // \Swagger\Client\LeapOneProductModels\PriceListJsonld | The updated PriceList resource
+$body = new \VentureLeap\ProductService\Model\PriceListJsonld(); // \VentureLeap\ProductService\Model\PriceListJsonld | The updated PriceList resource
 
 try {
     $result = $apiInstance->putPriceListItem($id, $body);
@@ -309,15 +311,15 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)| The updated PriceList resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)| The updated PriceList resource | [optional]
 
 ### Return type
 
-[**\Swagger\Client\LeapOneProductModels\PriceListJsonld**](../Model/PriceListJsonld.md)
+[**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)
 
 ### Authorization
 
-[applicationId](../../README.md#applicationId)
+[apiKey](../../README.md#apiKey)
 
 ### HTTP request headers
 

@@ -4,7 +4,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **internal_id** | **string** |  | [optional] 
-**name** | **string** |  | [optional] 
+**name** | **string** |  | 
 **active** | **bool** |  | [optional] 
 **priority** | **int** |  | [optional] 
 **custom_data** | **string[]** |  | [optional] 

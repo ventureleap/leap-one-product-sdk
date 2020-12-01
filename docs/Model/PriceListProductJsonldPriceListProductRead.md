@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **internal_id** | **string** |  | [optional] 
 **gross_price_per_unit** | **float** |  | [optional] 
 **price_list** | **string** |  | [optional] 
-**product** | [**\Swagger\Client\LeapOneProductModels\ProductJsonldPriceListProductRead**](ProductJsonldPriceListProductRead.md) |  | [optional] 
+**product** | **AnyOfPriceListProductJsonldPriceListProductReadProduct** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **price_list_id** | **string** |  | [optional] 
 

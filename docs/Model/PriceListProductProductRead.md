@@ -6,7 +6,6 @@ Name | Type | Description | Notes
 **internal_id** | **string** |  | [optional] 
 **gross_price_per_unit** | **float** |  | [optional] 
 **tax_percentage** | **string** |  | [optional] 
-**price_list** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **price_list_id** | **string** |  | [optional] 
 
