@@ -1,6 +1,6 @@
 {
-    "name": "GIT_USER_ID/GIT_REPO_ID",
-    "description": "",
+    "name": "ventureleap/leap-one-product-sdk",
+    "description": "Leap one Product SDK",
     "keywords": [
         "swagger",
         "php",
