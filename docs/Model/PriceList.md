@@ -3,7 +3,7 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**internal_id** | **string** |  | [optional] 
+**uuid** | **string** |  | [optional] 
 **name** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **created_at** | [**\DateTime**](\DateTime.md) |  | [optional] 
