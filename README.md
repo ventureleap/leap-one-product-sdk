@@ -27,6 +27,7 @@ To install the bindings via [Composer](http://getcomposer.org/), add the followi
     "GIT_USER_ID/GIT_REPO_ID": "*@dev"
   }
 }
+
 ```
 
 Then run `composer install`
