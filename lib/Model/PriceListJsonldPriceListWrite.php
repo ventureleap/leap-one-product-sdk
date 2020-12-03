@@ -60,7 +60,8 @@ class PriceListJsonldPriceListWrite implements ModelInterface, ArrayAccess
 'id' => 'string',
 'type' => 'string',
 'name' => 'string',
-'custom_data' => 'string'    ];
+'custom_data' => 'string',
+'active' => 'bool'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -72,7 +73,8 @@ class PriceListJsonldPriceListWrite implements ModelInterface, ArrayAccess
 'id' => null,
 'type' => null,
 'name' => null,
-'custom_data' => null    ];
+'custom_data' => null,
+'active' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -105,7 +107,8 @@ class PriceListJsonldPriceListWrite implements ModelInterface, ArrayAccess
 'id' => '@id',
 'type' => '@type',
 'name' => 'name',
-'custom_data' => 'customData'    ];
+'custom_data' => 'customData',
+'active' => 'active'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -117,7 +120,8 @@ class PriceListJsonldPriceListWrite implements ModelInterface, ArrayAccess
 'id' => 'setId',
 'type' => 'setType',
 'name' => 'setName',
-'custom_data' => 'setCustomData'    ];
+'custom_data' => 'setCustomData',
+'active' => 'setActive'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,7 +133,8 @@ class PriceListJsonldPriceListWrite implements ModelInterface, ArrayAccess
 'id' => 'getId',
 'type' => 'getType',
 'name' => 'getName',
-'custom_data' => 'getCustomData'    ];
+'custom_data' => 'getCustomData',
+'active' => 'getActive'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -194,6 +199,7 @@ class PriceListJsonldPriceListWrite implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -339,6 +345,30 @@ class PriceListJsonldPriceListWrite implements ModelInterface, ArrayAccess
     public function setCustomData($custom_data)
     {
         $this->container['custom_data'] = $custom_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     *
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool $active active
+     *
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }
