@@ -199,7 +199,7 @@ $apiInstance = new VentureLeap\ProductService\Api\ProductCategoryApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \VentureLeap\ProductService\Model\ProductCategoryJsonld(); // \VentureLeap\ProductService\Model\ProductCategoryJsonld | The new ProductCategory resource
+$body = new \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite(); // \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite | The new ProductCategory resource
 $accept_language = "accept_language_example"; // string | Locale
 
 try {
@@ -215,7 +215,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\VentureLeap\ProductService\Model\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The new ProductCategory resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite**](../Model/ProductCategoryJsonldProductCategoryWrite.md)| The new ProductCategory resource | [optional]
  **accept_language** | **string**| Locale | [optional]
 
 ### Return type
@@ -254,7 +254,7 @@ $apiInstance = new VentureLeap\ProductService\Api\ProductCategoryApi(
     $config
 );
 $id = "id_example"; // string | 
-$body = new \VentureLeap\ProductService\Model\ProductCategoryJsonld(); // \VentureLeap\ProductService\Model\ProductCategoryJsonld | The updated ProductCategory resource
+$body = new \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite(); // \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite | The updated ProductCategory resource
 $accept_language = "accept_language_example"; // string | Locale
 
 try {
@@ -271,7 +271,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\VentureLeap\ProductService\Model\ProductCategoryJsonld**](../Model/ProductCategoryJsonld.md)| The updated ProductCategory resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite**](../Model/ProductCategoryJsonldProductCategoryWrite.md)| The updated ProductCategory resource | [optional]
  **accept_language** | **string**| Locale | [optional]
 
 ### Return type

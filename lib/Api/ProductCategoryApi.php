@@ -908,7 +908,7 @@ class ProductCategoryApi
      *
      * Creates a ProductCategory resource.
      *
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The new ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The new ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
@@ -926,7 +926,7 @@ class ProductCategoryApi
      *
      * Creates a ProductCategory resource.
      *
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The new ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The new ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
@@ -1002,7 +1002,7 @@ class ProductCategoryApi
      *
      * Creates a ProductCategory resource.
      *
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The new ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The new ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \InvalidArgumentException
@@ -1023,7 +1023,7 @@ class ProductCategoryApi
      *
      * Creates a ProductCategory resource.
      *
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The new ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The new ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \InvalidArgumentException
@@ -1074,7 +1074,7 @@ class ProductCategoryApi
     /**
      * Create request for operation 'postProductCategoryCollection'
      *
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The new ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The new ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \InvalidArgumentException
@@ -1174,7 +1174,7 @@ class ProductCategoryApi
      * Replaces the ProductCategory resource.
      *
      * @param  string $id id (required)
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The updated ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
@@ -1193,7 +1193,7 @@ class ProductCategoryApi
      * Replaces the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The updated ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
@@ -1270,7 +1270,7 @@ class ProductCategoryApi
      * Replaces the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The updated ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \InvalidArgumentException
@@ -1292,7 +1292,7 @@ class ProductCategoryApi
      * Replaces the ProductCategory resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The updated ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \InvalidArgumentException
@@ -1344,7 +1344,7 @@ class ProductCategoryApi
      * Create request for operation 'putProductCategoryItem'
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonld $body The updated ProductCategory resource (optional)
+     * @param  \VentureLeap\ProductService\Model\ProductCategoryJsonldProductCategoryWrite $body The updated ProductCategory resource (optional)
      * @param  string $accept_language Locale (optional)
      *
      * @throws \InvalidArgumentException
