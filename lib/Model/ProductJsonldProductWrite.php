@@ -60,6 +60,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
 'id' => 'string',
 'type' => 'string',
 'name' => 'string',
+'description' => 'string',
 'active' => 'bool',
 'priority' => 'int',
 'categories' => 'string[]',
@@ -76,6 +77,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
 'id' => null,
 'type' => null,
 'name' => null,
+'description' => null,
 'active' => null,
 'priority' => null,
 'categories' => 'iri-reference',
@@ -113,6 +115,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
 'id' => '@id',
 'type' => '@type',
 'name' => 'name',
+'description' => 'description',
 'active' => 'active',
 'priority' => 'priority',
 'categories' => 'categories',
@@ -129,6 +132,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
 'id' => 'setId',
 'type' => 'setType',
 'name' => 'setName',
+'description' => 'setDescription',
 'active' => 'setActive',
 'priority' => 'setPriority',
 'categories' => 'setCategories',
@@ -145,6 +149,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
 'id' => 'getId',
 'type' => 'getType',
 'name' => 'getName',
+'description' => 'getDescription',
 'active' => 'getActive',
 'priority' => 'getPriority',
 'categories' => 'getCategories',
@@ -213,6 +218,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
         $this->container['id'] = isset($data['id']) ? $data['id'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
@@ -342,6 +348,30 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description description
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
 
         return $this;
     }

@@ -8,6 +8,7 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **uuid** | **string** |  | [optional] 
 **name** | **string** |  | 
+**description** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **priority** | **int** |  | [optional] 
 **categories** | [**\VentureLeap\ProductService\Model\ProductCategoryJsonldProductRead[]**](ProductCategoryJsonldProductRead.md) |  | [optional] 

@@ -61,6 +61,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
 'type' => 'string',
 'uuid' => 'string',
 'name' => 'string',
+'description' => 'string',
 'active' => 'bool',
 'priority' => 'int',
 'categories' => '\VentureLeap\ProductService\Model\ProductCategoryJsonldProductRead[]',
@@ -78,6 +79,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
 'type' => null,
 'uuid' => null,
 'name' => null,
+'description' => null,
 'active' => null,
 'priority' => null,
 'categories' => null,
@@ -116,6 +118,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
 'type' => '@type',
 'uuid' => 'uuid',
 'name' => 'name',
+'description' => 'description',
 'active' => 'active',
 'priority' => 'priority',
 'categories' => 'categories',
@@ -133,6 +136,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
 'type' => 'setType',
 'uuid' => 'setUuid',
 'name' => 'setName',
+'description' => 'setDescription',
 'active' => 'setActive',
 'priority' => 'setPriority',
 'categories' => 'setCategories',
@@ -150,6 +154,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
 'type' => 'getType',
 'uuid' => 'getUuid',
 'name' => 'getName',
+'description' => 'getDescription',
 'active' => 'getActive',
 'priority' => 'getPriority',
 'categories' => 'getCategories',
@@ -219,6 +224,7 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
+        $this->container['description'] = isset($data['description']) ? $data['description'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['priority'] = isset($data['priority']) ? $data['priority'] : null;
         $this->container['categories'] = isset($data['categories']) ? $data['categories'] : null;
@@ -372,6 +378,30 @@ class ProductJsonldProductRead implements ModelInterface, ArrayAccess
     public function setName($name)
     {
         $this->container['name'] = $name;
+
+        return $this;
+    }
+
+    /**
+     * Gets description
+     *
+     * @return string
+     */
+    public function getDescription()
+    {
+        return $this->container['description'];
+    }
+
+    /**
+     * Sets description
+     *
+     * @param string $description description
+     *
+     * @return $this
+     */
+    public function setDescription($description)
+    {
+        $this->container['description'] = $description;
 
         return $this;
     }
