@@ -62,6 +62,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'string',
 'gross_price_per_unit' => 'float',
 'price_list' => 'string',
+'product' => 'string',
 'active' => 'bool'    ];
 
     /**
@@ -76,6 +77,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => null,
 'gross_price_per_unit' => null,
 'price_list' => 'iri-reference',
+'product' => 'iri-reference',
 'active' => null    ];
 
     /**
@@ -111,6 +113,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'uuid',
 'gross_price_per_unit' => 'grossPricePerUnit',
 'price_list' => 'priceList',
+'product' => 'product',
 'active' => 'active'    ];
 
     /**
@@ -125,6 +128,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'setUuid',
 'gross_price_per_unit' => 'setGrossPricePerUnit',
 'price_list' => 'setPriceList',
+'product' => 'setProduct',
 'active' => 'setActive'    ];
 
     /**
@@ -139,6 +143,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'getUuid',
 'gross_price_per_unit' => 'getGrossPricePerUnit',
 'price_list' => 'getPriceList',
+'product' => 'getProduct',
 'active' => 'getActive'    ];
 
     /**
@@ -205,6 +210,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
+        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
@@ -372,6 +378,30 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     public function setPriceList($price_list)
     {
         $this->container['price_list'] = $price_list;
+
+        return $this;
+    }
+
+    /**
+     * Gets product
+     *
+     * @return string
+     */
+    public function getProduct()
+    {
+        return $this->container['product'];
+    }
+
+    /**
+     * Sets product
+     *
+     * @param string $product product
+     *
+     * @return $this
+     */
+    public function setProduct($product)
+    {
+        $this->container['product'] = $product;
 
         return $this;
     }
