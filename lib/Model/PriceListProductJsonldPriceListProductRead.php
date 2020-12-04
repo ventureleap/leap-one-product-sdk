@@ -64,6 +64,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'price_list' => 'string',
 'product' => 'AnyOfPriceListProductJsonldPriceListProductReadProduct',
 'active' => 'bool',
+'custom_data' => 'string',
 'price_list_uuid' => 'string'    ];
 
     /**
@@ -80,6 +81,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'price_list' => 'iri-reference',
 'product' => 'iri-reference',
 'active' => null,
+'custom_data' => null,
 'price_list_uuid' => null    ];
 
     /**
@@ -117,6 +119,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'price_list' => 'priceList',
 'product' => 'product',
 'active' => 'active',
+'custom_data' => 'customData',
 'price_list_uuid' => 'priceListUuid'    ];
 
     /**
@@ -133,6 +136,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'price_list' => 'setPriceList',
 'product' => 'setProduct',
 'active' => 'setActive',
+'custom_data' => 'setCustomData',
 'price_list_uuid' => 'setPriceListUuid'    ];
 
     /**
@@ -149,6 +153,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'price_list' => 'getPriceList',
 'product' => 'getProduct',
 'active' => 'getActive',
+'custom_data' => 'getCustomData',
 'price_list_uuid' => 'getPriceListUuid'    ];
 
     /**
@@ -217,6 +222,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
         $this->container['price_list_uuid'] = isset($data['price_list_uuid']) ? $data['price_list_uuid'] : null;
     }
 
@@ -229,6 +235,9 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     {
         $invalidProperties = [];
 
+        if ($this->container['custom_data'] === null) {
+            $invalidProperties[] = "'custom_data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -432,6 +441,30 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     public function setActive($active)
     {
         $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_data
+     *
+     * @return string
+     */
+    public function getCustomData()
+    {
+        return $this->container['custom_data'];
+    }
+
+    /**
+     * Sets custom_data
+     *
+     * @param string $custom_data custom_data
+     *
+     * @return $this
+     */
+    public function setCustomData($custom_data)
+    {
+        $this->container['custom_data'] = $custom_data;
 
         return $this;
     }

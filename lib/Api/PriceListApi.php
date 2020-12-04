@@ -591,7 +591,7 @@ class PriceListApi
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\ProductService\Model\PriceListJsonld
+     * @return \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead
      */
     public function getPriceListItem($id)
     {
@@ -608,11 +608,11 @@ class PriceListApi
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\ProductService\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function getPriceListItemWithHttpInfo($id)
     {
-        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonld';
+        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead';
         $request = $this->getPriceListItemRequest($id);
 
         try {
@@ -664,7 +664,7 @@ class PriceListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\ProductService\Model\PriceListJsonld',
+                        '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -706,7 +706,7 @@ class PriceListApi
      */
     public function getPriceListItemAsyncWithHttpInfo($id)
     {
-        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonld';
+        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead';
         $request = $this->getPriceListItemRequest($id);
 
         return $this->client
@@ -855,11 +855,11 @@ class PriceListApi
      * Updates the PriceList resource.
      *
      * @param  string $id id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceList $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\ProductService\Model\PriceListJsonld
+     * @return \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead
      */
     public function patchPriceListItem($id, $body = null)
     {
@@ -873,15 +873,15 @@ class PriceListApi
      * Updates the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceList $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\ProductService\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function patchPriceListItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonld';
+        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead';
         $request = $this->patchPriceListItemRequest($id, $body);
 
         try {
@@ -933,7 +933,7 @@ class PriceListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\ProductService\Model\PriceListJsonld',
+                        '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -949,7 +949,7 @@ class PriceListApi
      * Updates the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceList $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -970,14 +970,14 @@ class PriceListApi
      * Updates the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceList $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function patchPriceListItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonld';
+        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead';
         $request = $this->patchPriceListItemRequest($id, $body);
 
         return $this->client
@@ -1021,7 +1021,7 @@ class PriceListApi
      * Create request for operation 'patchPriceListItem'
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceList $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1129,11 +1129,11 @@ class PriceListApi
      *
      * Creates a PriceList resource.
      *
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The new PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The new PriceList resource (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\ProductService\Model\PriceListJsonld
+     * @return \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead
      */
     public function postPriceListCollection($body = null)
     {
@@ -1146,15 +1146,15 @@ class PriceListApi
      *
      * Creates a PriceList resource.
      *
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The new PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The new PriceList resource (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\ProductService\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function postPriceListCollectionWithHttpInfo($body = null)
     {
-        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonld';
+        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead';
         $request = $this->postPriceListCollectionRequest($body);
 
         try {
@@ -1206,7 +1206,7 @@ class PriceListApi
                 case 201:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\ProductService\Model\PriceListJsonld',
+                        '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1221,7 +1221,7 @@ class PriceListApi
      *
      * Creates a PriceList resource.
      *
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The new PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The new PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1241,14 +1241,14 @@ class PriceListApi
      *
      * Creates a PriceList resource.
      *
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The new PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The new PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function postPriceListCollectionAsyncWithHttpInfo($body = null)
     {
-        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonld';
+        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead';
         $request = $this->postPriceListCollectionRequest($body);
 
         return $this->client
@@ -1291,7 +1291,7 @@ class PriceListApi
     /**
      * Create request for operation 'postPriceListCollection'
      *
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The new PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The new PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
@@ -1386,11 +1386,11 @@ class PriceListApi
      * Replaces the PriceList resource.
      *
      * @param  string $id id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return \VentureLeap\ProductService\Model\PriceListJsonld
+     * @return \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead
      */
     public function putPriceListItem($id, $body = null)
     {
@@ -1404,15 +1404,15 @@ class PriceListApi
      * Replaces the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \VentureLeap\ProductService\ApiException on non-2xx response
      * @throws \InvalidArgumentException
-     * @return array of \VentureLeap\ProductService\Model\PriceListJsonld, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead, HTTP status code, HTTP response headers (array of strings)
      */
     public function putPriceListItemWithHttpInfo($id, $body = null)
     {
-        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonld';
+        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead';
         $request = $this->putPriceListItemRequest($id, $body);
 
         try {
@@ -1464,7 +1464,7 @@ class PriceListApi
                 case 200:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
-                        '\VentureLeap\ProductService\Model\PriceListJsonld',
+                        '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead',
                         $e->getResponseHeaders()
                     );
                     $e->setResponseObject($data);
@@ -1480,7 +1480,7 @@ class PriceListApi
      * Replaces the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
@@ -1501,14 +1501,14 @@ class PriceListApi
      * Replaces the PriceList resource.
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
     public function putPriceListItemAsyncWithHttpInfo($id, $body = null)
     {
-        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonld';
+        $returnType = '\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead';
         $request = $this->putPriceListItemRequest($id, $body);
 
         return $this->client
@@ -1552,7 +1552,7 @@ class PriceListApi
      * Create request for operation 'putPriceListItem'
      *
      * @param  string $id (required)
-     * @param  \VentureLeap\ProductService\Model\PriceListJsonld $body The updated PriceList resource (optional)
+     * @param  \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite $body The updated PriceList resource (optional)
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request

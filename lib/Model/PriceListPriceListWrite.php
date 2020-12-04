@@ -1,6 +1,6 @@
 <?php
 /**
- * PriceListProductPriceListProductWrite
+ * PriceListPriceListWrite
  *
  * PHP version 5
  *
@@ -32,14 +32,14 @@ use \ArrayAccess;
 use \VentureLeap\ProductService\ObjectSerializer;
 
 /**
- * PriceListProductPriceListProductWrite Class Doc Comment
+ * PriceListPriceListWrite Class Doc Comment
  *
  * @category Class
  * @package  VentureLeap\ProductService
  * @author   Swagger Codegen team
  * @link     https://github.com/swagger-api/swagger-codegen
  */
-class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAccess
+class PriceListPriceListWrite implements ModelInterface, ArrayAccess
 {
     const DISCRIMINATOR = null;
 
@@ -48,7 +48,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
       *
       * @var string
       */
-    protected static $swaggerModelName = 'PriceListProduct-priceListProduct:write';
+    protected static $swaggerModelName = 'PriceList-priceList:write';
 
     /**
       * Array of property to type mappings. Used for (de)serialization
@@ -56,12 +56,9 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'uuid' => 'string',
-'gross_price_per_unit' => 'float',
-'price_list' => 'string',
-'product' => 'string',
-'active' => 'bool',
-'custom_data' => 'string'    ];
+        'name' => 'string',
+'custom_data' => 'string',
+'active' => 'bool'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -69,12 +66,9 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'uuid' => null,
-'gross_price_per_unit' => null,
-'price_list' => 'iri-reference',
-'product' => 'iri-reference',
-'active' => null,
-'custom_data' => null    ];
+        'name' => null,
+'custom_data' => null,
+'active' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -103,12 +97,9 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $attributeMap = [
-        'uuid' => 'uuid',
-'gross_price_per_unit' => 'grossPricePerUnit',
-'price_list' => 'priceList',
-'product' => 'product',
-'active' => 'active',
-'custom_data' => 'customData'    ];
+        'name' => 'name',
+'custom_data' => 'customData',
+'active' => 'active'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -116,12 +107,9 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $setters = [
-        'uuid' => 'setUuid',
-'gross_price_per_unit' => 'setGrossPricePerUnit',
-'price_list' => 'setPriceList',
-'product' => 'setProduct',
-'active' => 'setActive',
-'custom_data' => 'setCustomData'    ];
+        'name' => 'setName',
+'custom_data' => 'setCustomData',
+'active' => 'setActive'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -129,12 +117,9 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
      * @var string[]
      */
     protected static $getters = [
-        'uuid' => 'getUuid',
-'gross_price_per_unit' => 'getGrossPricePerUnit',
-'price_list' => 'getPriceList',
-'product' => 'getProduct',
-'active' => 'getActive',
-'custom_data' => 'getCustomData'    ];
+        'name' => 'getName',
+'custom_data' => 'getCustomData',
+'active' => 'getActive'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -194,12 +179,9 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
      */
     public function __construct(array $data = null)
     {
-        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
-        $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
-        $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
-        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
-        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
+        $this->container['active'] = isset($data['active']) ? $data['active'] : null;
     }
 
     /**
@@ -230,121 +212,25 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
 
 
     /**
-     * Gets uuid
+     * Gets name
      *
      * @return string
      */
-    public function getUuid()
+    public function getName()
     {
-        return $this->container['uuid'];
+        return $this->container['name'];
     }
 
     /**
-     * Sets uuid
+     * Sets name
      *
-     * @param string $uuid uuid
+     * @param string $name name
      *
      * @return $this
      */
-    public function setUuid($uuid)
+    public function setName($name)
     {
-        $this->container['uuid'] = $uuid;
-
-        return $this;
-    }
-
-    /**
-     * Gets gross_price_per_unit
-     *
-     * @return float
-     */
-    public function getGrossPricePerUnit()
-    {
-        return $this->container['gross_price_per_unit'];
-    }
-
-    /**
-     * Sets gross_price_per_unit
-     *
-     * @param float $gross_price_per_unit gross_price_per_unit
-     *
-     * @return $this
-     */
-    public function setGrossPricePerUnit($gross_price_per_unit)
-    {
-        $this->container['gross_price_per_unit'] = $gross_price_per_unit;
-
-        return $this;
-    }
-
-    /**
-     * Gets price_list
-     *
-     * @return string
-     */
-    public function getPriceList()
-    {
-        return $this->container['price_list'];
-    }
-
-    /**
-     * Sets price_list
-     *
-     * @param string $price_list price_list
-     *
-     * @return $this
-     */
-    public function setPriceList($price_list)
-    {
-        $this->container['price_list'] = $price_list;
-
-        return $this;
-    }
-
-    /**
-     * Gets product
-     *
-     * @return string
-     */
-    public function getProduct()
-    {
-        return $this->container['product'];
-    }
-
-    /**
-     * Sets product
-     *
-     * @param string $product product
-     *
-     * @return $this
-     */
-    public function setProduct($product)
-    {
-        $this->container['product'] = $product;
-
-        return $this;
-    }
-
-    /**
-     * Gets active
-     *
-     * @return bool
-     */
-    public function getActive()
-    {
-        return $this->container['active'];
-    }
-
-    /**
-     * Sets active
-     *
-     * @param bool $active active
-     *
-     * @return $this
-     */
-    public function setActive($active)
-    {
-        $this->container['active'] = $active;
+        $this->container['name'] = $name;
 
         return $this;
     }
@@ -369,6 +255,30 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     public function setCustomData($custom_data)
     {
         $this->container['custom_data'] = $custom_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets active
+     *
+     * @return bool
+     */
+    public function getActive()
+    {
+        return $this->container['active'];
+    }
+
+    /**
+     * Sets active
+     *
+     * @param bool $active active
+     *
+     * @return $this
+     */
+    public function setActive($active)
+    {
+        $this->container['active'] = $active;
 
         return $this;
     }

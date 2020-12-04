@@ -132,6 +132,13 @@ class PriceListProductJsonldPriceListProductReadTest extends \PHPUnit_Framework_
     }
 
     /**
+     * Test attribute "custom_data"
+     */
+    public function testPropertyCustomData()
+    {
+    }
+
+    /**
      * Test attribute "price_list_uuid"
      */
     public function testPropertyPriceListUuid()

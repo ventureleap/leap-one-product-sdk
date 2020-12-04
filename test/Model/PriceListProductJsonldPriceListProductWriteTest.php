@@ -118,9 +118,23 @@ class PriceListProductJsonldPriceListProductWriteTest extends \PHPUnit_Framework
     }
 
     /**
+     * Test attribute "product"
+     */
+    public function testPropertyProduct()
+    {
+    }
+
+    /**
      * Test attribute "active"
      */
     public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "custom_data"
+     */
+    public function testPropertyCustomData()
     {
     }
 }

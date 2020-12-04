@@ -117,7 +117,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPriceListItem**
-> \VentureLeap\ProductService\Model\PriceListJsonld getPriceListItem($id)
+> \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead getPriceListItem($id)
 
 Retrieves a PriceList resource.
 
@@ -155,7 +155,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)
+[**\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead**](../Model/PriceListJsonldPriceListRead.md)
 
 ### Authorization
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **patchPriceListItem**
-> \VentureLeap\ProductService\Model\PriceListJsonld patchPriceListItem($id, $body)
+> \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead patchPriceListItem($id, $body)
 
 Updates the PriceList resource.
 
@@ -189,7 +189,7 @@ $apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     $config
 );
 $id = "id_example"; // string | 
-$body = new \VentureLeap\ProductService\Model\PriceList(); // \VentureLeap\ProductService\Model\PriceList | The updated PriceList resource
+$body = new \VentureLeap\ProductService\Model\PriceListPriceListWrite(); // \VentureLeap\ProductService\Model\PriceListPriceListWrite | The updated PriceList resource
 
 try {
     $result = $apiInstance->patchPriceListItem($id, $body);
@@ -205,11 +205,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\VentureLeap\ProductService\Model\PriceList**](../Model/PriceList.md)| The updated PriceList resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\PriceListPriceListWrite**](../Model/PriceListPriceListWrite.md)| The updated PriceList resource | [optional]
 
 ### Return type
 
-[**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)
+[**\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead**](../Model/PriceListJsonldPriceListRead.md)
 
 ### Authorization
 
@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **postPriceListCollection**
-> \VentureLeap\ProductService\Model\PriceListJsonld postPriceListCollection($body)
+> \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead postPriceListCollection($body)
 
 Creates a PriceList resource.
 
@@ -242,7 +242,7 @@ $apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \VentureLeap\ProductService\Model\PriceListJsonld(); // \VentureLeap\ProductService\Model\PriceListJsonld | The new PriceList resource
+$body = new \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite(); // \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite | The new PriceList resource
 
 try {
     $result = $apiInstance->postPriceListCollection($body);
@@ -257,11 +257,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **body** | [**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)| The new PriceList resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite**](../Model/PriceListJsonldPriceListWrite.md)| The new PriceList resource | [optional]
 
 ### Return type
 
-[**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)
+[**\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead**](../Model/PriceListJsonldPriceListRead.md)
 
 ### Authorization
 
@@ -275,7 +275,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **putPriceListItem**
-> \VentureLeap\ProductService\Model\PriceListJsonld putPriceListItem($id, $body)
+> \VentureLeap\ProductService\Model\PriceListJsonldPriceListRead putPriceListItem($id, $body)
 
 Replaces the PriceList resource.
 
@@ -295,7 +295,7 @@ $apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     $config
 );
 $id = "id_example"; // string | 
-$body = new \VentureLeap\ProductService\Model\PriceListJsonld(); // \VentureLeap\ProductService\Model\PriceListJsonld | The updated PriceList resource
+$body = new \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite(); // \VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite | The updated PriceList resource
 
 try {
     $result = $apiInstance->putPriceListItem($id, $body);
@@ -311,11 +311,11 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **string**|  |
- **body** | [**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)| The updated PriceList resource | [optional]
+ **body** | [**\VentureLeap\ProductService\Model\PriceListJsonldPriceListWrite**](../Model/PriceListJsonldPriceListWrite.md)| The updated PriceList resource | [optional]
 
 ### Return type
 
-[**\VentureLeap\ProductService\Model\PriceListJsonld**](../Model/PriceListJsonld.md)
+[**\VentureLeap\ProductService\Model\PriceListJsonldPriceListRead**](../Model/PriceListJsonldPriceListRead.md)
 
 ### Authorization
 

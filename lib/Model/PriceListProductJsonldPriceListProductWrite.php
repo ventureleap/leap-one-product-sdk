@@ -62,7 +62,9 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'string',
 'gross_price_per_unit' => 'float',
 'price_list' => 'string',
-'active' => 'bool'    ];
+'product' => 'string',
+'active' => 'bool',
+'custom_data' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -76,7 +78,9 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => null,
 'gross_price_per_unit' => null,
 'price_list' => 'iri-reference',
-'active' => null    ];
+'product' => 'iri-reference',
+'active' => null,
+'custom_data' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -111,7 +115,9 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'uuid',
 'gross_price_per_unit' => 'grossPricePerUnit',
 'price_list' => 'priceList',
-'active' => 'active'    ];
+'product' => 'product',
+'active' => 'active',
+'custom_data' => 'customData'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -125,7 +131,9 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'setUuid',
 'gross_price_per_unit' => 'setGrossPricePerUnit',
 'price_list' => 'setPriceList',
-'active' => 'setActive'    ];
+'product' => 'setProduct',
+'active' => 'setActive',
+'custom_data' => 'setCustomData'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -139,7 +147,9 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'getUuid',
 'gross_price_per_unit' => 'getGrossPricePerUnit',
 'price_list' => 'getPriceList',
-'active' => 'getActive'    ];
+'product' => 'getProduct',
+'active' => 'getActive',
+'custom_data' => 'getCustomData'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -205,7 +215,9 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
+        $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
+        $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
     }
 
     /**
@@ -217,6 +229,9 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     {
         $invalidProperties = [];
 
+        if ($this->container['custom_data'] === null) {
+            $invalidProperties[] = "'custom_data' can't be null";
+        }
         return $invalidProperties;
     }
 
@@ -377,6 +392,30 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     }
 
     /**
+     * Gets product
+     *
+     * @return string
+     */
+    public function getProduct()
+    {
+        return $this->container['product'];
+    }
+
+    /**
+     * Sets product
+     *
+     * @param string $product product
+     *
+     * @return $this
+     */
+    public function setProduct($product)
+    {
+        $this->container['product'] = $product;
+
+        return $this;
+    }
+
+    /**
      * Gets active
      *
      * @return bool
@@ -396,6 +435,30 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     public function setActive($active)
     {
         $this->container['active'] = $active;
+
+        return $this;
+    }
+
+    /**
+     * Gets custom_data
+     *
+     * @return string
+     */
+    public function getCustomData()
+    {
+        return $this->container['custom_data'];
+    }
+
+    /**
+     * Sets custom_data
+     *
+     * @param string $custom_data custom_data
+     *
+     * @return $this
+     */
+    public function setCustomData($custom_data)
+    {
+        $this->container['custom_data'] = $custom_data;
 
         return $this;
     }

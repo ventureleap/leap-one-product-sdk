@@ -97,9 +97,23 @@ class PriceListProductPriceListProductWriteTest extends \PHPUnit_Framework_TestC
     }
 
     /**
+     * Test attribute "product"
+     */
+    public function testPropertyProduct()
+    {
+    }
+
+    /**
      * Test attribute "active"
      */
     public function testPropertyActive()
+    {
+    }
+
+    /**
+     * Test attribute "custom_data"
+     */
+    public function testPropertyCustomData()
     {
     }
 }

@@ -9,7 +9,9 @@ Name | Type | Description | Notes
 **uuid** | **string** |  | [optional] 
 **gross_price_per_unit** | **float** |  | [optional] 
 **price_list** | **string** |  | [optional] 
+**product** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
+**custom_data** | **string** |  | 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 
