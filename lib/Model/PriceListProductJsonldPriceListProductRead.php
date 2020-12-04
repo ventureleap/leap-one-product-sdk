@@ -62,7 +62,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'uuid' => 'string',
 'gross_price_per_unit' => 'float',
 'price_list' => 'string',
-'product' => 'AnyOfPriceListProductJsonldPriceListProductReadProduct',
+'product' => 'string',
 'active' => 'bool',
 'custom_data' => 'string',
 'price_list_uuid' => 'string'    ];
@@ -400,7 +400,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Gets product
      *
-     * @return AnyOfPriceListProductJsonldPriceListProductReadProduct
+     * @return string
      */
     public function getProduct()
     {
@@ -410,7 +410,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Sets product
      *
-     * @param AnyOfPriceListProductJsonldPriceListProductReadProduct $product product
+     * @param string $product product
      *
      * @return $this
      */
