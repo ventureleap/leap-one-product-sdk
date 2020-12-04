@@ -3,12 +3,12 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**internal_id** | **string** |  | [optional] 
+**uuid** | **string** |  | [optional] 
 **name** | **string** |  | 
 **active** | **bool** |  | [optional] 
 **priority** | **int** |  | [optional] 
 **products** | **string[]** |  | [optional] 
-**custom_data** | **string[]** |  | [optional] 
+**custom_data** | **string** |  | 
 **application_id** | **string** |  | [optional] 
 **translatable_locale** | [****](.md) |  | [optional] 
 

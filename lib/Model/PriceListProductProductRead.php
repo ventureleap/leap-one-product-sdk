@@ -56,11 +56,11 @@ class PriceListProductProductRead implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'internal_id' => 'string',
+        'uuid' => 'string',
 'gross_price_per_unit' => 'float',
 'tax_percentage' => 'string',
 'active' => 'bool',
-'price_list_id' => 'string'    ];
+'price_list_uuid' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -68,11 +68,11 @@ class PriceListProductProductRead implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'internal_id' => null,
+        'uuid' => null,
 'gross_price_per_unit' => null,
 'tax_percentage' => null,
 'active' => null,
-'price_list_id' => null    ];
+'price_list_uuid' => null    ];
 
     /**
      * Array of property to type mappings. Used for (de)serialization
@@ -101,11 +101,11 @@ class PriceListProductProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'internal_id' => 'internalId',
+        'uuid' => 'uuid',
 'gross_price_per_unit' => 'grossPricePerUnit',
 'tax_percentage' => 'taxPercentage',
 'active' => 'active',
-'price_list_id' => 'priceListId'    ];
+'price_list_uuid' => 'priceListUuid'    ];
 
     /**
      * Array of attributes to setter functions (for deserialization of responses)
@@ -113,11 +113,11 @@ class PriceListProductProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'internal_id' => 'setInternalId',
+        'uuid' => 'setUuid',
 'gross_price_per_unit' => 'setGrossPricePerUnit',
 'tax_percentage' => 'setTaxPercentage',
 'active' => 'setActive',
-'price_list_id' => 'setPriceListId'    ];
+'price_list_uuid' => 'setPriceListUuid'    ];
 
     /**
      * Array of attributes to getter functions (for serialization of requests)
@@ -125,11 +125,11 @@ class PriceListProductProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'internal_id' => 'getInternalId',
+        'uuid' => 'getUuid',
 'gross_price_per_unit' => 'getGrossPricePerUnit',
 'tax_percentage' => 'getTaxPercentage',
 'active' => 'getActive',
-'price_list_id' => 'getPriceListId'    ];
+'price_list_uuid' => 'getPriceListUuid'    ];
 
     /**
      * Array of attributes where the key is the local name,
@@ -189,11 +189,11 @@ class PriceListProductProductRead implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
         $this->container['tax_percentage'] = isset($data['tax_percentage']) ? $data['tax_percentage'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
-        $this->container['price_list_id'] = isset($data['price_list_id']) ? $data['price_list_id'] : null;
+        $this->container['price_list_uuid'] = isset($data['price_list_uuid']) ? $data['price_list_uuid'] : null;
     }
 
     /**
@@ -221,25 +221,25 @@ class PriceListProductProductRead implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets internal_id
+     * Gets uuid
      *
      * @return string
      */
-    public function getInternalId()
+    public function getUuid()
     {
-        return $this->container['internal_id'];
+        return $this->container['uuid'];
     }
 
     /**
-     * Sets internal_id
+     * Sets uuid
      *
-     * @param string $internal_id internal_id
+     * @param string $uuid uuid
      *
      * @return $this
      */
-    public function setInternalId($internal_id)
+    public function setUuid($uuid)
     {
-        $this->container['internal_id'] = $internal_id;
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }
@@ -317,25 +317,25 @@ class PriceListProductProductRead implements ModelInterface, ArrayAccess
     }
 
     /**
-     * Gets price_list_id
+     * Gets price_list_uuid
      *
      * @return string
      */
-    public function getPriceListId()
+    public function getPriceListUuid()
     {
-        return $this->container['price_list_id'];
+        return $this->container['price_list_uuid'];
     }
 
     /**
-     * Sets price_list_id
+     * Sets price_list_uuid
      *
-     * @param string $price_list_id price_list_id
+     * @param string $price_list_uuid price_list_uuid
      *
      * @return $this
      */
-    public function setPriceListId($price_list_id)
+    public function setPriceListUuid($price_list_uuid)
     {
-        $this->container['price_list_id'] = $price_list_id;
+        $this->container['price_list_uuid'] = $price_list_uuid;
 
         return $this;
     }

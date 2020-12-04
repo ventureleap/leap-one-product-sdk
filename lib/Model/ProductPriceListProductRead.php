@@ -56,9 +56,9 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'internal_id' => 'string',
+        'uuid' => 'string',
 'name' => 'string',
-'custom_data' => 'string[]'    ];
+'custom_data' => 'string'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -66,7 +66,7 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'internal_id' => null,
+        'uuid' => null,
 'name' => null,
 'custom_data' => null    ];
 
@@ -97,7 +97,7 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'internal_id' => 'internalId',
+        'uuid' => 'uuid',
 'name' => 'name',
 'custom_data' => 'customData'    ];
 
@@ -107,7 +107,7 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'internal_id' => 'setInternalId',
+        'uuid' => 'setUuid',
 'name' => 'setName',
 'custom_data' => 'setCustomData'    ];
 
@@ -117,7 +117,7 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'internal_id' => 'getInternalId',
+        'uuid' => 'getUuid',
 'name' => 'getName',
 'custom_data' => 'getCustomData'    ];
 
@@ -179,7 +179,7 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['internal_id'] = isset($data['internal_id']) ? $data['internal_id'] : null;
+        $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['name'] = isset($data['name']) ? $data['name'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
     }
@@ -195,6 +195,9 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
 
         if ($this->container['name'] === null) {
             $invalidProperties[] = "'name' can't be null";
+        }
+        if ($this->container['custom_data'] === null) {
+            $invalidProperties[] = "'custom_data' can't be null";
         }
         return $invalidProperties;
     }
@@ -212,25 +215,25 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
 
 
     /**
-     * Gets internal_id
+     * Gets uuid
      *
      * @return string
      */
-    public function getInternalId()
+    public function getUuid()
     {
-        return $this->container['internal_id'];
+        return $this->container['uuid'];
     }
 
     /**
-     * Sets internal_id
+     * Sets uuid
      *
-     * @param string $internal_id internal_id
+     * @param string $uuid uuid
      *
      * @return $this
      */
-    public function setInternalId($internal_id)
+    public function setUuid($uuid)
     {
-        $this->container['internal_id'] = $internal_id;
+        $this->container['uuid'] = $uuid;
 
         return $this;
     }
@@ -262,7 +265,7 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
     /**
      * Gets custom_data
      *
-     * @return string[]
+     * @return string
      */
     public function getCustomData()
     {
@@ -272,7 +275,7 @@ class ProductPriceListProductRead implements ModelInterface, ArrayAccess
     /**
      * Sets custom_data
      *
-     * @param string[] $custom_data custom_data
+     * @param string $custom_data custom_data
      *
      * @return $this
      */
