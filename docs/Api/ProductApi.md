@@ -62,7 +62,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCollection**
-> \VentureLeap\ProductService\Model\InlineResponse2004 getProductCollection($custom_data, $name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language)
+> \VentureLeap\ProductService\Model\InlineResponse2004 getProductCollection($custom_data, $name, $categories, $order_name, $active, $page, $items_per_page, $pagination, $accept_language)
 
 Retrieves the collection of Product resources.
 
@@ -85,13 +85,14 @@ $custom_data = "custom_data_example"; // string |
 $name = "name_example"; // string | 
 $categories = "categories_example"; // string | 
 $order_name = "order_name_example"; // string | 
+$active = true; // bool | 
 $page = 1; // int | The collection page number
 $items_per_page = 30; // int | The number of items per page
 $pagination = true; // bool | Enable or disable pagination
 $accept_language = "accept_language_example"; // string | Locale
 
 try {
-    $result = $apiInstance->getProductCollection($custom_data, $name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
+    $result = $apiInstance->getProductCollection($custom_data, $name, $categories, $order_name, $active, $page, $items_per_page, $pagination, $accept_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductApi->getProductCollection: ', $e->getMessage(), PHP_EOL;
@@ -107,6 +108,7 @@ Name | Type | Description  | Notes
  **name** | **string**|  | [optional]
  **categories** | **string**|  | [optional]
  **order_name** | **string**|  | [optional]
+ **active** | **bool**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
  **items_per_page** | **int**| The number of items per page | [optional] [default to 30]
  **pagination** | **bool**| Enable or disable pagination | [optional]
