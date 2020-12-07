@@ -62,7 +62,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCollection**
-> \VentureLeap\ProductService\Model\InlineResponse2004 getProductCollection($name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language)
+> \VentureLeap\ProductService\Model\InlineResponse2004 getProductCollection($custom_data, $name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language)
 
 Retrieves the collection of Product resources.
 
@@ -81,6 +81,7 @@ $apiInstance = new VentureLeap\ProductService\Api\ProductApi(
     new GuzzleHttp\Client(),
     $config
 );
+$custom_data = "custom_data_example"; // string | 
 $name = "name_example"; // string | 
 $categories = "categories_example"; // string | 
 $order_name = "order_name_example"; // string | 
@@ -90,7 +91,7 @@ $pagination = true; // bool | Enable or disable pagination
 $accept_language = "accept_language_example"; // string | Locale
 
 try {
-    $result = $apiInstance->getProductCollection($name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
+    $result = $apiInstance->getProductCollection($custom_data, $name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductApi->getProductCollection: ', $e->getMessage(), PHP_EOL;
@@ -102,6 +103,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **custom_data** | **string**|  | [optional]
  **name** | **string**|  | [optional]
  **categories** | **string**|  | [optional]
  **order_name** | **string**|  | [optional]

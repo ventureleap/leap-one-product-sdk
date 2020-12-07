@@ -323,7 +323,6 @@ class ProductCategoryApi
      *
      * @param  string $name name (optional)
      * @param  string $products products (optional)
-     * @param  string $type type (optional)
      * @param  int $page The collection page number (optional, default to 1)
      * @param  int $items_per_page The number of items per page (optional, default to 30)
      * @param  bool $pagination Enable or disable pagination (optional)
@@ -333,9 +332,9 @@ class ProductCategoryApi
      * @throws \InvalidArgumentException
      * @return \VentureLeap\ProductService\Model\InlineResponse2003
      */
-    public function getProductCategoryCollection($name = null, $products = null, $type = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    public function getProductCategoryCollection($name = null, $products = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
-        list($response) = $this->getProductCategoryCollectionWithHttpInfo($name, $products, $type, $page, $items_per_page, $pagination, $accept_language);
+        list($response) = $this->getProductCategoryCollectionWithHttpInfo($name, $products, $page, $items_per_page, $pagination, $accept_language);
         return $response;
     }
 
@@ -346,7 +345,6 @@ class ProductCategoryApi
      *
      * @param  string $name (optional)
      * @param  string $products (optional)
-     * @param  string $type (optional)
      * @param  int $page The collection page number (optional, default to 1)
      * @param  int $items_per_page The number of items per page (optional, default to 30)
      * @param  bool $pagination Enable or disable pagination (optional)
@@ -356,10 +354,10 @@ class ProductCategoryApi
      * @throws \InvalidArgumentException
      * @return array of \VentureLeap\ProductService\Model\InlineResponse2003, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCategoryCollectionWithHttpInfo($name = null, $products = null, $type = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    public function getProductCategoryCollectionWithHttpInfo($name = null, $products = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
         $returnType = '\VentureLeap\ProductService\Model\InlineResponse2003';
-        $request = $this->getProductCategoryCollectionRequest($name, $products, $type, $page, $items_per_page, $pagination, $accept_language);
+        $request = $this->getProductCategoryCollectionRequest($name, $products, $page, $items_per_page, $pagination, $accept_language);
 
         try {
             $options = $this->createHttpClientOption();
@@ -427,7 +425,6 @@ class ProductCategoryApi
      *
      * @param  string $name (optional)
      * @param  string $products (optional)
-     * @param  string $type (optional)
      * @param  int $page The collection page number (optional, default to 1)
      * @param  int $items_per_page The number of items per page (optional, default to 30)
      * @param  bool $pagination Enable or disable pagination (optional)
@@ -436,9 +433,9 @@ class ProductCategoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCategoryCollectionAsync($name = null, $products = null, $type = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    public function getProductCategoryCollectionAsync($name = null, $products = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
-        return $this->getProductCategoryCollectionAsyncWithHttpInfo($name, $products, $type, $page, $items_per_page, $pagination, $accept_language)
+        return $this->getProductCategoryCollectionAsyncWithHttpInfo($name, $products, $page, $items_per_page, $pagination, $accept_language)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -453,7 +450,6 @@ class ProductCategoryApi
      *
      * @param  string $name (optional)
      * @param  string $products (optional)
-     * @param  string $type (optional)
      * @param  int $page The collection page number (optional, default to 1)
      * @param  int $items_per_page The number of items per page (optional, default to 30)
      * @param  bool $pagination Enable or disable pagination (optional)
@@ -462,10 +458,10 @@ class ProductCategoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCategoryCollectionAsyncWithHttpInfo($name = null, $products = null, $type = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    public function getProductCategoryCollectionAsyncWithHttpInfo($name = null, $products = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
         $returnType = '\VentureLeap\ProductService\Model\InlineResponse2003';
-        $request = $this->getProductCategoryCollectionRequest($name, $products, $type, $page, $items_per_page, $pagination, $accept_language);
+        $request = $this->getProductCategoryCollectionRequest($name, $products, $page, $items_per_page, $pagination, $accept_language);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -509,7 +505,6 @@ class ProductCategoryApi
      *
      * @param  string $name (optional)
      * @param  string $products (optional)
-     * @param  string $type (optional)
      * @param  int $page The collection page number (optional, default to 1)
      * @param  int $items_per_page The number of items per page (optional, default to 30)
      * @param  bool $pagination Enable or disable pagination (optional)
@@ -518,7 +513,7 @@ class ProductCategoryApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCategoryCollectionRequest($name = null, $products = null, $type = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    protected function getProductCategoryCollectionRequest($name = null, $products = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
 
         $resourcePath = '/product/product_categories';
@@ -535,10 +530,6 @@ class ProductCategoryApi
         // query params
         if ($products !== null) {
             $queryParams['products'] = ObjectSerializer::toQueryValue($products, null);
-        }
-        // query params
-        if ($type !== null) {
-            $queryParams['type'] = ObjectSerializer::toQueryValue($type, null);
         }
         // query params
         if ($page !== null) {

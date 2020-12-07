@@ -199,7 +199,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [AnyOfPriceListProductJsonldPriceListProductReadProduct](docs/Model/AnyOfPriceListProductJsonldPriceListProductReadProduct.md)
  - [ConfigurationEntryJsonldConfigurationRead](docs/Model/ConfigurationEntryJsonldConfigurationRead.md)
  - [ConfigurationEntryJsonldConfigurationWrite](docs/Model/ConfigurationEntryJsonldConfigurationWrite.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
@@ -220,7 +219,6 @@ Class | Method | HTTP request | Description
  - [ProductCategoryJsonldProductCategoryRead](docs/Model/ProductCategoryJsonldProductCategoryRead.md)
  - [ProductCategoryJsonldProductCategoryWrite](docs/Model/ProductCategoryJsonldProductCategoryWrite.md)
  - [ProductCategoryJsonldProductRead](docs/Model/ProductCategoryJsonldProductRead.md)
- - [ProductJsonldPriceListProductRead](docs/Model/ProductJsonldPriceListProductRead.md)
  - [ProductJsonldProductRead](docs/Model/ProductJsonldProductRead.md)
  - [ProductJsonldProductWrite](docs/Model/ProductJsonldProductWrite.md)
 

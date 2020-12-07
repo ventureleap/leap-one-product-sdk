@@ -321,6 +321,7 @@ class ProductApi
      *
      * Retrieves the collection of Product resources.
      *
+     * @param  string $custom_data custom_data (optional)
      * @param  string $name name (optional)
      * @param  string $categories categories (optional)
      * @param  string $order_name order_name (optional)
@@ -333,9 +334,9 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \VentureLeap\ProductService\Model\InlineResponse2004
      */
-    public function getProductCollection($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    public function getProductCollection($custom_data = null, $name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
-        list($response) = $this->getProductCollectionWithHttpInfo($name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
+        list($response) = $this->getProductCollectionWithHttpInfo($custom_data, $name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
         return $response;
     }
 
@@ -344,6 +345,7 @@ class ProductApi
      *
      * Retrieves the collection of Product resources.
      *
+     * @param  string $custom_data (optional)
      * @param  string $name (optional)
      * @param  string $categories (optional)
      * @param  string $order_name (optional)
@@ -356,10 +358,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return array of \VentureLeap\ProductService\Model\InlineResponse2004, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getProductCollectionWithHttpInfo($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    public function getProductCollectionWithHttpInfo($custom_data = null, $name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
         $returnType = '\VentureLeap\ProductService\Model\InlineResponse2004';
-        $request = $this->getProductCollectionRequest($name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
+        $request = $this->getProductCollectionRequest($custom_data, $name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
 
         try {
             $options = $this->createHttpClientOption();
@@ -425,6 +427,7 @@ class ProductApi
      *
      * Retrieves the collection of Product resources.
      *
+     * @param  string $custom_data (optional)
      * @param  string $name (optional)
      * @param  string $categories (optional)
      * @param  string $order_name (optional)
@@ -436,9 +439,9 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsync($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    public function getProductCollectionAsync($custom_data = null, $name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
-        return $this->getProductCollectionAsyncWithHttpInfo($name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language)
+        return $this->getProductCollectionAsyncWithHttpInfo($custom_data, $name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -451,6 +454,7 @@ class ProductApi
      *
      * Retrieves the collection of Product resources.
      *
+     * @param  string $custom_data (optional)
      * @param  string $name (optional)
      * @param  string $categories (optional)
      * @param  string $order_name (optional)
@@ -462,10 +466,10 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function getProductCollectionAsyncWithHttpInfo($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    public function getProductCollectionAsyncWithHttpInfo($custom_data = null, $name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
         $returnType = '\VentureLeap\ProductService\Model\InlineResponse2004';
-        $request = $this->getProductCollectionRequest($name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
+        $request = $this->getProductCollectionRequest($custom_data, $name, $categories, $order_name, $page, $items_per_page, $pagination, $accept_language);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -507,6 +511,7 @@ class ProductApi
     /**
      * Create request for operation 'getProductCollection'
      *
+     * @param  string $custom_data (optional)
      * @param  string $name (optional)
      * @param  string $categories (optional)
      * @param  string $order_name (optional)
@@ -518,7 +523,7 @@ class ProductApi
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    protected function getProductCollectionRequest($name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
+    protected function getProductCollectionRequest($custom_data = null, $name = null, $categories = null, $order_name = null, $page = '1', $items_per_page = '30', $pagination = null, $accept_language = null)
     {
 
         $resourcePath = '/product/products';
@@ -528,6 +533,10 @@ class ProductApi
         $httpBody = '';
         $multipart = false;
 
+        // query params
+        if ($custom_data !== null) {
+            $queryParams['customData'] = ObjectSerializer::toQueryValue($custom_data, null);
+        }
         // query params
         if ($name !== null) {
             $queryParams['name'] = ObjectSerializer::toQueryValue($name, null);

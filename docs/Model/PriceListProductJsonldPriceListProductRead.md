@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **uuid** | **string** |  | [optional] 
 **gross_price_per_unit** | **float** |  | [optional] 
 **price_list** | **string** |  | [optional] 
-**product** | **AnyOfPriceListProductJsonldPriceListProductReadProduct** |  | [optional] 
+**product** | **string** |  | [optional] 
 **active** | **bool** |  | [optional] 
 **custom_data** | **string** |  | 
 **price_list_uuid** | **string** |  | [optional] 
