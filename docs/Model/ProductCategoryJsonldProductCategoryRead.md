@@ -8,10 +8,10 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **uuid** | **string** |  | [optional] 
 **name** | **string** |  | 
-**active** | **bool** |  | [optional] 
 **priority** | **int** |  | [optional] 
-**custom_data** | **string** |  | 
-**products** | **string[]** |  | [optional] 
+**products** | [**\VentureLeap\ProductService\Model\ProductJsonldProductCategoryRead[]**](ProductJsonldProductCategoryRead.md) |  | [optional] 
+**custom_data** | **object** |  | [optional] 
+**active** | **bool** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

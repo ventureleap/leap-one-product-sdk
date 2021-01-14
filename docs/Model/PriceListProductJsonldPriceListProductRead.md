@@ -8,11 +8,12 @@ Name | Type | Description | Notes
 **type** | **string** |  | [optional] 
 **uuid** | **string** |  | [optional] 
 **gross_price_per_unit** | **float** |  | [optional] 
-**price_list** | **string** |  | [optional] 
-**product** | **string** |  | [optional] 
+**price_list** | [**AnyOfPriceListProductJsonldPriceListProductReadPriceList**](AnyOfPriceListProductJsonldPriceListProductReadPriceList.md) |  | [optional] 
+**product** | **AnyOfPriceListProductJsonldPriceListProductReadProduct** |  | [optional] 
 **active** | **bool** |  | [optional] 
-**custom_data** | **string** |  | 
+**custom_data** | **object** |  | [optional] 
 **price_list_uuid** | **string** |  | [optional] 
+**product_uuid** | **string** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)
 

@@ -87,6 +87,7 @@ $apiInstance = new VentureLeap\ProductService\Api\ConfigurationEntryApi(
     $config
 );
 $key = "key_example"; // string | 
+$sub_key = "sub_key_example"; // string | 
 $value = "value_example"; // string | 
 $application_id = "application_id_example"; // string | 
 $page = 1; // int | The collection page number
@@ -94,7 +95,7 @@ $items_per_page = 30; // int | The number of items per page
 $pagination = true; // bool | Enable or disable pagination
 
 try {
-    $result = $apiInstance->getConfigurationEntryCollection($key, $value, $application_id, $page, $items_per_page, $pagination);
+    $result = $apiInstance->getConfigurationEntryCollection($key, $sub_key, $value, $application_id, $page, $items_per_page, $pagination);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ConfigurationEntryApi->getConfigurationEntryCollection: ', $e->getMessage(), PHP_EOL;
@@ -199,6 +200,12 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
+ - [AnyOfPriceListProductJsonldPriceListProductReadPriceList](docs/Model/AnyOfPriceListProductJsonldPriceListProductReadPriceList.md)
+ - [AnyOfPriceListProductJsonldPriceListProductReadProduct](docs/Model/AnyOfPriceListProductJsonldPriceListProductReadProduct.md)
+ - [AnyOfPriceListProductJsonldPriceListProductWritePriceList](docs/Model/AnyOfPriceListProductJsonldPriceListProductWritePriceList.md)
+ - [AnyOfPriceListProductJsonldPriceListProductWriteProduct](docs/Model/AnyOfPriceListProductJsonldPriceListProductWriteProduct.md)
+ - [AnyOfPriceListProductPriceListProductWritePriceList](docs/Model/AnyOfPriceListProductPriceListProductWritePriceList.md)
+ - [AnyOfPriceListProductPriceListProductWriteProduct](docs/Model/AnyOfPriceListProductPriceListProductWriteProduct.md)
  - [ConfigurationEntryJsonldConfigurationRead](docs/Model/ConfigurationEntryJsonldConfigurationRead.md)
  - [ConfigurationEntryJsonldConfigurationWrite](docs/Model/ConfigurationEntryJsonldConfigurationWrite.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)
@@ -209,18 +216,28 @@ Class | Method | HTTP request | Description
  - [InlineResponse200Hydrasearch](docs/Model/InlineResponse200Hydrasearch.md)
  - [InlineResponse200HydrasearchHydramapping](docs/Model/InlineResponse200HydrasearchHydramapping.md)
  - [InlineResponse200Hydraview](docs/Model/InlineResponse200Hydraview.md)
+ - [PriceListJsonldPriceListProductRead](docs/Model/PriceListJsonldPriceListProductRead.md)
+ - [PriceListJsonldPriceListProductWrite](docs/Model/PriceListJsonldPriceListProductWrite.md)
  - [PriceListJsonldPriceListRead](docs/Model/PriceListJsonldPriceListRead.md)
  - [PriceListJsonldPriceListWrite](docs/Model/PriceListJsonldPriceListWrite.md)
+ - [PriceListPriceListProductWrite](docs/Model/PriceListPriceListProductWrite.md)
  - [PriceListPriceListWrite](docs/Model/PriceListPriceListWrite.md)
  - [PriceListProductJsonldPriceListProductRead](docs/Model/PriceListProductJsonldPriceListProductRead.md)
  - [PriceListProductJsonldPriceListProductWrite](docs/Model/PriceListProductJsonldPriceListProductWrite.md)
  - [PriceListProductJsonldProductRead](docs/Model/PriceListProductJsonldProductRead.md)
+ - [PriceListProductJsonldProductWrite](docs/Model/PriceListProductJsonldProductWrite.md)
  - [PriceListProductPriceListProductWrite](docs/Model/PriceListProductPriceListProductWrite.md)
  - [ProductCategoryJsonldProductCategoryRead](docs/Model/ProductCategoryJsonldProductCategoryRead.md)
  - [ProductCategoryJsonldProductCategoryWrite](docs/Model/ProductCategoryJsonldProductCategoryWrite.md)
  - [ProductCategoryJsonldProductRead](docs/Model/ProductCategoryJsonldProductRead.md)
+ - [ProductCategoryJsonldProductWrite](docs/Model/ProductCategoryJsonldProductWrite.md)
+ - [ProductJsonldPriceListProductRead](docs/Model/ProductJsonldPriceListProductRead.md)
+ - [ProductJsonldPriceListProductWrite](docs/Model/ProductJsonldPriceListProductWrite.md)
+ - [ProductJsonldProductCategoryRead](docs/Model/ProductJsonldProductCategoryRead.md)
+ - [ProductJsonldProductCategoryWrite](docs/Model/ProductJsonldProductCategoryWrite.md)
  - [ProductJsonldProductRead](docs/Model/ProductJsonldProductRead.md)
  - [ProductJsonldProductWrite](docs/Model/ProductJsonldProductWrite.md)
+ - [ProductPriceListProductWrite](docs/Model/ProductPriceListProductWrite.md)
 
 ## Documentation For Authorization
 

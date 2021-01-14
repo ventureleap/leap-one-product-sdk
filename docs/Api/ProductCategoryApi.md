@@ -62,7 +62,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getProductCategoryCollection**
-> \VentureLeap\ProductService\Model\InlineResponse2003 getProductCategoryCollection($name, $products, $page, $items_per_page, $pagination, $accept_language)
+> \VentureLeap\ProductService\Model\InlineResponse2003 getProductCategoryCollection($name, $products, $custom_data, $page, $items_per_page, $pagination, $accept_language)
 
 Retrieves the collection of ProductCategory resources.
 
@@ -83,13 +83,14 @@ $apiInstance = new VentureLeap\ProductService\Api\ProductCategoryApi(
 );
 $name = "name_example"; // string | 
 $products = "products_example"; // string | 
+$custom_data = "custom_data_example"; // string | 
 $page = 1; // int | The collection page number
 $items_per_page = 30; // int | The number of items per page
 $pagination = true; // bool | Enable or disable pagination
 $accept_language = "accept_language_example"; // string | Locale
 
 try {
-    $result = $apiInstance->getProductCategoryCollection($name, $products, $page, $items_per_page, $pagination, $accept_language);
+    $result = $apiInstance->getProductCategoryCollection($name, $products, $custom_data, $page, $items_per_page, $pagination, $accept_language);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling ProductCategoryApi->getProductCategoryCollection: ', $e->getMessage(), PHP_EOL;
@@ -103,6 +104,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**|  | [optional]
  **products** | **string**|  | [optional]
+ **custom_data** | **string**|  | [optional]
  **page** | **int**| The collection page number | [optional] [default to 1]
  **items_per_page** | **int**| The number of items per page | [optional] [default to 30]
  **pagination** | **bool**| Enable or disable pagination | [optional]

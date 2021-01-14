@@ -63,7 +63,7 @@ void (empty response body)
 [[Back to top]](#) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to Model list]](../../README.md#documentation-for-models) [[Back to README]](../../README.md)
 
 # **getPriceListCollection**
-> \VentureLeap\ProductService\Model\InlineResponse2002 getPriceListCollection($name, $pagination)
+> \VentureLeap\ProductService\Model\InlineResponse2002 getPriceListCollection($name, $custom_data, $pagination)
 
 Retrieves the collection of PriceList resources.
 
@@ -83,10 +83,11 @@ $apiInstance = new VentureLeap\ProductService\Api\PriceListApi(
     $config
 );
 $name = "name_example"; // string | 
+$custom_data = "custom_data_example"; // string | 
 $pagination = true; // bool | Enable or disable pagination
 
 try {
-    $result = $apiInstance->getPriceListCollection($name, $pagination);
+    $result = $apiInstance->getPriceListCollection($name, $custom_data, $pagination);
     print_r($result);
 } catch (Exception $e) {
     echo 'Exception when calling PriceListApi->getPriceListCollection: ', $e->getMessage(), PHP_EOL;
@@ -99,6 +100,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **name** | **string**|  | [optional]
+ **custom_data** | **string**|  | [optional]
  **pagination** | **bool**| Enable or disable pagination | [optional]
 
 ### Return type
