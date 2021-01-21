@@ -63,7 +63,7 @@ class PriceListProductJsonldProductRead implements ModelInterface, ArrayAccess
 'gross_price_per_unit' => 'float',
 'tax_percentage' => 'string',
 'active' => 'bool',
-'custom_data' => 'object',
+'custom_data' => 'object[]',
 'price_list_uuid' => 'string'    ];
 
     /**
@@ -415,7 +415,7 @@ class PriceListProductJsonldProductRead implements ModelInterface, ArrayAccess
     /**
      * Gets custom_data
      *
-     * @return object
+     * @return object[]
      */
     public function getCustomData()
     {
@@ -425,7 +425,7 @@ class PriceListProductJsonldProductRead implements ModelInterface, ArrayAccess
     /**
      * Sets custom_data
      *
-     * @param object $custom_data custom_data
+     * @param object[] $custom_data custom_data
      *
      * @return $this
      */

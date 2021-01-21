@@ -64,7 +64,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'price_list' => 'AnyOfPriceListProductJsonldPriceListProductReadPriceList',
 'product' => 'AnyOfPriceListProductJsonldPriceListProductReadProduct',
 'active' => 'bool',
-'custom_data' => 'object',
+'custom_data' => 'object[]',
 'price_list_uuid' => 'string',
 'product_uuid' => 'string'    ];
 
@@ -451,7 +451,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Gets custom_data
      *
-     * @return object
+     * @return object[]
      */
     public function getCustomData()
     {
@@ -461,7 +461,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Sets custom_data
      *
-     * @param object $custom_data custom_data
+     * @param object[] $custom_data custom_data
      *
      * @return $this
      */

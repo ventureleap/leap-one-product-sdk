@@ -11,7 +11,7 @@ Name | Type | Description | Notes
 **price_list** | [**AnyOfPriceListProductJsonldPriceListProductReadPriceList**](AnyOfPriceListProductJsonldPriceListProductReadPriceList.md) |  | [optional] 
 **product** | **AnyOfPriceListProductJsonldPriceListProductReadProduct** |  | [optional] 
 **active** | **bool** |  | [optional] 
-**custom_data** | **object** |  | [optional] 
+**custom_data** | **object[]** |  | [optional] 
 **price_list_uuid** | **string** |  | [optional] 
 **product_uuid** | **string** |  | [optional] 
 

@@ -61,7 +61,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
 'price_list' => 'AnyOfPriceListProductPriceListProductWritePriceList',
 'product' => 'AnyOfPriceListProductPriceListProductWriteProduct',
 'active' => 'bool',
-'custom_data' => 'object'    ];
+'custom_data' => 'object[]'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -349,7 +349,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Gets custom_data
      *
-     * @return object
+     * @return object[]
      */
     public function getCustomData()
     {
@@ -359,7 +359,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Sets custom_data
      *
-     * @param object $custom_data custom_data
+     * @param object[] $custom_data custom_data
      *
      * @return $this
      */
