@@ -57,11 +57,12 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
       */
     protected static $swaggerTypes = [
         'uuid' => 'string',
-'gross_price_per_unit' => 'float',
+'gross_price_per_unit' => 'int',
+'tax_percentage' => 'int',
 'price_list' => 'AnyOfPriceListProductPriceListProductWritePriceList',
 'product' => 'AnyOfPriceListProductPriceListProductWriteProduct',
 'active' => 'bool',
-'custom_data' => 'object[]'    ];
+'custom_data' => 'object'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -71,6 +72,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     protected static $swaggerFormats = [
         'uuid' => null,
 'gross_price_per_unit' => null,
+'tax_percentage' => null,
 'price_list' => null,
 'product' => 'iri-reference',
 'active' => null,
@@ -105,6 +107,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     protected static $attributeMap = [
         'uuid' => 'uuid',
 'gross_price_per_unit' => 'grossPricePerUnit',
+'tax_percentage' => 'taxPercentage',
 'price_list' => 'priceList',
 'product' => 'product',
 'active' => 'active',
@@ -118,6 +121,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     protected static $setters = [
         'uuid' => 'setUuid',
 'gross_price_per_unit' => 'setGrossPricePerUnit',
+'tax_percentage' => 'setTaxPercentage',
 'price_list' => 'setPriceList',
 'product' => 'setProduct',
 'active' => 'setActive',
@@ -131,6 +135,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     protected static $getters = [
         'uuid' => 'getUuid',
 'gross_price_per_unit' => 'getGrossPricePerUnit',
+'tax_percentage' => 'getTaxPercentage',
 'price_list' => 'getPriceList',
 'product' => 'getProduct',
 'active' => 'getActive',
@@ -196,6 +201,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     {
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
+        $this->container['tax_percentage'] = isset($data['tax_percentage']) ? $data['tax_percentage'] : null;
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
@@ -253,7 +259,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Gets gross_price_per_unit
      *
-     * @return float
+     * @return int
      */
     public function getGrossPricePerUnit()
     {
@@ -263,13 +269,37 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Sets gross_price_per_unit
      *
-     * @param float $gross_price_per_unit gross_price_per_unit
+     * @param int $gross_price_per_unit gross_price_per_unit
      *
      * @return $this
      */
     public function setGrossPricePerUnit($gross_price_per_unit)
     {
         $this->container['gross_price_per_unit'] = $gross_price_per_unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_percentage
+     *
+     * @return int
+     */
+    public function getTaxPercentage()
+    {
+        return $this->container['tax_percentage'];
+    }
+
+    /**
+     * Sets tax_percentage
+     *
+     * @param int $tax_percentage tax_percentage
+     *
+     * @return $this
+     */
+    public function setTaxPercentage($tax_percentage)
+    {
+        $this->container['tax_percentage'] = $tax_percentage;
 
         return $this;
     }
@@ -349,7 +379,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -359,7 +389,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */

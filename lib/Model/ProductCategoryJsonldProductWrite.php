@@ -59,7 +59,7 @@ class ProductCategoryJsonldProductWrite implements ModelInterface, ArrayAccess
         'context' => 'string',
 'id' => 'string',
 'type' => 'string',
-'custom_data' => 'object[]',
+'custom_data' => 'object',
 'active' => 'bool'    ];
 
     /**
@@ -295,7 +295,7 @@ class ProductCategoryJsonldProductWrite implements ModelInterface, ArrayAccess
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -305,7 +305,7 @@ class ProductCategoryJsonldProductWrite implements ModelInterface, ArrayAccess
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */

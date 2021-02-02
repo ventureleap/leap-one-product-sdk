@@ -62,7 +62,7 @@ class ProductCategoryJsonldProductCategoryWrite implements ModelInterface, Array
 'name' => 'string',
 'priority' => 'int',
 'products' => '\VentureLeap\ProductService\Model\ProductJsonldProductCategoryWrite[]',
-'custom_data' => 'object[]',
+'custom_data' => 'object',
 'active' => 'bool'    ];
 
     /**
@@ -388,7 +388,7 @@ class ProductCategoryJsonldProductCategoryWrite implements ModelInterface, Array
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -398,7 +398,7 @@ class ProductCategoryJsonldProductCategoryWrite implements ModelInterface, Array
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */

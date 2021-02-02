@@ -60,11 +60,14 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'id' => 'string',
 'type' => 'string',
 'uuid' => 'string',
-'gross_price_per_unit' => 'float',
+'gross_price_per_unit' => 'int',
+'tax_percentage' => 'int',
 'price_list' => 'AnyOfPriceListProductJsonldPriceListProductReadPriceList',
 'product' => 'AnyOfPriceListProductJsonldPriceListProductReadProduct',
 'active' => 'bool',
-'custom_data' => 'object[]',
+'custom_data' => 'object',
+'vat_per_unit' => 'int',
+'net_price_per_unit' => 'int',
 'price_list_uuid' => 'string',
 'product_uuid' => 'string'    ];
 
@@ -79,10 +82,13 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'type' => null,
 'uuid' => null,
 'gross_price_per_unit' => null,
+'tax_percentage' => null,
 'price_list' => null,
 'product' => 'iri-reference',
 'active' => null,
 'custom_data' => null,
+'vat_per_unit' => null,
+'net_price_per_unit' => null,
 'price_list_uuid' => null,
 'product_uuid' => null    ];
 
@@ -118,10 +124,13 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'type' => '@type',
 'uuid' => 'uuid',
 'gross_price_per_unit' => 'grossPricePerUnit',
+'tax_percentage' => 'taxPercentage',
 'price_list' => 'priceList',
 'product' => 'product',
 'active' => 'active',
 'custom_data' => 'customData',
+'vat_per_unit' => 'vatPerUnit',
+'net_price_per_unit' => 'netPricePerUnit',
 'price_list_uuid' => 'priceListUuid',
 'product_uuid' => 'productUuid'    ];
 
@@ -136,10 +145,13 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'type' => 'setType',
 'uuid' => 'setUuid',
 'gross_price_per_unit' => 'setGrossPricePerUnit',
+'tax_percentage' => 'setTaxPercentage',
 'price_list' => 'setPriceList',
 'product' => 'setProduct',
 'active' => 'setActive',
 'custom_data' => 'setCustomData',
+'vat_per_unit' => 'setVatPerUnit',
+'net_price_per_unit' => 'setNetPricePerUnit',
 'price_list_uuid' => 'setPriceListUuid',
 'product_uuid' => 'setProductUuid'    ];
 
@@ -154,10 +166,13 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'type' => 'getType',
 'uuid' => 'getUuid',
 'gross_price_per_unit' => 'getGrossPricePerUnit',
+'tax_percentage' => 'getTaxPercentage',
 'price_list' => 'getPriceList',
 'product' => 'getProduct',
 'active' => 'getActive',
 'custom_data' => 'getCustomData',
+'vat_per_unit' => 'getVatPerUnit',
+'net_price_per_unit' => 'getNetPricePerUnit',
 'price_list_uuid' => 'getPriceListUuid',
 'product_uuid' => 'getProductUuid'    ];
 
@@ -224,10 +239,13 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
+        $this->container['tax_percentage'] = isset($data['tax_percentage']) ? $data['tax_percentage'] : null;
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
         $this->container['custom_data'] = isset($data['custom_data']) ? $data['custom_data'] : null;
+        $this->container['vat_per_unit'] = isset($data['vat_per_unit']) ? $data['vat_per_unit'] : null;
+        $this->container['net_price_per_unit'] = isset($data['net_price_per_unit']) ? $data['net_price_per_unit'] : null;
         $this->container['price_list_uuid'] = isset($data['price_list_uuid']) ? $data['price_list_uuid'] : null;
         $this->container['product_uuid'] = isset($data['product_uuid']) ? $data['product_uuid'] : null;
     }
@@ -355,7 +373,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Gets gross_price_per_unit
      *
-     * @return float
+     * @return int
      */
     public function getGrossPricePerUnit()
     {
@@ -365,13 +383,37 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Sets gross_price_per_unit
      *
-     * @param float $gross_price_per_unit gross_price_per_unit
+     * @param int $gross_price_per_unit gross_price_per_unit
      *
      * @return $this
      */
     public function setGrossPricePerUnit($gross_price_per_unit)
     {
         $this->container['gross_price_per_unit'] = $gross_price_per_unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_percentage
+     *
+     * @return int
+     */
+    public function getTaxPercentage()
+    {
+        return $this->container['tax_percentage'];
+    }
+
+    /**
+     * Sets tax_percentage
+     *
+     * @param int $tax_percentage tax_percentage
+     *
+     * @return $this
+     */
+    public function setTaxPercentage($tax_percentage)
+    {
+        $this->container['tax_percentage'] = $tax_percentage;
 
         return $this;
     }
@@ -451,7 +493,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -461,13 +503,61 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */
     public function setCustomData($custom_data)
     {
         $this->container['custom_data'] = $custom_data;
+
+        return $this;
+    }
+
+    /**
+     * Gets vat_per_unit
+     *
+     * @return int
+     */
+    public function getVatPerUnit()
+    {
+        return $this->container['vat_per_unit'];
+    }
+
+    /**
+     * Sets vat_per_unit
+     *
+     * @param int $vat_per_unit vat_per_unit
+     *
+     * @return $this
+     */
+    public function setVatPerUnit($vat_per_unit)
+    {
+        $this->container['vat_per_unit'] = $vat_per_unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets net_price_per_unit
+     *
+     * @return int
+     */
+    public function getNetPricePerUnit()
+    {
+        return $this->container['net_price_per_unit'];
+    }
+
+    /**
+     * Sets net_price_per_unit
+     *
+     * @param int $net_price_per_unit net_price_per_unit
+     *
+     * @return $this
+     */
+    public function setNetPricePerUnit($net_price_per_unit)
+    {
+        $this->container['net_price_per_unit'] = $net_price_per_unit;
 
         return $this;
     }

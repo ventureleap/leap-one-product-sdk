@@ -63,7 +63,7 @@ class ProductCategoryJsonldProductCategoryRead implements ModelInterface, ArrayA
 'name' => 'string',
 'priority' => 'int',
 'products' => '\VentureLeap\ProductService\Model\ProductJsonldProductCategoryRead[]',
-'custom_data' => 'object[]',
+'custom_data' => 'object',
 'active' => 'bool'    ];
 
     /**
@@ -418,7 +418,7 @@ class ProductCategoryJsonldProductCategoryRead implements ModelInterface, ArrayA
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -428,7 +428,7 @@ class ProductCategoryJsonldProductCategoryRead implements ModelInterface, ArrayA
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */

@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 **name** | **string** |  | 
 **priority** | **int** |  | [optional] 
 **products** | [**\VentureLeap\ProductService\Model\ProductJsonldProductCategoryRead[]**](ProductJsonldProductCategoryRead.md) |  | [optional] 
-**custom_data** | **object[]** |  | [optional] 
+**custom_data** | **object** |  | [optional] 
 **active** | **bool** |  | [optional] 
 
 [[Back to Model list]](../../README.md#documentation-for-models) [[Back to API list]](../../README.md#documentation-for-api-endpoints) [[Back to README]](../../README.md)

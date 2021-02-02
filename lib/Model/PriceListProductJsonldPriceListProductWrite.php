@@ -60,11 +60,12 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'id' => 'string',
 'type' => 'string',
 'uuid' => 'string',
-'gross_price_per_unit' => 'float',
+'gross_price_per_unit' => 'int',
+'tax_percentage' => 'int',
 'price_list' => 'AnyOfPriceListProductJsonldPriceListProductWritePriceList',
 'product' => 'AnyOfPriceListProductJsonldPriceListProductWriteProduct',
 'active' => 'bool',
-'custom_data' => 'object[]'    ];
+'custom_data' => 'object'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -77,6 +78,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'type' => null,
 'uuid' => null,
 'gross_price_per_unit' => null,
+'tax_percentage' => null,
 'price_list' => null,
 'product' => 'iri-reference',
 'active' => null,
@@ -114,6 +116,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'type' => '@type',
 'uuid' => 'uuid',
 'gross_price_per_unit' => 'grossPricePerUnit',
+'tax_percentage' => 'taxPercentage',
 'price_list' => 'priceList',
 'product' => 'product',
 'active' => 'active',
@@ -130,6 +133,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'type' => 'setType',
 'uuid' => 'setUuid',
 'gross_price_per_unit' => 'setGrossPricePerUnit',
+'tax_percentage' => 'setTaxPercentage',
 'price_list' => 'setPriceList',
 'product' => 'setProduct',
 'active' => 'setActive',
@@ -146,6 +150,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'type' => 'getType',
 'uuid' => 'getUuid',
 'gross_price_per_unit' => 'getGrossPricePerUnit',
+'tax_percentage' => 'getTaxPercentage',
 'price_list' => 'getPriceList',
 'product' => 'getProduct',
 'active' => 'getActive',
@@ -214,6 +219,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['uuid'] = isset($data['uuid']) ? $data['uuid'] : null;
         $this->container['gross_price_per_unit'] = isset($data['gross_price_per_unit']) ? $data['gross_price_per_unit'] : null;
+        $this->container['tax_percentage'] = isset($data['tax_percentage']) ? $data['tax_percentage'] : null;
         $this->container['price_list'] = isset($data['price_list']) ? $data['price_list'] : null;
         $this->container['product'] = isset($data['product']) ? $data['product'] : null;
         $this->container['active'] = isset($data['active']) ? $data['active'] : null;
@@ -343,7 +349,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     /**
      * Gets gross_price_per_unit
      *
-     * @return float
+     * @return int
      */
     public function getGrossPricePerUnit()
     {
@@ -353,13 +359,37 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     /**
      * Sets gross_price_per_unit
      *
-     * @param float $gross_price_per_unit gross_price_per_unit
+     * @param int $gross_price_per_unit gross_price_per_unit
      *
      * @return $this
      */
     public function setGrossPricePerUnit($gross_price_per_unit)
     {
         $this->container['gross_price_per_unit'] = $gross_price_per_unit;
+
+        return $this;
+    }
+
+    /**
+     * Gets tax_percentage
+     *
+     * @return int
+     */
+    public function getTaxPercentage()
+    {
+        return $this->container['tax_percentage'];
+    }
+
+    /**
+     * Sets tax_percentage
+     *
+     * @param int $tax_percentage tax_percentage
+     *
+     * @return $this
+     */
+    public function setTaxPercentage($tax_percentage)
+    {
+        $this->container['tax_percentage'] = $tax_percentage;
 
         return $this;
     }
@@ -439,7 +469,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -449,7 +479,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */

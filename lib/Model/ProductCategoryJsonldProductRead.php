@@ -61,7 +61,7 @@ class ProductCategoryJsonldProductRead implements ModelInterface, ArrayAccess
 'type' => 'string',
 'uuid' => 'string',
 'name' => 'string',
-'custom_data' => 'object[]',
+'custom_data' => 'object',
 'active' => 'bool'    ];
 
     /**
@@ -358,7 +358,7 @@ class ProductCategoryJsonldProductRead implements ModelInterface, ArrayAccess
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -368,7 +368,7 @@ class ProductCategoryJsonldProductRead implements ModelInterface, ArrayAccess
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */

@@ -111,6 +111,13 @@ class PriceListProductJsonldPriceListProductReadTest extends \PHPUnit_Framework_
     }
 
     /**
+     * Test attribute "tax_percentage"
+     */
+    public function testPropertyTaxPercentage()
+    {
+    }
+
+    /**
      * Test attribute "price_list"
      */
     public function testPropertyPriceList()
@@ -135,6 +142,20 @@ class PriceListProductJsonldPriceListProductReadTest extends \PHPUnit_Framework_
      * Test attribute "custom_data"
      */
     public function testPropertyCustomData()
+    {
+    }
+
+    /**
+     * Test attribute "vat_per_unit"
+     */
+    public function testPropertyVatPerUnit()
+    {
+    }
+
+    /**
+     * Test attribute "net_price_per_unit"
+     */
+    public function testPropertyNetPricePerUnit()
     {
     }
 

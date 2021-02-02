@@ -111,6 +111,13 @@ class PriceListProductJsonldPriceListProductWriteTest extends \PHPUnit_Framework
     }
 
     /**
+     * Test attribute "tax_percentage"
+     */
+    public function testPropertyTaxPercentage()
+    {
+    }
+
+    /**
      * Test attribute "price_list"
      */
     public function testPropertyPriceList()

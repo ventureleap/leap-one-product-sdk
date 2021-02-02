@@ -60,7 +60,7 @@ class PriceListJsonldPriceListProductWrite implements ModelInterface, ArrayAcces
 'id' => 'string',
 'type' => 'string',
 'active' => 'bool',
-'custom_data' => 'object[]'    ];
+'custom_data' => 'object'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -319,7 +319,7 @@ class PriceListJsonldPriceListProductWrite implements ModelInterface, ArrayAcces
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -329,7 +329,7 @@ class PriceListJsonldPriceListProductWrite implements ModelInterface, ArrayAcces
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */

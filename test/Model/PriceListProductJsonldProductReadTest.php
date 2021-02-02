@@ -132,6 +132,20 @@ class PriceListProductJsonldProductReadTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
+     * Test attribute "vat_per_unit"
+     */
+    public function testPropertyVatPerUnit()
+    {
+    }
+
+    /**
+     * Test attribute "net_price_per_unit"
+     */
+    public function testPropertyNetPricePerUnit()
+    {
+    }
+
+    /**
      * Test attribute "price_list_uuid"
      */
     public function testPropertyPriceListUuid()

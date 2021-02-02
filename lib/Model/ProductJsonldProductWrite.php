@@ -65,7 +65,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
 'categories' => '\VentureLeap\ProductService\Model\ProductCategoryJsonldProductWrite[]',
 'price_list_products' => '\VentureLeap\ProductService\Model\PriceListProductJsonldProductWrite[]',
 'active' => 'bool',
-'custom_data' => 'object[]'    ];
+'custom_data' => 'object'    ];
 
     /**
       * Array of property to format mappings. Used for (de)serialization
@@ -472,7 +472,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
     /**
      * Gets custom_data
      *
-     * @return object[]
+     * @return object
      */
     public function getCustomData()
     {
@@ -482,7 +482,7 @@ class ProductJsonldProductWrite implements ModelInterface, ArrayAccess
     /**
      * Sets custom_data
      *
-     * @param object[] $custom_data custom_data
+     * @param object $custom_data custom_data
      *
      * @return $this
      */
