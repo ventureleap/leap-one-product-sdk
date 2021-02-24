@@ -62,8 +62,8 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'uuid' => 'string',
 'gross_price_per_unit' => 'int',
 'tax_percentage' => 'int',
-'price_list' => 'AnyOfPriceListProductJsonldPriceListProductWritePriceList',
-'product' => 'AnyOfPriceListProductJsonldPriceListProductWriteProduct',
+'price_list' => '\VentureLeap\ProductService\Model\PriceListJsonldPriceListProductWrite',
+'product' => '\VentureLeap\ProductService\Model\ProductJsonldPriceListProductWrite',
 'active' => 'bool',
 'custom_data' => 'object'    ];
 
@@ -80,7 +80,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
 'gross_price_per_unit' => null,
 'tax_percentage' => null,
 'price_list' => null,
-'product' => 'iri-reference',
+'product' => null,
 'active' => null,
 'custom_data' => null    ];
 
@@ -397,7 +397,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     /**
      * Gets price_list
      *
-     * @return AnyOfPriceListProductJsonldPriceListProductWritePriceList
+     * @return \VentureLeap\ProductService\Model\PriceListJsonldPriceListProductWrite
      */
     public function getPriceList()
     {
@@ -407,7 +407,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     /**
      * Sets price_list
      *
-     * @param AnyOfPriceListProductJsonldPriceListProductWritePriceList $price_list price_list
+     * @param \VentureLeap\ProductService\Model\PriceListJsonldPriceListProductWrite $price_list price_list
      *
      * @return $this
      */
@@ -421,7 +421,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     /**
      * Gets product
      *
-     * @return AnyOfPriceListProductJsonldPriceListProductWriteProduct
+     * @return \VentureLeap\ProductService\Model\ProductJsonldPriceListProductWrite
      */
     public function getProduct()
     {
@@ -431,7 +431,7 @@ class PriceListProductJsonldPriceListProductWrite implements ModelInterface, Arr
     /**
      * Sets product
      *
-     * @param AnyOfPriceListProductJsonldPriceListProductWriteProduct $product product
+     * @param \VentureLeap\ProductService\Model\ProductJsonldPriceListProductWrite $product product
      *
      * @return $this
      */

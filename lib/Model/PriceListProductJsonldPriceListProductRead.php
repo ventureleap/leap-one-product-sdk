@@ -62,8 +62,8 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'uuid' => 'string',
 'gross_price_per_unit' => 'int',
 'tax_percentage' => 'int',
-'price_list' => 'AnyOfPriceListProductJsonldPriceListProductReadPriceList',
-'product' => 'AnyOfPriceListProductJsonldPriceListProductReadProduct',
+'price_list' => '\VentureLeap\ProductService\Model\PriceListJsonldPriceListProductRead',
+'product' => '\VentureLeap\ProductService\Model\ProductJsonldPriceListProductRead',
 'active' => 'bool',
 'custom_data' => 'object',
 'vat_per_unit' => 'int',
@@ -84,7 +84,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
 'gross_price_per_unit' => null,
 'tax_percentage' => null,
 'price_list' => null,
-'product' => 'iri-reference',
+'product' => null,
 'active' => null,
 'custom_data' => null,
 'vat_per_unit' => null,
@@ -421,7 +421,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Gets price_list
      *
-     * @return AnyOfPriceListProductJsonldPriceListProductReadPriceList
+     * @return \VentureLeap\ProductService\Model\PriceListJsonldPriceListProductRead
      */
     public function getPriceList()
     {
@@ -431,7 +431,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Sets price_list
      *
-     * @param AnyOfPriceListProductJsonldPriceListProductReadPriceList $price_list price_list
+     * @param \VentureLeap\ProductService\Model\PriceListJsonldPriceListProductRead $price_list price_list
      *
      * @return $this
      */
@@ -445,7 +445,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Gets product
      *
-     * @return AnyOfPriceListProductJsonldPriceListProductReadProduct
+     * @return \VentureLeap\ProductService\Model\ProductJsonldPriceListProductRead
      */
     public function getProduct()
     {
@@ -455,7 +455,7 @@ class PriceListProductJsonldPriceListProductRead implements ModelInterface, Arra
     /**
      * Sets product
      *
-     * @param AnyOfPriceListProductJsonldPriceListProductReadProduct $product product
+     * @param \VentureLeap\ProductService\Model\ProductJsonldPriceListProductRead $product product
      *
      * @return $this
      */

@@ -200,12 +200,6 @@ Class | Method | HTTP request | Description
 
 ## Documentation For Models
 
- - [AnyOfPriceListProductJsonldPriceListProductReadPriceList](docs/Model/AnyOfPriceListProductJsonldPriceListProductReadPriceList.md)
- - [AnyOfPriceListProductJsonldPriceListProductReadProduct](docs/Model/AnyOfPriceListProductJsonldPriceListProductReadProduct.md)
- - [AnyOfPriceListProductJsonldPriceListProductWritePriceList](docs/Model/AnyOfPriceListProductJsonldPriceListProductWritePriceList.md)
- - [AnyOfPriceListProductJsonldPriceListProductWriteProduct](docs/Model/AnyOfPriceListProductJsonldPriceListProductWriteProduct.md)
- - [AnyOfPriceListProductPriceListProductWritePriceList](docs/Model/AnyOfPriceListProductPriceListProductWritePriceList.md)
- - [AnyOfPriceListProductPriceListProductWriteProduct](docs/Model/AnyOfPriceListProductPriceListProductWriteProduct.md)
  - [ConfigurationEntryJsonldConfigurationRead](docs/Model/ConfigurationEntryJsonldConfigurationRead.md)
  - [ConfigurationEntryJsonldConfigurationWrite](docs/Model/ConfigurationEntryJsonldConfigurationWrite.md)
  - [InlineResponse200](docs/Model/InlineResponse200.md)

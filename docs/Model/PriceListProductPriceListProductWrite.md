@@ -6,8 +6,8 @@ Name | Type | Description | Notes
 **uuid** | **string** |  | [optional] 
 **gross_price_per_unit** | **int** |  | [optional] 
 **tax_percentage** | **int** |  | [optional] 
-**price_list** | [**AnyOfPriceListProductPriceListProductWritePriceList**](AnyOfPriceListProductPriceListProductWritePriceList.md) |  | [optional] 
-**product** | **AnyOfPriceListProductPriceListProductWriteProduct** |  | [optional] 
+**price_list** | [**\VentureLeap\ProductService\Model\PriceListPriceListProductWrite**](PriceListPriceListProductWrite.md) |  | [optional] 
+**product** | [**\VentureLeap\ProductService\Model\ProductPriceListProductWrite**](ProductPriceListProductWrite.md) |  | [optional] 
 **active** | **bool** |  | [optional] 
 **custom_data** | **object** |  | [optional] 
 

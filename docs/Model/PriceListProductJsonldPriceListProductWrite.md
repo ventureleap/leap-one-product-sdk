@@ -9,8 +9,8 @@ Name | Type | Description | Notes
 **uuid** | **string** |  | [optional] 
 **gross_price_per_unit** | **int** |  | [optional] 
 **tax_percentage** | **int** |  | [optional] 
-**price_list** | [**AnyOfPriceListProductJsonldPriceListProductWritePriceList**](AnyOfPriceListProductJsonldPriceListProductWritePriceList.md) |  | [optional] 
-**product** | **AnyOfPriceListProductJsonldPriceListProductWriteProduct** |  | [optional] 
+**price_list** | [**\VentureLeap\ProductService\Model\PriceListJsonldPriceListProductWrite**](PriceListJsonldPriceListProductWrite.md) |  | [optional] 
+**product** | [**\VentureLeap\ProductService\Model\ProductJsonldPriceListProductWrite**](ProductJsonldPriceListProductWrite.md) |  | [optional] 
 **active** | **bool** |  | [optional] 
 **custom_data** | **object** |  | [optional] 
 

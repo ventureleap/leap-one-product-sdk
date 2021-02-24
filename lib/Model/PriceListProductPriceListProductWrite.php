@@ -59,8 +59,8 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
         'uuid' => 'string',
 'gross_price_per_unit' => 'int',
 'tax_percentage' => 'int',
-'price_list' => 'AnyOfPriceListProductPriceListProductWritePriceList',
-'product' => 'AnyOfPriceListProductPriceListProductWriteProduct',
+'price_list' => '\VentureLeap\ProductService\Model\PriceListPriceListProductWrite',
+'product' => '\VentureLeap\ProductService\Model\ProductPriceListProductWrite',
 'active' => 'bool',
 'custom_data' => 'object'    ];
 
@@ -74,7 +74,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
 'gross_price_per_unit' => null,
 'tax_percentage' => null,
 'price_list' => null,
-'product' => 'iri-reference',
+'product' => null,
 'active' => null,
 'custom_data' => null    ];
 
@@ -307,7 +307,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Gets price_list
      *
-     * @return AnyOfPriceListProductPriceListProductWritePriceList
+     * @return \VentureLeap\ProductService\Model\PriceListPriceListProductWrite
      */
     public function getPriceList()
     {
@@ -317,7 +317,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Sets price_list
      *
-     * @param AnyOfPriceListProductPriceListProductWritePriceList $price_list price_list
+     * @param \VentureLeap\ProductService\Model\PriceListPriceListProductWrite $price_list price_list
      *
      * @return $this
      */
@@ -331,7 +331,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Gets product
      *
-     * @return AnyOfPriceListProductPriceListProductWriteProduct
+     * @return \VentureLeap\ProductService\Model\ProductPriceListProductWrite
      */
     public function getProduct()
     {
@@ -341,7 +341,7 @@ class PriceListProductPriceListProductWrite implements ModelInterface, ArrayAcce
     /**
      * Sets product
      *
-     * @param AnyOfPriceListProductPriceListProductWriteProduct $product product
+     * @param \VentureLeap\ProductService\Model\ProductPriceListProductWrite $product product
      *
      * @return $this
      */
